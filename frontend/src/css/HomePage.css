@@ -1,0 +1,182 @@
+.home-container {
+    width: 90%;
+    margin: auto;
+    padding-top: 160px;
+    height: 300px;
+    text-align: center;
+    margin-bottom: 270px;
+
+    h1,
+    h2 {
+        font-size: 3em;
+        font-weight: 500;
+        font-family: "PawWow", sans-serif;
+        color: var(--second-color);
+    }
+
+    h2 {
+        margin-bottom: 50px;
+    }
+
+    .totale {
+        width: 400px;
+        margin: 0 auto;
+        border-radius: 20% / 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        color: var(--second-color);
+        font-size: 1.7em;
+        font-weight: 600;
+
+        .numero {
+            font-size: 2em;
+            font-weight: 800;
+        }
+    }
+}
+
+.descrizione-container {
+    background-color: var(--main-color);
+    text-align: center;
+}
+
+.descrizione {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+
+    .testo {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        color: white;
+        padding-right: 30px;
+
+        h3 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-weight: 600;
+            font-size: 1.2em;
+        }
+    }
+
+    .immagine {
+        width: 50%;
+
+        img {
+            width: 100%;
+            padding: 50px 10px;
+            transition: transform 0.5s ease;
+        }
+
+        img:hover {
+            transform: scale(1.1);
+            cursor: pointer;
+        }
+    }
+
+    a {
+        margin: 0 auto;
+        width: 30%;
+        text-decoration: inherit;
+        padding: 10px;
+        border-radius: 10px;
+        background-color: white;
+        color: var(--main-color);
+        font-weight: 600;
+        font-size: 1.2em;
+    }
+
+    a:hover {
+        color: darkgreen;
+    }
+
+}
+
+.aiutaci-container {
+    text-align: center;
+    padding-top: 100px;
+    margin-bottom: 100px;
+
+    .aiutaci {
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+
+        .testo {
+            width: 60%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            color: black;
+            padding-left: 30px;
+
+            h3 {
+                font-size: 3em;
+                margin-bottom: 20px;
+                color: darkgreen;
+            }
+
+            p {
+                font-size: 1.2em;
+                font-weight: 400;
+            }
+        }
+
+        .immagine {
+            width: 40%;
+            border-radius: 30px;
+            overflow: hidden;
+
+            img {
+                width: 100%;
+                aspect-ratio: 1;
+                transition: transform 0.5s ease;
+            }
+
+            img:hover {
+                transform: scale(1.1);
+                cursor: pointer;
+            }
+        }
+
+        a {
+            margin: 0 auto;
+            width: 30%;
+            text-decoration: inherit;
+            padding: 10px;
+            border-radius: 10px;
+            background-color: var(--main-color);
+            color: white;
+            font-weight: 600;
+            font-size: 1.2em;
+        }
+
+        a:hover {
+            background-color: darkgreen;
+        }
+
+    }
+}
+
+.img-volontari {
+    aspect-ratio: 1;
+}
+
+.mappa {
+    width: 100%;
+    height: 350px;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.mappa iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}

@@ -1,0 +1,123 @@
+import axios from "axios"
+// import di router-dom per link
+import { Link, useParams, useNavigate } from "react-router-dom";
+
+// import state e effect
+import { useState, useEffect } from "react";
+
+// importo hook per il contesto
+import { useGlobal } from "../contexts/GlobalContext";
+
+import { IoMdMale } from "react-icons/io";
+import { IoMdFemale } from "react-icons/io";
+import { FaArrowLeft } from "react-icons/fa";
+
+import "../css/Info.css";
+
+export default function Info() {
+
+    const { slug } = useParams();
+
+    // estrapolo dal context la variabile di stato
+    const { setIsLoading } = useGlobal();
+
+    // variabile di stato del gatto
+    const [cat, setCat] = useState([]);
+
+    //variabile di stato per la data estesa
+    const [data, setData] = useState([]);
+
+    // chiamata axios per ricevere la lista dei gatti
+    const fecthCat = () => {
+        // appena entro nella funzione per la chiamata axios, attivo il loading 
+        setIsLoading(true);
+        axios.get('http://localhost:3000/api/cats/ospiti/' + slug)
+            .then(response => {
+                setCat(response.data)
+            })
+            .catch(error => { console.log(error) })
+            // terminata la chiamata axios, disattivo il loading
+            .finally(() => { setIsLoading(false) })
+    }
+
+    // funzione che restituisce il mese corrispondente alla data presente nel db
+    function dataEstesa() {
+
+        const mesi = {
+            "01": "Gennaio",
+            "02": "Febbraio",
+            "03": "Marzo",
+            "04": "Aprile",
+            "05": "Maggio",
+            "06": "Giugno",
+            "07": "Luglio",
+            "08": "Agosto",
+            "09": "Settembre",
+            "10": "Ottobre",
+            "11": "Novembre",
+            "12": "Dicembre"
+        };
+
+        const mese = mesi[cat?.date_of_birth?.slice(-2)];
+        const anno = cat?.date_of_birth?.slice(0, 4);
+        setData(mese + " " + anno);
+    }
+
+    // faccio partire la chiamata solo al primo montaggio del componente
+    useEffect(fecthCat, []);
+
+    useEffect(dataEstesa, [cat]);
+
+    return (
+        <>
+            <div className="info">
+                <Link
+                    to={"/adotta"}
+                    className="indietro">
+                    <FaArrowLeft />
+                </Link>
+                <h2>{cat.name}</h2>
+                <div className="evidenza">
+                    <div className="immagine">
+                        {cat.image ?
+                            <img src={cat.image}
+                                alt="gatto"
+                                onError={(e) => {
+                                    e.target.src = "../img/default.png"; // Percorso della mia immagine di default
+                                    e.target.onerror = null; // Evita loop infiniti se anche la default manca
+                                }} />
+                            :
+                            <img src="../img/default.png" alt="gatto" />
+                        }
+                    </div>
+                    <div className="testo">
+                        {cat.sex && (
+                            <span> <strong>Sesso: </strong>
+                                {cat.sex == "M" ?
+                                    <>
+                                        <IoMdMale className="icona maschio" />
+                                        Maschio
+                                    </>
+                                    :
+                                    <>
+                                        <IoMdFemale className="icona femmina" />
+                                        Femmina
+                                    </>
+                                }</span>
+
+                        )}
+                        {cat.date_of_birth && (
+                            <span><strong>Data di nascita: </strong>{data}</span>
+                        )}
+                        {cat.coat && (
+                            <span><strong>Manto: </strong>{cat.coat}</span>
+                        )}
+                        {cat.info && (
+                            <span><strong>Informazioni: </strong>{cat.info}</span>
+                        )}
+                    </div>
+                </div>
+            </div>
+        </>
+    )
+}
