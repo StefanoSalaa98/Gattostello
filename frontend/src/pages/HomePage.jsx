@@ -46,7 +46,7 @@ export default function HomePage() {
                     <div className="testo">
                         <h3>Cosa facciamo e perché</h3>
                         <p>Siamo presenti sul territorio per tutelare i gatti in situazione di bisogno, ovunque si trovino: in struttura, in colonia o in stallo, offriamo loro cibo, protezione e accoglienza. Ci battiamo ogni giorno per la loro tutela e per educare a un'adozione consapevole, affinchè gatto e umano diventino buoni compagni di vita.</p>
-                        <Link to="/chi-siamo">
+                        <Link className="bottone" to="/chi-siamo">
                             Scopri di più
                         </Link>
                     </div>
@@ -70,7 +70,7 @@ export default function HomePage() {
                             è solo grazie al verbo "donare" di tante persone sensibili e generose e all'impegno dei volontari che continuiamo ad andare avanti!
                             La cura dei mici sono possibili solo grazie al vostro contributo. Ogni aiuto è veramente prezioso, grazie di cuore. Ci sono molti modi per sostenerci, vieni a scoprirli...
                         </p>
-                        <Link to="/sostienici">
+                        <Link className="bottone" to="/sostienici">
                             SOSTIENICI
                         </Link>
                     </div>
@@ -85,7 +85,7 @@ export default function HomePage() {
                     <div className="testo">
                         <h3>Unisciti a noi</h3>
                         <p>Il cuore della nostra associazione pulsa grazie al lavoro di soli volontari: per questo siamo sempre felici di accogliere nuove persone pronte a donare un po' del proprio tempo ai nostri ospiti. L'impegno quotidiano è concreto, preparare la pappa e curare l'igiene dei loro spazi, ma la vera magia sta nel mezzo: tra una pulizia e l'altra, c'è sempre spazio per lunghe sessioni di coccole, giochi spensierati e quegli sguardi profondi che valgono più di mille parole.</p>
-                        <Link to="/unisciti">
+                        <Link className="bottone" to="/unisciti">
                             Scopri di più
                         </Link>
                     </div>

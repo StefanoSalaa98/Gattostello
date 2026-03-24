@@ -241,6 +241,10 @@
             .testo {
                 width: 100%;
                 padding-right: 30px;
+
+                .bottone {
+                    width: 150px;
+                }
             }
 
             .immagine {
@@ -267,6 +271,10 @@
                 margin-bottom: 70px;
             }
         }
+    }
+
+    .bottone {
+        width: 150px;
     }
 }
 
