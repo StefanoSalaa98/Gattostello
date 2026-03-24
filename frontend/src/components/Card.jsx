@@ -4,8 +4,6 @@ import { IoMdFemale } from "react-icons/io";
 export default function Card(props) {
 
     const { image, name, sex } = props;
-    // const defaultImage = "/images/placeholder-micio.png";
-    // const [imgSrc, setImgSrc] = useState(gatto.fotoUrl || defaultImage);
 
     return (
         <>

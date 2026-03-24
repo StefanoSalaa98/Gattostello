@@ -24,7 +24,7 @@ header {
     }
 
     .testa {
-        margin-right: 50px;
+        margin-right: 30px;
         margin-bottom: 3px;
     }
 
@@ -65,7 +65,6 @@ header {
         display: flex;
         align-items: center;
         justify-content: flex-end;
-        gap: 20px;
         width: 25%;
 
         a {
@@ -96,5 +95,92 @@ header {
         color: white;
         font-weight: 500;
         font-size: 1.3em;
+    }
+}
+
+@media (max-width: 1250px) {
+
+    .header-container {
+
+        .logo {
+            width: 20%;
+
+            img {
+                width: 82%;
+            }
+        }
+
+        .pagine {
+            width: 60%;
+        }
+
+        .burger {
+            width: 20%;
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .header-container {
+
+        .logo {
+            width: 30%;
+
+            img {
+                height: 75px;
+            }
+        }
+
+        .pagine {
+            width: 50%;
+            visibility: hidden;
+
+        }
+
+        #offcanvasMenu {
+            width: 35%;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .header-container {
+
+        .logo {
+            width: 35%;
+        }
+
+        .pagine {
+            width: 35%;
+        }
+
+        .burger {
+            width: 30%;
+        }
+
+        #offcanvasMenu {
+            width: 50%;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .header-container {
+
+        .logo {
+            width: 45%;
+        }
+
+        .pagine {
+            width: 15%;
+        }
+
+        .burger {
+            width: 40%;
+        }
+
+        #offcanvasMenu {
+            width: 70%;
+        }
     }
 }
