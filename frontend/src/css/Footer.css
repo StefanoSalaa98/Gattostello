@@ -21,3 +21,15 @@ footer {
         }
     }
 }
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-wrap: wrap;
+        gap: 50px;
+    }
+
+    .footer-container>div {
+        width: 100%;
+    }
+
+}
