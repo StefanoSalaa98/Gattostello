@@ -131,3 +131,85 @@
 
     }
 }
+
+@media (max-width: 1024px) {
+    .chi-siamo-container {
+
+        .chi-siamo {
+            display: block;
+
+            .testo {
+                width: 100%;
+                padding-right: 0;
+                margin-bottom: 50px;
+            }
+
+            .immagine {
+                width: 80%;
+                margin: 0 auto;
+            }
+        }
+    }
+
+    .chi-siamo2-container {
+
+        .chi-siamo2 {
+            display: block;
+
+            .testo {
+                width: 100%;
+                padding-left: 0;
+            }
+
+            .immagine {
+                width: 80%;
+                margin: 0 auto;
+                margin-top: 50px;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .chi-siamo-container {
+
+        .chi-siamo {
+
+            .testo {
+                margin-bottom: 30px;
+            }
+
+            .immagine {
+                width: 90%;
+            }
+        }
+    }
+
+    .chi-siamo2-container {
+        padding-top: 30px;
+        margin-bottom: 70px;
+
+        .chi-siamo2 {
+
+            .immagine {
+                width: 90%;
+                margin-bottom: 30px;
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+
+    .chi-siamo-container,
+    .chi-siamo2-container,
+    .chi-siamo3-container {
+        width: 100%;
+    }
+
+    .chi-siamo3-container {
+        .chi-siamo3 .adotta a {
+            font-size: 1.2em;
+        }
+    }
+}
