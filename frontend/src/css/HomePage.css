@@ -21,7 +21,6 @@
     .totale {
         width: 400px;
         margin: 0 auto;
-        border-radius: 20% / 50%;
         display: flex;
         flex-direction: column;
         justify-content: space-around;

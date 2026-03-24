@@ -47,7 +47,6 @@ export default function Sostienici() {
                         <div>
                             <h2>Diventa Socio</h2>
                             <h5>Decidi che impronta lasciare</h5>
-                            {/* <RadioButton /> */}
                             <div className="radio-container">
                                 <label>
                                     <input
@@ -178,7 +177,7 @@ export default function Sostienici() {
                                 <Iban />
                             </li>
                             <li>
-                                Potete portare cibo, giochi, tiragraffi al nostro indirizzo: <br />
+                                Potete portare cibo, giochi, articoli per felini al nostro indirizzo: <br />
                                 Via A. Diaz 25, Alzate Brianza (CO)
                             </li>
                             <li>

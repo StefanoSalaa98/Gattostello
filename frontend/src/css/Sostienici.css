@@ -495,3 +495,241 @@
     transform: scale(1.1);
     transition: 0.2s;
 }
+
+/* Sezione responsive */
+
+@media (max-width: 1150px) {
+    .sostienici-container {
+        padding-top: 130px;
+    }
+
+}
+
+@media (max-width: 1024px) {
+    .sostienici-container {
+        margin-bottom: 30px;
+    }
+
+    .sostienici {
+        display: block;
+
+        .testo {
+            width: 100%;
+            padding-right: 0;
+        }
+
+        .immagine {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+    }
+
+    .tessera-container {
+
+        .tessera {
+            width: 90%;
+            display: block;
+
+            .testo {
+                width: 100%;
+                padding-left: 0;
+            }
+
+            .immagine {
+                width: 80%;
+                margin: 0 auto;
+            }
+        }
+    }
+
+    .distanza-container {
+        margin-top: 90px;
+        margin-bottom: 70px;
+    }
+
+    .distanza {
+        display: block;
+
+        .testo {
+            width: 100%;
+            padding-right: 0;
+        }
+
+        .immagine {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+    }
+
+    .cinque-x-mille-container {
+
+        .cinque-x-mille {
+            display: block;
+
+            .testo {
+                width: 100%;
+                padding-left: 0;
+            }
+
+            .immagine {
+                width: 80%;
+                margin: 0 auto;
+            }
+        }
+    }
+
+    .esselunga-container {
+        margin-bottom: 80px;
+    }
+
+    .esselunga {
+        display: block;
+
+        .testo {
+            width: 100%;
+            padding-right: 0;
+            margin-top: 50px;
+        }
+
+        .immagine {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+    }
+
+    .dona-container {
+        padding-bottom: 100px;
+
+        .dona {
+            display: block;
+
+            .testo {
+                width: 100%;
+                padding-left: 0;
+            }
+
+            .immagine {
+                width: 80%;
+                margin: 0 auto;
+            }
+        }
+    }
+
+}
+
+@media (max-width: 768px) {
+    .sostienici {
+
+        .immagine {
+            width: 90%;
+        }
+
+    }
+
+    .radio-container {
+        flex-wrap: wrap;
+
+        label {
+            width: 50%;
+            margin-bottom: 20px;
+        }
+    }
+
+    .distanza-container {
+        margin-top: 70px;
+        margin-bottom: 50px;
+    }
+
+    .distanza {
+
+        .immagine {
+            width: 90%;
+        }
+    }
+
+    .cinque-x-mille-container {
+
+        .cinque-x-mille {
+
+            .immagine {
+                width: 90%;
+            }
+        }
+    }
+
+
+    .esselunga .immagine {
+        width: 90%;
+
+        img {
+            padding: 0;
+            border-radius: 30px;
+        }
+    }
+
+
+
+    .dona-container {
+        .dona {
+            .immagine {
+                width: 90%;
+            }
+        }
+
+    }
+}
+
+@media (max-width: 480px) {
+    .sostienici {
+
+        .immagine {
+            width: 100%;
+        }
+
+    }
+
+    .distanza-container {
+        margin-top: 50px;
+        margin-bottom: 30px;
+    }
+
+    .distanza {
+
+        .immagine {
+            width: 100%;
+        }
+
+    }
+
+    .cinque-x-mille-container {
+
+        .cinque-x-mille {
+
+            .immagine {
+                width: 100%;
+            }
+        }
+    }
+
+    .esselunga-container {
+        .esselunga {
+            .immagine {
+                width: 100%;
+            }
+        }
+    }
+
+
+
+    .dona-container {
+        .dona {
+            .immagine {
+                width: 100%;
+            }
+        }
+
+    }
+}
