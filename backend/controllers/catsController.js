@@ -34,7 +34,7 @@ export function index(req, res) {
 export function ospiti(req, res) {
 
     const page = parseInt(req.query.page) || 1;
-    const limit = 8;
+    const limit = 12;
 
     // Query per contare il totale dei gatti
     const countSql = "SELECT COUNT(*) as total FROM gatti WHERE adottato = 0";
@@ -80,7 +80,7 @@ export function ospiti(req, res) {
 // lista gatti già adottati
 export function exOspiti(req, res) {
     const page = parseInt(req.query.page) || 1;
-    const limit = 8;
+    const limit = 12;
 
     // Query per contare il totale dei gatti
     const countSql = "SELECT COUNT(*) as total FROM gatti WHERE adottato = 1";
