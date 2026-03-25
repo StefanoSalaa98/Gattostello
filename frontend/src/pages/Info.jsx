@@ -1,6 +1,7 @@
 import axios from "axios"
-// import di router-dom per link
-import { Link, useParams, useNavigate } from "react-router-dom";
+
+import { Link, useParams } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 // import state e effect
 import { useState, useEffect } from "react";
@@ -17,6 +18,10 @@ import "../css/Info.css";
 export default function Info() {
 
     const { slug } = useParams();
+    // recupero la pagina in cui si trovava il gatto
+    const location = useLocation();
+    const params = new URLSearchParams(location.search);
+    const page = params.get("page") || 1;
 
     // estrapolo dal context la variabile di stato
     const { setIsLoading } = useGlobal();
@@ -72,7 +77,7 @@ export default function Info() {
         <>
             <div className="info">
                 <Link
-                    to={"/adotta"}
+                    to={`/adotta?page=${page}`}
                     className="indietro">
                     <FaArrowLeft />
                 </Link>

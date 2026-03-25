@@ -1,6 +1,7 @@
 import axios from "axios"
 import { useState, useEffect } from "react"
 import { Link } from "react-router-dom";
+import { useSearchParams } from "react-router-dom";
 // importo hook per il contesto
 import { useGlobal } from "../contexts/GlobalContext";
 import Card from "../components/Card";
@@ -14,7 +15,8 @@ export default function AdottaUnGatto() {
     const [cats, setCats] = useState([]);
 
     // variabile di stato della pagina corrente
-    const [page, setPage] = useState(1);
+    const [searchParams, setSearchParams] = useSearchParams();
+    const page = parseInt(searchParams.get("page")) || 1;
 
     // variabile di stato delle pagine totali
     const [totalPages, setTotalPages] = useState();
@@ -41,7 +43,7 @@ export default function AdottaUnGatto() {
             <div className="gatto-container fade-in" key={page}>
                 {cats.map((cat) => (
                     <Link
-                        to={`/adotta/${cat.slug}`}
+                        to={`/adotta/${cat.slug}?page=${page}`}
                         key={cat.id}
                         className="gatto"
                     >
@@ -59,7 +61,7 @@ export default function AdottaUnGatto() {
                 <button
                     className="prev-next-btn"
                     disabled={page === 1}
-                    onClick={() => setPage(prev => prev - 1)}
+                    onClick={() => setSearchParams({ page: page - 1 })}
                 >
                     <span className="arrow">«</span> Precedente
                 </button>
@@ -69,7 +71,7 @@ export default function AdottaUnGatto() {
                 <button
                     className="prev-next-btn"
                     disabled={page === totalPages}
-                    onClick={() => setPage(prev => prev + 1)}
+                    onClick={() => setSearchParams({ page: page + 1 })}
                 >
                     Successiva <span className="arrow">»</span>
                 </button>
