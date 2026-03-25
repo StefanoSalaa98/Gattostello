@@ -56,3 +56,31 @@
 .fullscreen-card img:hover {
     cursor: pointer;
 }
+
+@media (max-width: 1024px) {
+
+    .news-container {
+        .immagine {
+            width: 48%;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+
+    .news-container {
+        .immagine {
+            width: 70%;
+            margin: 0 auto;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+
+    .news-container {
+        .immagine {
+            width: 90%;
+        }
+    }
+}
