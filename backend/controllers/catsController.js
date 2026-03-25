@@ -5,7 +5,7 @@ import connection from "../data/db.js";
 export function index(req, res) {
 
     const page = parseInt(req.query.page) || 1;
-    const limit = 8;
+    const limit = 12;
     console.log("sei nella nuova index limitata");
 
     const offset = (page - 1) * limit;
@@ -17,7 +17,7 @@ export function index(req, res) {
     OFFSET ?
     `;
 
-    connection.query(sql, (err, results) => {
+    connection.query(sql, [limit, offset], (err, results) => {
         if (err) return res.status(500).json({ error: "Database error" });
 
         results.map((x) => {
@@ -161,5 +161,90 @@ export function totAdottati(req, res) {
         if (err) return res.status(500).json({ error: "Database error" });
 
         res.json(results[0]);
+    });
+}
+
+// STORE – crea nuova entità gatto
+export function store(req, res) {
+    const {
+        slug,
+        name,
+        sex,
+        date_of_birth = null,
+        coat = null,
+        image = null,
+        info = null,
+        adottato = 0,
+        prenotato = 0
+    } = req.body;
+
+    const sql = `
+        INSERT INTO gatti
+        (slug, name, sex, date_of_birth, coat, image, info, adottato, prenotato)
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+    `;
+
+    connection.query(
+        sql,
+        [slug, name, sex, date_of_birth, coat, image, info, adottato, prenotato],
+        (err, result) => {
+            if (err) return res.status(500).json({ error: "Database error" });
+
+            res.status(201).json({
+                message: "Gatto creato",
+                id: result.insertId
+            });
+        }
+    );
+}
+
+// UPDATE – modifica gatto
+export function update(req, res) {
+
+    const { slug } = req.params;
+
+    // creo l'array delle chiavi e dei valori che ho ricevuto
+    const chiavi = [];
+    const valori = [];
+
+    // per ogni chiave presente carico chiavi e valori negli array corrispondenti
+    for (let key in req.body) {
+        chiavi.push(`${key} = ?`);
+        valori.push(req.body[key]);
+    }
+
+    if (chiavi.length === 0) {
+        return res.status(400).json({ error: "Nessun dato da aggiornare" });
+    }
+
+    const sql = `
+        UPDATE gatti
+        SET ${chiavi.join(", ")}
+        WHERE slug = ?
+    `;
+
+    valori.push(slug);
+
+    connection.query(sql, valori, (err, result) => {
+        if (err) return res.status(500).json({ error: "Database error" });
+
+        res.json({ message: "Gatto aggiornato" });
+    });
+}
+
+// DELETE – elimina gatto 
+export function destroy(req, res) {
+    const { slug } = req.params;
+
+    const sql = `DELETE FROM gatti WHERE slug = ?`;
+
+    connection.query(sql, [slug], (err, result) => {
+        if (err) return res.status(500).json({ error: "Database error" });
+
+        if (result.affectedRows === 0) {
+            return res.status(404).json({ error: "Gatto non trovato" });
+        }
+
+        res.json({ message: "Gatto eliminato" });
     });
 }

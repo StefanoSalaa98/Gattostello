@@ -14,21 +14,9 @@ router.get('/ospiti/', catsController.ospiti);
 router.get('/exOspiti', catsController.exOspiti);
 router.get('/ospiti/:slug', catsController.show);
 router.get('/exOspiti/totali', catsController.totAdottati);
-
-
-
-// // Rotta che restituisce la media voto delle recensioni di ciascun film
-// // Metto questa rotta prima della rotta :id per evitare che '/rating' venga interpretato come un ID
-// router.get('/rating', moviesController.ratingReview);
-
-// // Rotta /show/:id che restituisce un singolo film
-// router.get('/:id', moviesController.show);
-
-// // Rotta per l'IA che interpreta richiesta utente
-// router.post('/chat', moviesController.chatController);
-
-// // Rotta che permette di inserire una nuova recensione
-// router.post('/:id/reviews', moviesController.storeReview);
+router.post("/", catsController.store);
+router.put("/:slug", catsController.update);
+router.delete("/:slug", catsController.destroy);
 
 // // Rotta che permette di inserire un nuovo film
 // router.post('/', upload.single('image'), moviesController.storeMovie);
