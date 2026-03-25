@@ -262,6 +262,10 @@
 
             .testo {
                 width: 100%;
+
+                .bottone {
+                    width: 150px;
+                }
             }
 
             .immagine {
