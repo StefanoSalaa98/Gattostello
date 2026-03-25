@@ -183,3 +183,41 @@ body {
   scrollbar-width: thin;
   scrollbar-color: var(--second-color) var(--main-color);
 }
+
+@media (max-width: 1024px) {
+
+  /* Card.jsx */
+  .gatto-container {
+    margin-bottom: 40px;
+
+    .gatto {
+      width: calc((100% - 80px) / 3);
+    }
+  }
+}
+
+@media (max-width: 768px) {
+
+  /* Card.jsx */
+  .gatto-container {
+
+    .gatto {
+      width: calc((100% - 80px) / 2);
+    }
+  }
+}
+
+@media (max-width: 480px) {
+
+  /* Card.jsx */
+  .gatto-container {
+    display: block;
+
+    .gatto {
+      display: block;
+      width: 90%;
+      margin: 50px auto;
+    }
+  }
+
+}
