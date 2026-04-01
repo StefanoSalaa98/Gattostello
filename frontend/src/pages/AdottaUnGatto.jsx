@@ -25,10 +25,11 @@ export default function AdottaUnGatto() {
     const fecthCats = () => {
         // appena entro nella funzione per la chiamata axios, attivo il loading 
         setIsLoading(true);
-        axios.get(`http://localhost:3000/api/cats/ospiti/?page=${page}`)
-            .then(response => {
-                setCats(response.data.data);
-                setTotalPages(response.data.pagination.totalPages);
+        setCats([]); // svuoto la lista dei gatti presenti (utile ogni volta che cambio pagina)
+        axios.get(`http://laravel-gattostello.test/api/cats?adottato=0&page=${page}`)
+            .then(({ data }) => {
+                setCats(data.data);
+                setTotalPages(data.total_pages);
             })
             .catch(error => { console.log(error) })
             // terminata la chiamata axios, disattivo il loading
@@ -41,7 +42,7 @@ export default function AdottaUnGatto() {
     return (
         <>
             <div className="gatto-container fade-in" key={page}>
-                {cats.map((cat) => (
+                {cats?.map((cat) => (
                     <Link
                         to={`/adotta/${cat.slug}?page=${page}`}
                         key={cat.id}
