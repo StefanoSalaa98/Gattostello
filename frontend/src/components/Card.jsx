@@ -9,7 +9,7 @@ export default function Card(props) {
         <>
             <div className="immagine">
                 {image ?
-                    <img src={image}
+                    <img src={`http://laravel-gattostello.test/storage/${image}`}
                         alt="gatto"
                         onError={(e) => {
                             e.target.src = "img/default.png"; // Percorso della mia immagine di default
