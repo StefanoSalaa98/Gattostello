@@ -28,6 +28,7 @@ function App() {
         {/* Questo componente ricarica la nuova pagina dall'inizio */}
         <ScrollToTop />
         <Routes>
+
           <Route element={<MyLayout />}>
             <Route index element={<HomePage />}></Route>
             <Route path="/chi-siamo" element={<ChiSiamo />}></Route>
