@@ -8,6 +8,9 @@ import "../css/HomePage.css"
 
 export default function HomePage() {
 
+    // recupero l'indirizzo protetto che espone la API
+    const API_URL = import.meta.env.VITE_API_URL;
+
     const color = " rgb(95 201 95)";
 
     // variabile di stato del totale dei gatti adottati
@@ -15,7 +18,7 @@ export default function HomePage() {
 
     // chiamata axios per ricevere il totale dei gatti adottati
     const fecthTotale = () => {
-        axios.get('http://laravel-gattostello.test/api/cats/total-ex')
+        axios.get(`${API_URL}/total-ex`)
             .then(({ data }) => {
                 setTotale(data.data)
             })

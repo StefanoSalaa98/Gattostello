@@ -7,6 +7,9 @@ import Card from "../components/Card";
 
 export default function ExOspiti() {
 
+    // recupero l'indirizzo protetto che espone la API
+    const API_URL = import.meta.env.VITE_API_URL;
+
     // estrapolo dal context la variabile di stato
     const { setIsLoading } = useGlobal();
 
@@ -25,7 +28,7 @@ export default function ExOspiti() {
         // appena entro nella funzione per la chiamata axios, attivo il loading 
         setIsLoading(true);
         setCats([]);
-        axios.get(`http://laravel-gattostello.test/api/cats?adottato=1&page=${page}`)
+        axios.get(`${API_URL}?adottato=1&page=${page}`)
             .then(({ data }) => {
                 setCats(data.data);
                 setTotalPages(data.total_pages);

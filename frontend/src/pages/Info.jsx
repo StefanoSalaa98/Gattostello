@@ -17,7 +17,15 @@ import "../css/Info.css";
 
 export default function Info() {
 
+    // recupero l'indirizzo protetto che espone la API
+    const API_URL = import.meta.env.VITE_API_URL;
+
+    // recupero l'indirizzo protetto dove prendere le immagini
+    const IMAGE_URL = import.meta.env.VITE_IMAGE_URL;
+
+    // recupero lo slug del gatto selezionato
     const { slug } = useParams();
+
     // recupero la pagina in cui si trovava il gatto
     const location = useLocation();
     const params = new URLSearchParams(location.search);
@@ -36,7 +44,7 @@ export default function Info() {
     const fecthCat = () => {
         // appena entro nella funzione per la chiamata axios, attivo il loading 
         setIsLoading(true);
-        axios.get('http://laravel-gattostello.test/api/cats/' + slug)
+        axios.get(`${API_URL}/${slug}`)
             .then(response => {
                 console.log(response.data.data);
                 setCat(response.data.data)
@@ -86,7 +94,7 @@ export default function Info() {
                 <div className="evidenza">
                     <div className="immagine">
                         {cat.image ?
-                            <img src={`http://laravel-gattostello.test/storage/${cat.image}`}
+                            <img src={`${IMAGE_URL}/${cat.image}`}
                                 alt="gatto"
                                 onError={(e) => {
                                     e.target.src = "../img/default.png"; // Percorso della mia immagine di default

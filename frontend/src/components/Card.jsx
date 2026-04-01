@@ -3,13 +3,16 @@ import { IoMdFemale } from "react-icons/io";
 
 export default function Card(props) {
 
+    // recupero l'indirizzo protetto dove prendere le immagini
+    const IMAGE_URL = import.meta.env.VITE_IMAGE_URL;
+
     const { image, name, sex } = props;
 
     return (
         <>
             <div className="immagine">
                 {image ?
-                    <img src={`http://laravel-gattostello.test/storage/${image}`}
+                    <img src={`${IMAGE_URL}/${image}`}
                         alt="gatto"
                         onError={(e) => {
                             e.target.src = "img/default.png"; // Percorso della mia immagine di default
