@@ -31,10 +31,10 @@ export default function HomePage() {
 
     return (
         <>
-            <div className="home-container">
-                <h1 className=" animate__animated animate__backInLeft animate__slow">BENVENUTI SUL SITO DEL GATTOSTELLO</h1>
-                <h2 className=" animate__animated animate__backInRight animate__slow">Dove ogni gatto trova una zampa tesa e un posto sicuro</h2>
-                <div className="totale animate__animated animate__backInUp animate__slow">
+            <div className="home-container animate__animated animate__fadeIn animate__slower">
+                <h1>BENVENUTI SUL SITO DEL GATTOSTELLO</h1>
+                <h2>Dove ogni gatto trova una zampa tesa e un posto sicuro</h2>
+                <div className="totale">
                     <span>Abbiamo aiutato: </span>
                     <span className="numero">{totale}</span>
                     <span> mici a trovare casa</span>
