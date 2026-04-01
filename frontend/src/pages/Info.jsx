@@ -36,9 +36,10 @@ export default function Info() {
     const fecthCat = () => {
         // appena entro nella funzione per la chiamata axios, attivo il loading 
         setIsLoading(true);
-        axios.get('http://localhost:3000/api/cats/ospiti/' + slug)
+        axios.get('http://laravel-gattostello.test/api/cats/' + slug)
             .then(response => {
-                setCat(response.data)
+                console.log(response.data.data);
+                setCat(response.data.data)
             })
             .catch(error => { console.log(error) })
             // terminata la chiamata axios, disattivo il loading
@@ -85,7 +86,7 @@ export default function Info() {
                 <div className="evidenza">
                     <div className="immagine">
                         {cat.image ?
-                            <img src={cat.image}
+                            <img src={`http://laravel-gattostello.test/storage/${cat.image}`}
                                 alt="gatto"
                                 onError={(e) => {
                                     e.target.src = "../img/default.png"; // Percorso della mia immagine di default
