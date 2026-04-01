@@ -15,9 +15,9 @@ export default function HomePage() {
 
     // chiamata axios per ricevere il totale dei gatti adottati
     const fecthTotale = () => {
-        axios.get('http://localhost:3000/api/cats/exospiti/totali')
-            .then(response => {
-                setTotale(response.data.totale_adottati)
+        axios.get('http://laravel-gattostello.test/api/cats/total-ex')
+            .then(({ data }) => {
+                setTotale(data.data)
             })
             .catch(error => { console.log(error) })
         console.log(totale);
