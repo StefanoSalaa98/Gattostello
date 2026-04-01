@@ -5,6 +5,7 @@ import { useSearchParams } from "react-router-dom";
 import { useGlobal } from "../contexts/GlobalContext";
 import Card from "../components/Card";
 import SkeletonCard from "../components/SkeletonCard";
+import Pagination from "../components/Pagination";
 
 export default function ExOspiti() {
 
@@ -60,27 +61,11 @@ export default function ExOspiti() {
                     ))}
             </div>
 
-            {/* Controlli di Paginazione */}
-            <div className="pagination-container">
-                <button
-                    className="prev-next-btn"
-                    disabled={page === 1}
-                    onClick={() => setSearchParams({ page: page - 1 })}
-                >
-                    <span className="arrow">«</span> Precedente
-                </button>
-
-                <span className="page-numbers"> Pagina {page} di {totalPages} </span>
-
-                <button
-                    className="prev-next-btn"
-                    disabled={page === totalPages}
-                    onClick={() => setSearchParams({ page: page + 1 })}
-                >
-                    Successiva <span className="arrow">»</span>
-                </button>
-            </div>
-
+            <Pagination
+                page={page}
+                totalPages={totalPages}
+                setSearchParams={setSearchParams}
+            />
         </>
     )
 }
