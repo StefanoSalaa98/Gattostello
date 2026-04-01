@@ -1,5 +1,6 @@
 import axios from "axios"
 import { useState, useEffect } from "react"
+import { useSearchParams } from "react-router-dom";
 // importo hook per il contesto
 import { useGlobal } from "../contexts/GlobalContext";
 import Card from "../components/Card";
@@ -13,7 +14,8 @@ export default function ExOspiti() {
     const [cats, setCats] = useState([]);
 
     // variabile di stato della pagina corrente
-    const [page, setPage] = useState(1);
+    const [searchParams, setSearchParams] = useSearchParams();
+    const page = parseInt(searchParams.get("page")) || 1;
 
     // variabile di stato delle pagine totali
     const [totalPages, setTotalPages] = useState();
@@ -22,10 +24,11 @@ export default function ExOspiti() {
     const fecthCats = () => {
         // appena entro nella funzione per la chiamata axios, attivo il loading 
         setIsLoading(true);
-        axios.get('http://localhost:3000/api/cats/exOspiti')
-            .then(response => {
-                setCats(response.data.data);
-                setTotalPages(response.data.pagination.totalPages);
+        setCats([]);
+        axios.get(`http://laravel-gattostello.test/api/cats?adottato=1&page=${page}`)
+            .then(({ data }) => {
+                setCats(data.data);
+                setTotalPages(data.total_pages);
             })
             .catch(error => { console.log(error) })
             // terminata la chiamata axios, disattivo il loading
@@ -33,7 +36,7 @@ export default function ExOspiti() {
     }
 
     // faccio partire la chiamata solo al primo montaggio del componente
-    useEffect(fecthCats, []);
+    useEffect(fecthCats, [page]);
 
     return (
         <>
@@ -55,7 +58,7 @@ export default function ExOspiti() {
                 <button
                     className="prev-next-btn"
                     disabled={page === 1}
-                    onClick={() => setPage(prev => prev - 1)}
+                    onClick={() => setSearchParams({ page: page - 1 })}
                 >
                     <span className="arrow">«</span> Precedente
                 </button>
@@ -65,7 +68,7 @@ export default function ExOspiti() {
                 <button
                     className="prev-next-btn"
                     disabled={page === totalPages}
-                    onClick={() => setPage(prev => prev + 1)}
+                    onClick={() => setSearchParams({ page: page + 1 })}
                 >
                     Successiva <span className="arrow">»</span>
                 </button>
