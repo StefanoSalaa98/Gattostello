@@ -6,7 +6,6 @@ export function index(req, res) {
 
     const page = parseInt(req.query.page) || 1;
     const limit = 12;
-    console.log("sei nella nuova index limitata");
 
     const offset = (page - 1) * limit;
 
@@ -166,17 +165,19 @@ export function totAdottati(req, res) {
 
 // STORE – crea nuova entità gatto
 export function store(req, res) {
+
     const {
         slug,
         name,
         sex,
         date_of_birth = null,
         coat = null,
-        image = null,
         info = null,
         adottato = 0,
         prenotato = 0
     } = req.body;
+
+    const image = req.file ? req.file.filename : null;
 
     const sql = `
         INSERT INTO gatti
