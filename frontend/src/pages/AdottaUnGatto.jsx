@@ -5,6 +5,7 @@ import { useSearchParams } from "react-router-dom";
 // importo hook per il contesto
 import { useGlobal } from "../contexts/GlobalContext";
 import Card from "../components/Card";
+import SkeletonCard from "../components/SkeletonCard";
 
 export default function AdottaUnGatto() {
 
@@ -12,7 +13,7 @@ export default function AdottaUnGatto() {
     const API_URL = import.meta.env.VITE_API_URL;
 
     // estrapolo dal context la variabile di stato
-    const { setIsLoading } = useGlobal();
+    const { isLoading, setIsLoading } = useGlobal();
 
     // variabile di stato dei gatti
     const [cats, setCats] = useState([]);
@@ -25,10 +26,9 @@ export default function AdottaUnGatto() {
     const [totalPages, setTotalPages] = useState();
 
     // chiamata axios per ricevere la lista dei gatti
-    const fecthCats = () => {
+    const fetchCats = () => {
         // appena entro nella funzione per la chiamata axios, attivo il loading 
         setIsLoading(true);
-        setCats([]); // svuoto la lista dei gatti presenti (utile ogni volta che cambio pagina)
         axios.get(`${API_URL}?adottato=0&page=${page}`)
             .then(({ data }) => {
                 setCats(data.data);
@@ -40,7 +40,7 @@ export default function AdottaUnGatto() {
     }
 
     // faccio partire la chiamata solo al primo montaggio del componente
-    useEffect(fecthCats, [page]);
+    useEffect(fetchCats, [page]);
 
     return (
         <>
@@ -58,8 +58,11 @@ export default function AdottaUnGatto() {
                         />
                     </Link>
                 ))}
+                {isLoading &&
+                    Array.from({ length: 8 }).map((_, index) => (
+                        <SkeletonCard key={index} />
+                    ))}
             </div>
-
             {/* Controlli di Paginazione */}
             <div className="pagination-container">
                 <button

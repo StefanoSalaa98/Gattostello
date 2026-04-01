@@ -4,6 +4,7 @@ import { useSearchParams } from "react-router-dom";
 // importo hook per il contesto
 import { useGlobal } from "../contexts/GlobalContext";
 import Card from "../components/Card";
+import SkeletonCard from "../components/SkeletonCard";
 
 export default function ExOspiti() {
 
@@ -11,7 +12,7 @@ export default function ExOspiti() {
     const API_URL = import.meta.env.VITE_API_URL;
 
     // estrapolo dal context la variabile di stato
-    const { setIsLoading } = useGlobal();
+    const { isLoading, setIsLoading } = useGlobal();
 
     // variabile di stato dei gatti
     const [cats, setCats] = useState([]);
@@ -27,7 +28,6 @@ export default function ExOspiti() {
     const fecthCats = () => {
         // appena entro nella funzione per la chiamata axios, attivo il loading 
         setIsLoading(true);
-        setCats([]);
         axios.get(`${API_URL}?adottato=1&page=${page}`)
             .then(({ data }) => {
                 setCats(data.data);
@@ -54,6 +54,10 @@ export default function ExOspiti() {
                         />
                     </div>
                 ))}
+                {isLoading &&
+                    Array.from({ length: 8 }).map((_, index) => (
+                        <SkeletonCard key={index} />
+                    ))}
             </div>
 
             {/* Controlli di Paginazione */}
