@@ -162,7 +162,7 @@ body {
 /* scrollbar personalizzata per Chrome / Edge / Safari */
 
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 18px;
 }
 
 ::-webkit-scrollbar-track {
@@ -180,7 +180,7 @@ body {
 
 /* Firefox */
 * {
-  scrollbar-width: thin;
+  scrollbar-width: auto;
   scrollbar-color: var(--second-color) var(--main-color);
 }
 
