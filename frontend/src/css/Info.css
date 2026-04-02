@@ -51,3 +51,44 @@
         }
     }
 }
+
+@media (max-width: 1024px) {
+    .info {
+        width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .info {
+
+        .evidenza {
+            display: block;
+            margin: 0 auto;
+
+            .immagine {
+                width: 90%;
+                margin: 0 auto;
+                margin-bottom: 30px;
+
+                img {
+                    border-radius: 20px;
+                }
+            }
+
+            .testo {
+                width: 90%;
+
+                span {
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .info {
+        width: 100%;
+    }
+}
