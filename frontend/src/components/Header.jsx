@@ -19,7 +19,7 @@ export default function Header() {
                             <NavLink className="link" to="/chi-siamo">Chi Siamo</NavLink>
                             <NavLink className="link" to="/sostienici">Sostienici</NavLink>
                             <NavLink className="link" to="/unisciti">Unisciti</NavLink>
-                            <NavLink className="link" to="/novita">Novità</NavLink>
+                            <NavLink className="link" to="/eventi">Eventi</NavLink>
 
                             <NavLink className="link" to="/adotta">
                                 <div className="doppia-riga">

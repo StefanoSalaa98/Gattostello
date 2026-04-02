@@ -46,7 +46,7 @@ export default function BurgerMenu() {
                             <NavLink className="nav-link" to="/unisciti">Unisciti</NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink className="nav-link" to="/novita">Novità</NavLink>
+                            <NavLink className="nav-link" to="/eventi">Eventi</NavLink>
                         </li>
                         <li className="nav-item">
                             <NavLink className="nav-link" to="/adotta">Adotta un gatto</NavLink>
