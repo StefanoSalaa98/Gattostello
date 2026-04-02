@@ -42,17 +42,36 @@ header {
     }
 
     .link {
+        position: relative;
         color: rgb(255, 255, 255);
         font-weight: 500;
         text-decoration: inherit;
     }
 
-    .link:hover {
-        color: #080b4e;
+    .link:after {
+        /* necessario per after */
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        width: 0;
+        height: 2px;
+        background-color: white;
+        transition: width 0.5s ease;
+        transform: translateX(-50%);
+    }
+
+    .link:hover::after {
+        width: 100%;
     }
 
     .link.active {
         color: rgb(5, 5, 17);
+    }
+
+    .link.active::after {
+        background-color: rgb(5, 5, 17);
+        width: 100%;
     }
 
     .doppia-riga {

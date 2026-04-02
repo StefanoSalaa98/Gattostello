@@ -33,26 +33,26 @@ export default function BurgerMenu() {
 
                 <div className="offcanvas-body menu-laterale d-flex flex-column">
                     <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
-                        <li className="nav-item">
-                            <NavLink className="nav-link" to="/">Home Page</NavLink>
+                        <li className="nav-item mb-3">
+                            <NavLink className="link" to="/">Home Page</NavLink>
                         </li>
-                        <li className="nav-item">
-                            <NavLink className="nav-link" to="/chi-siamo">Chi Siamo</NavLink>
+                        <li className="nav-item mb-3">
+                            <NavLink className="link" to="/chi-siamo">Chi Siamo</NavLink>
                         </li>
-                        <li className="nav-item">
-                            <NavLink className="nav-link" to="/sostienici">Sostienici</NavLink>
+                        <li className="nav-item mb-3">
+                            <NavLink className="link" to="/sostienici">Sostienici</NavLink>
                         </li>
-                        <li className="nav-item">
-                            <NavLink className="nav-link" to="/unisciti">Unisciti</NavLink>
+                        <li className="nav-item mb-3">
+                            <NavLink className="link" to="/unisciti">Unisciti</NavLink>
                         </li>
-                        <li className="nav-item">
-                            <NavLink className="nav-link" to="/eventi">Eventi</NavLink>
+                        <li className="nav-item mb-3">
+                            <NavLink className="link" to="/eventi">Eventi</NavLink>
                         </li>
-                        <li className="nav-item">
-                            <NavLink className="nav-link" to="/adotta">Adotta un gatto</NavLink>
+                        <li className="nav-item mb-3">
+                            <NavLink className="link" to="/adotta">Adotta un gatto</NavLink>
                         </li>
-                        <li className="nav-item">
-                            <NavLink className="nav-link" to="/ex-ospiti">I nostri ex ospiti</NavLink>
+                        <li className="nav-item mb-3">
+                            <NavLink className="link" to="/ex-ospiti">I nostri ex ospiti</NavLink>
                         </li>
                         <li className="nav-item social mt-auto">
                             <a className="nav-link icona"
