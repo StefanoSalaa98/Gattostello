@@ -10,7 +10,7 @@ import Unisciti from './pages/Unisciti'
 import AdottaUnGatto from './pages/AdottaUnGatto';
 import ExOspiti from './pages/ExOspiti';
 import Info from './pages/Info';
-import Novita from './pages/Novita';
+import Eventi from './pages/Eventi';
 import Sostienici from './pages/Sostienici'
 import ScrollToTop from './components/ScrollToTop';
 import NotFoundPage from './pages/NotFondPage';
@@ -39,7 +39,7 @@ function App() {
             </Route>
             <Route path="/ex-ospiti" element={<ExOspiti />}></Route>
             <Route path="/unisciti" element={<Unisciti />}></Route>
-            <Route path="/novita" element={<Novita />}></Route>
+            <Route path="/eventi" element={<Eventi />}></Route>
             <Route path="*" element={<NotFoundPage />} />
           </Route>
         </Routes>

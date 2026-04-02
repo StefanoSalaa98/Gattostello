@@ -1,0 +1,91 @@
+.carousel-container {
+    display: flex;
+    align-items: flex-start;
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 120px;
+    margin-bottom: 100px;
+
+    .testo {
+        width: 50%;
+        padding-right: 20px;
+        font-size: 1.1em;
+
+        .icona {
+            color: black;
+            font-size: 2em;
+            margin-left: 50px;
+        }
+    }
+
+    .immagine {
+        width: 50%;
+        aspect-ratio: 1;
+    }
+}
+
+.zoom-img {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    animation: slowZoom 10s linear forwards;
+}
+
+@keyframes slowZoom {
+    from {
+        transform: scale(1);
+        opacity: 0.75;
+    }
+
+    to {
+        transform: scale(1.15);
+        opacity: 1;
+    }
+}
+
+@media (max-width: 1024px) {
+
+    .carousel-container {
+        display: block;
+
+        .testo {
+            width: 80%;
+            margin: 0 auto;
+            padding-right: 0;
+            margin-bottom: 50px;
+        }
+
+        .immagine {
+            margin: 0 auto;
+            width: 80%;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+
+    .carousel-container {
+
+        .testo {
+            width: 90%;
+        }
+
+        .immagine {
+            width: 90%;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+
+    .carousel-container {
+
+        .testo {
+            width: 100%;
+        }
+
+        .immagine {
+            width: 100%;
+        }
+    }
+}
