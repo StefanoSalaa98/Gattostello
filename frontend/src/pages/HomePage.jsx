@@ -1,6 +1,7 @@
 import axios from "axios"
 import { useState, useEffect } from "react"
 import { Link } from "react-router-dom";
+import { useGlobal } from "../contexts/GlobalContext";
 
 import OndaTop from "../components/OndaTop"
 import OndaBottom from "../components/OndaBottom"
@@ -11,6 +12,9 @@ export default function HomePage() {
     // recupero l'indirizzo protetto che espone la API
     const API_URL = import.meta.env.VITE_API_URL;
 
+    // estrapolo dal context la variabile di stato
+    const { isLoading, setIsLoading } = useGlobal();
+
     const color = " rgb(95 201 95)";
 
     // variabile di stato del totale dei gatti adottati
@@ -18,12 +22,15 @@ export default function HomePage() {
 
     // chiamata axios per ricevere il totale dei gatti adottati
     const fecthTotale = () => {
+        // appena entro nella funzione per la chiamata axios, attivo il loading 
+        setIsLoading(true);
         axios.get(`${API_URL}/total-ex`)
             .then(({ data }) => {
                 setTotale(data.data)
             })
             .catch(error => { console.log(error) })
-        console.log(totale);
+            // terminata la chiamata axios, disattivo il loading
+            .finally(() => { setIsLoading(false) })
     }
 
     // faccio partire la chiamata solo al primo montaggio del componente
@@ -31,14 +38,21 @@ export default function HomePage() {
 
     return (
         <>
-            <div className="home-container animate__animated animate__fadeIn animate__slower">
-                <h1>BENVENUTI SUL SITO DEL GATTOSTELLO</h1>
-                <h2>Dove ogni gatto trova una zampa tesa e un posto sicuro</h2>
-                <div className="totale">
-                    <span>Abbiamo aiutato: </span>
-                    <span className="numero">{totale}</span>
-                    <span> mici a trovare casa</span>
+            <div className="home-container">
+                <div className="animate__animated animate__fadeIn animate__slower">
+                    <h1>BENVENUTI SUL SITO DEL GATTOSTELLO</h1>
+                    <h2>Dove ogni gatto trova una zampa tesa e un posto sicuro</h2>
                 </div>
+                {!isLoading &&
+                    <div className="animate__animated animate__fadeIn animate__slower">
+                        <div className="totale">
+                            <span>Abbiamo aiutato: </span>
+                            <span className="numero">{totale}</span>
+                            <span> mici a trovare casa</span>
+                        </div>
+                    </div>
+                }
+
             </div>
 
             <OndaBottom colore={color} sfondo="bianco" />
