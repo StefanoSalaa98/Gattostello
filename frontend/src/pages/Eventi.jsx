@@ -36,16 +36,16 @@ export default function Eventi() {
                         appuntamenti imperdibili aperti a tutti.
                     </p>
                     <p>
-                        Volete iniziare la giornata con la zampa giusta? Le nostre colazioni con i mici sono il carburante perfetto: cornetti, caffè e tante coccole feline per risvegliare il buonumore! Se invece preferite il relax del tramonto, non potete mancare ai nostri apericena con i baffi, dove brindiamo alla salute dei nostri mici tra una fusa e l'altra.
+                        Volete iniziare la giornata con la zampa giusta? Le nostre <strong> colazioni con i mici </strong> sono il carburante perfetto: cornetti, caffè e tante coccole feline per risvegliare il buonumore! Se invece preferite il relax del tramonto, non potete mancare ai nostri <strong> apericena con i baffi</strong>, dove brindiamo alla salute dei nostri mici tra una fusa e l'altra.
                     </p>
                     <p>
-                        Ma non finisce qui, perché amiamo stare insieme anche davanti a tavole imbandite nelle cene di gruppo, l'occasione ideale per fare quattro chiacchiere, condividere e divertirsi in compagnia.
+                        Ma non finisce qui, perché amiamo stare insieme anche davanti a tavole imbandite nelle <strong> cene di gruppo</strong>, l'occasione ideale per fare quattro chiacchiere, condividere e divertirsi in compagnia.
                     </p>
                     <p>
-                        Ci troverete carichi di colori e creatività anche tra le bancarelle, perché partecipiamo ai mercatini della zona con tantissimi gadget fatti a mano che parlano di noi e del nostro impegno.
+                        Ci troverete carichi di colori e creatività anche tra le bancarelle, perché <strong> partecipiamo ai mercatini </strong> della zona con tantissimi gadget fatti a mano che parlano di noi e del nostro impegno.
                     </p>
                     <p>
-                        E siccome la pancia dei nostri amici è la nostra priorità, siamo sempre in prima linea con le raccolte pappe: un piccolo gesto di solidarietà che per i nostri mici di strada significa tutto.
+                        E siccome la pancia dei nostri amici è la nostra priorità, siamo sempre in prima linea con le <strong> raccolte pappe: </strong>un piccolo gesto di solidarietà che per i nostri mici di strada significa tutto.
                     </p>
                     <p>
                         Resta sempre aggiornato sui prossimi eventi seguendo i nostri canali social:
