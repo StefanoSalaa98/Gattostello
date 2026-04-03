@@ -90,7 +90,7 @@ header {
             margin-right: 10px;
             padding: 5px 7px 8px;
             border: solid 1px transparent;
-            --webkit-transition: 1.2s ease;
+            -webkit-transition: 1.2s ease;
             transition: 1.2s ease;
         }
 

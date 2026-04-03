@@ -17,7 +17,7 @@
             margin-left: 50px;
             padding: 3px 7px 10px 7px;
             border: solid 2px transparent;
-            --webkit-transition: 1.2s ease;
+            -webkit-transition: 1.2s ease;
             transition: 1.2s ease;
         }
 
