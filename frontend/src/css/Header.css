@@ -158,6 +158,10 @@ header {
 
         }
 
+        .burger {
+            width: 35%;
+        }
+
         #offcanvasMenu {
             width: 35%;
         }
@@ -172,11 +176,19 @@ header {
         }
 
         .pagine {
-            width: 35%;
+            width: 0;
         }
 
         .burger {
-            width: 30%;
+            width: 65%;
+
+            .testa {
+                margin-right: 15px;
+            }
+
+            .icona {
+                margin-right: 0;
+            }
         }
 
         #offcanvasMenu {
@@ -189,15 +201,16 @@ header {
     .header-container {
 
         .logo {
-            width: 45%;
+            width: 50%;
         }
 
-        .pagine {
-            width: 15%;
-        }
 
         .burger {
-            width: 40%;
+            width: 50%;
+
+            .testa {
+                margin-right: 5px;
+            }
         }
 
         #offcanvasMenu {
