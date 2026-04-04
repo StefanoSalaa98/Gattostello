@@ -55,15 +55,15 @@ export default function BurgerMenu() {
                             <NavLink className="link" to="/ex-ospiti">I nostri ex ospiti</NavLink>
                         </li>
                         <li className="nav-item social mt-auto">
-                            <a className="nav-link icona-burger"
+                            <a className="icona nav-link icona-burger"
                                 href="https://www.facebook.com/ilGattostello">
                                 <FaFacebookF />
                             </a>
-                            <a className="nav-link icona-burger"
+                            <a className="icona nav-link icona-burger"
                                 href="https://www.facebook.com/profile.php?id=100087577566537&locale=it_IT">
                                 <FaFacebookF />
                             </a>
-                            <a className="nav-link icona-burger"
+                            <a className="icona nav-link icona-burger"
                                 href="https://www.instagram.com/gattostello.odv/">
                                 <FaInstagram />
                             </a>
