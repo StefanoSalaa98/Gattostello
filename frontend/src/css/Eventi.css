@@ -1,15 +1,14 @@
 .carousel-container {
-    display: flex;
-    align-items: flex-start;
     width: 90%;
     margin: 0 auto;
     padding-top: 120px;
     margin-bottom: 100px;
 
     .testo {
-        width: 50%;
-        padding-right: 20px;
+        width: 90%;
+        margin: 0 auto;
         font-size: 1.1em;
+        margin-top: 40px;
 
         .icona {
             color: black;
@@ -27,9 +26,45 @@
         }
     }
 
-    .immagine {
-        width: 50%;
-        aspect-ratio: 1;
+    .carosello {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .icona {
+            margin: 0 auto;
+            font-size: 3em;
+            border: 1px solid black;
+            border-radius: 50%;
+            padding: 3px;
+            transition: transform 0.8s ease;
+        }
+
+        .icona:hover {
+            cursor: pointer;
+        }
+
+        .ruota-sx {
+            transform: rotate(-90deg);
+        }
+
+        .ruota-sx:hover {
+            transform: rotate(-90deg) scale(1.3);
+        }
+
+        .ruota-dx {
+            transform: rotate(90deg);
+        }
+
+        .ruota-dx:hover {
+            transform: rotate(90deg) scale(1.3);
+        }
+
+        .immagine {
+            width: 50%;
+            aspect-ratio: 1;
+            margin: 0 auto;
+        }
     }
 }
 
@@ -58,15 +93,18 @@
         display: block;
 
         .testo {
-            width: 80%;
-            margin: 0 auto;
-            padding-right: 0;
             margin-bottom: 50px;
         }
 
-        .immagine {
-            margin: 0 auto;
-            width: 80%;
+        .carosello {
+
+            .icona {
+                font-size: 2.5em;
+            }
+
+            .immagine {
+                width: 70%;
+            }
         }
     }
 }
@@ -74,13 +112,17 @@
 @media (max-width: 768px) {
 
     .carousel-container {
+        width: 95%;
 
-        .testo {
-            width: 90%;
-        }
+        .carosello {
 
-        .immagine {
-            width: 90%;
+            .icona {
+                font-size: 2em;
+            }
+
+            .immagine {
+                width: 80%;
+            }
         }
     }
 }
@@ -91,10 +133,17 @@
 
         .testo {
             width: 100%;
+
+            .icona {
+                margin-left: 30px;
+            }
         }
 
-        .immagine {
-            width: 100%;
+        .carosello {
+
+            .immagine {
+                width: 70%;
+            }
         }
     }
 }

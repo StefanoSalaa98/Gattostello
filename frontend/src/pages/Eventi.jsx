@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import "../css/Eventi.css";
 import { FaFacebookF } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
+import { PiPawPrintLight } from "react-icons/pi";
 
 export default function Eventi() {
 
@@ -18,9 +19,9 @@ export default function Eventi() {
 
     useEffect(() => {
         const interval = setInterval(() => {
-            setCurrentIndex((prev) =>
+            setCurrentIndex((index) =>
                 // se ho raggounto l'ultima img ricomincio da capo altrimenti faccio +1
-                prev === images.length - 1 ? 0 : prev + 1
+                index === images.length - 1 ? 0 : index + 1
             );
         }, 10000); // ogni 3 secondi
 
@@ -30,6 +31,33 @@ export default function Eventi() {
     return (
         <>
             <div className="carousel-container">
+                <div className="carosello">
+                    <PiPawPrintLight
+                        className="icona ruota-sx"
+                        onClick={() =>
+                            setCurrentIndex((index) =>
+                                index === 0 ? images.length - 1 : index - 1
+                            )
+                        }
+                    />
+                    <div className="immagine overflow-hidden rounded shadow">
+                        <img
+                            key={currentIndex}
+                            src={images[currentIndex]}
+                            alt="carosello"
+                            className="zoom-img img-fluid w-100"
+                        />
+                    </div>
+                    <PiPawPrintLight
+                        className="icona ruota-dx"
+                        onClick={() =>
+                            setCurrentIndex((index) =>
+                                index === images.length - 1 ? 0 : index + 1
+                            )
+                        }
+                    />
+                </div>
+
                 <div className="testo">
                     <p>
                         La nostra associazione non è solo un gruppo di volontari, ma una grande famiglia che oltre a prendersi cura degli amici a quattro zampe organizza una serie di
@@ -55,14 +83,6 @@ export default function Eventi() {
                         <a className="icona" href="https://www.facebook.com/ilGattostello"><FaFacebookF /></a>
                         <a className="icona" href="https://www.facebook.com/profile.php?id=100087577566537&locale=it_IT"><FaFacebookF /></a>
                     </div>
-                </div>
-                <div className="immagine  overflow-hidden rounded shadow">
-                    <img
-                        key={currentIndex}
-                        src={images[currentIndex]}
-                        alt="carosello"
-                        className="zoom-img img-fluid w-100"
-                    />
                 </div>
             </div >
         </>
