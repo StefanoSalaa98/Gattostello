@@ -11,6 +11,14 @@ import "../css/Sostienici.css";
 
 export default function Sostienici() {
 
+    // prendo tutti i file immagine presenti nel percorso specificato
+    const images = Object.values(
+        import.meta.glob("/public/img/adozioni/*.{jpg,png,jpeg}", {
+            eager: true,  // importa subito tutte le immagini appena carica il componente
+            as: "url"  // fa sì che ogni immagine venga trasformata nel suo percorso URL stringa
+        })
+    );
+
     const [scelta, setScelta] = useState(() => {
         return sessionStorage.getItem("scelta") || "";
     });
@@ -111,6 +119,15 @@ export default function Sostienici() {
                     <div className="immagine">
                         <img src="img/adozioni.jpg" alt="adozioni" />
                     </div>
+                </div>
+            </div>
+
+            <div className="banner">
+                <div className="banner-track">
+                    {/* duplico l'array e lo scorro completamente */}
+                    {[...images, ...images].map((img, index) => (
+                        <img key={index} src={img} alt={`banner ${index + 1}`} />
+                    ))}
                 </div>
             </div>
 

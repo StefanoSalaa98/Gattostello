@@ -242,8 +242,50 @@
             cursor: pointer;
         }
     }
-
 }
+
+/* Inizio Banner */
+
+.banner {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    padding-bottom: 60px;
+}
+
+.banner-track {
+    display: flex;
+    /* largo quanto tutte le immagini messe insieme */
+    width: max-content;
+    animation: scroll 45s linear infinite;
+}
+
+/* fermo lo scorrimento all'hover */
+.banner-track:hover {
+    animation-play-state: paused;
+}
+
+.banner-track img {
+    width: 500px;
+    height: 350px;
+    object-fit: cover;
+    /* non riduco la larghezza delle immagini */
+    flex-shrink: 0;
+    margin-right: 10px;
+    border-radius: 10px;
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/* Fine Banner */
 
 .cinque-x-mille-container {
     text-align: center;
@@ -650,6 +692,11 @@
         }
     }
 
+    .banner-track img {
+        width: 450px;
+        height: 300px;
+    }
+
     .cinque-x-mille-container {
 
         .cinque-x-mille {
@@ -702,6 +749,11 @@
             width: 100%;
         }
 
+    }
+
+    .banner-track img {
+        width: 350px;
+        height: 250px;
     }
 
     .cinque-x-mille-container {
