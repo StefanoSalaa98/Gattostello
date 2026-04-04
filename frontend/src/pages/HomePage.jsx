@@ -44,12 +44,10 @@ export default function HomePage() {
                     <h2>Dove ogni gatto trova una zampa tesa e un posto sicuro</h2>
                 </div>
                 {!isLoading &&
-                    <div className="animate__animated animate__fadeIn animate__slower">
-                        <div className="totale">
-                            <span>Abbiamo aiutato: </span>
-                            <span className="numero">{totale}</span>
-                            <span> mici a trovare casa</span>
-                        </div>
+                    <div className="totale animate__animated animate__fadeIn animate__slower">
+                        <span>Abbiamo aiutato: </span>
+                        <span className="numero">{totale}</span>
+                        <span> mici a trovare casa</span>
                     </div>
                 }
 

@@ -239,7 +239,7 @@
 
             .testo {
                 width: 100%;
-                padding-right: 30px;
+                padding-right: 0;
 
                 .bottone {
                     width: 150px;
@@ -262,6 +262,7 @@
 
             .testo {
                 width: 100%;
+                padding-left: 0;
 
                 .bottone {
                     width: 150px;
@@ -309,6 +310,14 @@
 }
 
 @media (max-width: 480px) {
+    .home-container {
+        margin-bottom: 550px;
+
+        .totale {
+            width: 80%;
+
+        }
+    }
 
     .descrizione-container {
 
