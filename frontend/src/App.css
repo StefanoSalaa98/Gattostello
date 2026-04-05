@@ -202,7 +202,7 @@ body {
   .gatto-container {
 
     .gatto {
-      width: calc((100% - 80px) / 2);
+      width: calc((100% - 40px) / 2);
     }
   }
 }
