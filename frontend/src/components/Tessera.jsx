@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Iban from "./Iban";
+import AnimateOnScroll from "../hooks/AnimateOnScroll";
 
 export default function Tessera({ livello }) {
 
@@ -60,13 +61,15 @@ export default function Tessera({ livello }) {
 
     return (
         <>
-            <p>{livelli[livello]}</p>
-            <div>
-                <span className="iban-title"> IBAN: </span><Iban />
-            </div>
-            <div>
-                <span className="causale">Inserici nella causale: Tessera {causale()}</span>
-            </div>
+            <AnimateOnScroll>
+                <p>{livelli[livello]}</p>
+                <div>
+                    <span className="iban-title"> IBAN: </span><Iban />
+                </div>
+                <div>
+                    <span className="causale">Inserici nella causale: Tessera {causale()}</span>
+                </div>
+            </AnimateOnScroll>
         </>
     )
 }
