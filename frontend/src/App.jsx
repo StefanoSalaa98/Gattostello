@@ -14,6 +14,7 @@ import Eventi from './pages/Eventi';
 import Sostienici from './pages/Sostienici'
 import ScrollToTop from './components/ScrollToTop';
 import NotFoundPage from './pages/NotFondPage';
+import "./css/Animations.css";
 
 // importo il provider context globale
 import { GlobalProvider } from './contexts/GlobalContext';
