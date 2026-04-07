@@ -1,0 +1,55 @@
+.scroll-base {
+    opacity: 0;
+    will-change: transform, opacity;
+}
+
+/* TESTI */
+.fade-up {
+    transform: translateY(50px);
+    animation: fadeUp 1.5s ease forwards;
+}
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* IMMAGINI */
+.slide-left {
+    transform: translateX(-80px);
+    animation: slideLeft 1.5s ease forwards;
+}
+
+@keyframes slideLeft {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.slide-right {
+    transform: translateX(80px);
+    animation: slideLeft 1.5s ease forwards;
+}
+
+@keyframes slideRight {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* CARD */
+.zoom-in {
+    transform: scale(0.8);
+    animation: zoomIn 1.5s ease forwards;
+}
+
+@keyframes zoomIn {
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
