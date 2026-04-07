@@ -3,6 +3,7 @@ import "../css/Eventi.css";
 import { FaFacebookF } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { PiPawPrintLight } from "react-icons/pi";
+import AnimateOnScroll from "../hooks/AnimateOnScroll";
 
 export default function Eventi() {
 
@@ -59,29 +60,43 @@ export default function Eventi() {
                 </div>
 
                 <div className="testo">
-                    <p>
-                        La nostra associazione non è solo un gruppo di volontari, ma una grande famiglia che oltre a prendersi cura degli amici a quattro zampe organizza una serie di
-                        appuntamenti imperdibili aperti a tutti.
-                    </p>
-                    <p>
-                        Volete iniziare la giornata con la zampa giusta? Le nostre <strong> colazioni con i mici </strong> sono il carburante perfetto: cornetti, caffè e tante coccole feline per risvegliare il buonumore! Se invece preferite il relax del tramonto, non potete mancare ai nostri <strong> apericena con i baffi</strong>, dove brindiamo alla salute dei nostri mici tra una fusa e l'altra.
-                    </p>
-                    <p>
-                        Ma non finisce qui, perché amiamo stare insieme anche davanti a tavole imbandite nelle <strong> cene di gruppo</strong>, l'occasione ideale per fare quattro chiacchiere, condividere e divertirsi in compagnia.
-                    </p>
-                    <p>
-                        Ci troverete carichi di colori e creatività anche tra le bancarelle, perché <strong> partecipiamo ai mercatini </strong> della zona con tantissimi gadget fatti a mano che parlano di noi e del nostro impegno.
-                    </p>
-                    <p>
-                        E siccome la pancia dei nostri amici è la nostra priorità, siamo sempre in prima linea con le <strong> raccolte pappe: </strong>un piccolo gesto di solidarietà che per i nostri mici di strada significa tutto.
-                    </p>
-                    <p>
-                        Resta sempre aggiornato sui prossimi eventi seguendo i nostri canali social:
-                    </p>
+                    <AnimateOnScroll>
+                        <p>
+                            La nostra associazione non è solo un gruppo di volontari, ma una grande famiglia che oltre a prendersi cura degli amici a quattro zampe organizza una serie di
+                            appuntamenti imperdibili aperti a tutti.
+                        </p>
+                    </AnimateOnScroll>
+                    <AnimateOnScroll>
+                        <p>
+                            Volete iniziare la giornata con la zampa giusta? Le nostre <strong> colazioni con i mici </strong> sono il carburante perfetto: cornetti, caffè e tante coccole feline per risvegliare il buonumore! Se invece preferite il relax del tramonto, non potete mancare ai nostri <strong> apericena con i baffi</strong>, dove brindiamo alla salute dei nostri mici tra una fusa e l'altra.
+                        </p>
+                    </AnimateOnScroll>
+                    <AnimateOnScroll>
+                        <p>
+                            Ma non finisce qui, perché amiamo stare insieme anche davanti a tavole imbandite nelle <strong> cene di gruppo</strong>, l'occasione ideale per fare quattro chiacchiere, condividere e divertirsi in compagnia.
+                        </p>
+                    </AnimateOnScroll>
+                    <AnimateOnScroll>
+                        <p>
+                            Ci troverete carichi di colori e creatività anche tra le bancarelle, perché <strong> partecipiamo ai mercatini </strong> della zona con tantissimi gadget fatti a mano che parlano di noi e del nostro impegno.
+                        </p>
+                    </AnimateOnScroll>
+                    <AnimateOnScroll>
+                        <p>
+                            E siccome la pancia dei nostri amici è la nostra priorità, siamo sempre in prima linea con le <strong> raccolte pappe: </strong>un piccolo gesto di solidarietà che per i nostri mici di strada significa tutto.
+                        </p>
+                    </AnimateOnScroll>
+                    <AnimateOnScroll>
+                        <p>
+                            Resta sempre aggiornato sui prossimi eventi seguendo i nostri canali social:
+                        </p>
+                    </AnimateOnScroll>
                     <div className="testa">
-                        <a className="icona" href="https://www.instagram.com/gattostello.odv/"><FaInstagram /></a>
-                        <a className="icona" href="https://www.facebook.com/ilGattostello"><FaFacebookF /></a>
-                        <a className="icona" href="https://www.facebook.com/profile.php?id=100087577566537&locale=it_IT"><FaFacebookF /></a>
+                        <AnimateOnScroll>
+                            <a className="icona" href="https://www.instagram.com/gattostello.odv/"><FaInstagram /></a>
+                            <a className="icona" href="https://www.facebook.com/ilGattostello"><FaFacebookF /></a>
+                            <a className="icona" href="https://www.facebook.com/profile.php?id=100087577566537&locale=it_IT"><FaFacebookF /></a>
+                        </AnimateOnScroll>
                     </div>
                 </div>
             </div >
