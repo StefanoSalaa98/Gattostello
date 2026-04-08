@@ -62,7 +62,6 @@ export default function Sostienici() {
                         <AnimateOnScroll delay={0.5}>
                             <div>
                                 <h2>Diventa Socio</h2>
-                                <h5>Decidi che impronta lasciare</h5>
                                 <div className="radio-container">
                                     <label>
                                         <input
