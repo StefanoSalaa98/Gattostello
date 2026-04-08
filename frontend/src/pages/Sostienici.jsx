@@ -42,7 +42,7 @@ export default function Sostienici() {
                     </div>
                     <div className="immagine">
                         <AnimateOnScroll animation="slide-right" delay={0.5}>
-                            <img src="img/filippo.jpg" alt="filippo" />
+                            <img src="img/filippo.jpg" alt="filippo" loading="lazy" />
                         </AnimateOnScroll>
                     </div>
                 </div>
@@ -55,7 +55,7 @@ export default function Sostienici() {
                 <div className="tessera">
                     <div className="immagine">
                         <AnimateOnScroll animation="slide-left">
-                            <img src="img/tessera.jpg" alt="tessera" />
+                            <img src="img/tessera.jpg" alt="tessera" loading="lazy" />
                         </AnimateOnScroll>
                     </div>
                     <div className="testo">
@@ -126,7 +126,7 @@ export default function Sostienici() {
                     </div>
                     <div className="immagine">
                         <AnimateOnScroll animation="slide-right" delay={0.5}>
-                            <img src="img/adozioni.jpg" alt="adozioni" />
+                            <img src="img/adozioni.jpg" alt="adozioni" loading="lazy" />
                         </AnimateOnScroll>
                     </div>
                 </div>
@@ -148,7 +148,7 @@ export default function Sostienici() {
                 <div className="cinque-x-mille">
                     <div className="immagine">
                         <AnimateOnScroll animation="slide-left">
-                            <img src="img/5x1000.jpg" alt="5x1000" />
+                            <img src="img/5x1000.jpg" alt="5x1000" loading="lazy" />
                         </AnimateOnScroll>
                     </div>
                     <div className="testo">
@@ -189,7 +189,7 @@ export default function Sostienici() {
                     </div>
                     <div className="immagine">
                         <AnimateOnScroll animation="slide-right" delay={0.5}>
-                            <img src="img/fidaty.jpg" alt="fidaty" />
+                            <img src="img/fidaty.jpg" alt="carta-fidaty" loading="lazy" />
                         </AnimateOnScroll>
                     </div>
                 </div>
@@ -202,7 +202,7 @@ export default function Sostienici() {
                 <div className="dona">
                     <div className="immagine">
                         <AnimateOnScroll animation="slide-left">
-                            <img src="img/iban.jpg" alt="iban" />
+                            <img src="img/iban.jpg" alt="iban" loading="lazy" />
                         </AnimateOnScroll>
                     </div>
                     <div className="testo">

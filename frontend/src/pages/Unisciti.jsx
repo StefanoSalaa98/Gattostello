@@ -19,7 +19,7 @@ export default function Unisciti() {
                     </div>
                     <div className="immagine">
                         <AnimateOnScroll animation="slide-right" delay={0.5}>
-                            <img src="img/mango.jpg" alt="mango" />
+                            <img src="img/mango.jpg" alt="gatto" loading="lazy" />
                         </AnimateOnScroll>
                     </div>
                 </div>
@@ -28,7 +28,7 @@ export default function Unisciti() {
                 <div className="unisciti">
                     <div className="immagine">
                         <AnimateOnScroll animation="slide-left">
-                            <img src="img/lino.jpg" alt="lino" />
+                            <img src="img/lino.jpg" alt="gatto" loading="lazy" />
                         </AnimateOnScroll>
                     </div>
                     <div className="testo">

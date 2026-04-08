@@ -66,7 +66,7 @@ export default function HomePage() {
 
                     <div className="immagine">
                         <AnimateOnScroll animation="slide-right" delay={0.5}>
-                            <img src="img/giornale.jpg" alt="giornale" />
+                            <img src="img/giornale.jpg" alt="giornale" loading="lazy" />
                         </AnimateOnScroll>
                     </div>
 
@@ -81,7 +81,7 @@ export default function HomePage() {
 
                     <div className="immagine">
                         <AnimateOnScroll animation="slide-left">
-                            <img src="img/abbraccio.jpg" alt="abbraccio" />
+                            <img src="img/abbraccio.jpg" alt="abbraccio" loading="lazy" />
                         </AnimateOnScroll>
                     </div>
 
@@ -120,7 +120,7 @@ export default function HomePage() {
 
                     <div className="immagine sotto">
                         <AnimateOnScroll animation="slide-right" delay={0.5}>
-                            <img className="img-volontari" src="img/volontari.jpg" alt="volontari" />
+                            <img className="img-volontari" src="img/volontari.jpg" alt="volontari" loading="lazy" />
                         </AnimateOnScroll>
                     </div>
                 </div>

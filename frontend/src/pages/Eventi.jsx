@@ -47,6 +47,7 @@ export default function Eventi() {
                             src={images[currentIndex]}
                             alt="carosello"
                             className="zoom-img img-fluid w-100"
+                            loading="lazy"
                         />
                     </div>
                     <PiPawPrintLight

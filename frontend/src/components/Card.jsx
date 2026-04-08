@@ -17,7 +17,9 @@ export default function Card(props) {
                         onError={(e) => {
                             e.target.src = "img/default.png"; // Percorso della mia immagine di default
                             e.target.onerror = null; // Evita loop infiniti se anche la default manca
-                        }} />
+                        }}
+                        loading="lazy"
+                    />
                     :
                     <img src="img/default.png" alt="gatto" />
                 }

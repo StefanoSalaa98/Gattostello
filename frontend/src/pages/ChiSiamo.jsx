@@ -20,7 +20,7 @@ export default function ChiSiamo() {
                     </div>
                     <div className="immagine">
                         <AnimateOnScroll animation="slide-right" delay={0.5}>
-                            <img src="img/bianconero.jpg" alt="coppia" />
+                            <img src="img/bianconero.jpg" alt="coppia" loading="lazy" />
                         </AnimateOnScroll>
                     </div>
                 </div>
@@ -29,7 +29,7 @@ export default function ChiSiamo() {
                 <div className="chi-siamo2">
                     <div className="immagine">
                         <AnimateOnScroll animation="slide-left">
-                            <img src="img/gruppo.jpg" alt="gruppo" />
+                            <img src="img/gruppo.jpg" alt="gruppo" loading="lazy" />
                         </AnimateOnScroll>
                     </div>
                     <div className="testo">
