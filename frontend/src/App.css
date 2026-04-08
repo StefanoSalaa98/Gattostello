@@ -57,8 +57,6 @@ body {
 
   .gatto {
     width: calc((100% - 120px) / 4);
-    background-color: lightcyan;
-    border-radius: 20px;
     padding-bottom: 5px;
     cursor: pointer;
     text-decoration: inherit;
@@ -77,6 +75,8 @@ body {
     .testo {
       display: flex;
       justify-content: center;
+      background-color: lightcyan;
+      border-radius: 0 0 20px 20px;
     }
 
     .titolo {

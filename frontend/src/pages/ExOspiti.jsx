@@ -6,6 +6,7 @@ import { useGlobal } from "../contexts/GlobalContext";
 import Card from "../components/Card";
 import SkeletonCard from "../components/SkeletonCard";
 import Pagination from "../components/Pagination";
+import AnimateOnScroll from "../hooks/AnimateOnScroll";
 
 export default function ExOspiti() {
 
@@ -47,12 +48,14 @@ export default function ExOspiti() {
             <div className="gatto-container fade-in" key={page}>
                 {cats.map((cat) => (
                     <div key={cat.id} className="gatto">
-                        <Card
-                            name={cat.name}
-                            sex={cat.sex}
-                            image={cat.image}
+                        <AnimateOnScroll animation="zoom-in">
+                            <Card
+                                name={cat.name}
+                                sex={cat.sex}
+                                image={cat.image}
 
-                        />
+                            />
+                        </AnimateOnScroll>
                     </div>
                 ))}
                 {isLoading &&
