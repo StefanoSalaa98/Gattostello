@@ -126,6 +126,11 @@
     animation: suEGiu 2s ease-in-out infinite;
 }
 
+.titolo-livello {
+    margin-top: 8px;
+    margin-bottom: 15px;
+}
+
 .iban-title {
     font-size: 1.5em;
 }
