@@ -543,6 +543,16 @@
     transition: 0.2s;
 }
 
+/* imposto una larghezza massima dei contenitori per gestire monitor molto grandi */
+.sostienici,
+.tessera,
+.distanza,
+.cinque-x-mille,
+.esselunga,
+.dona {
+    max-width: 1200px;
+}
+
 /* Sezione responsive */
 
 @media (max-width: 1150px) {

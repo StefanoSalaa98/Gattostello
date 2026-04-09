@@ -132,6 +132,13 @@
     }
 }
 
+/* imposto una larghezza massima dei contenitori per gestire monitor molto grandi */
+.chi-siamo,
+.chi-siamo2,
+.chi-siamo3 {
+    max-width: 1200px;
+}
+
 @media (max-width: 1024px) {
     .chi-siamo-container {
 

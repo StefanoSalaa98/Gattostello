@@ -87,6 +87,12 @@
     }
 }
 
+/* imposto una larghezza massima dei contenitori per gestire monitor molto grandi */
+.carousel-container {
+    max-width: 1200px;
+}
+
+
 @media (max-width: 1024px) {
 
     .carousel-container {

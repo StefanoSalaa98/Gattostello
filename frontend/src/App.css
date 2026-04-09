@@ -54,6 +54,8 @@ body {
   gap: 40px;
   padding-top: 140px;
   margin-bottom: 100px;
+  /* imposto una larghezza massima dei contenitori per gestire monitor molto grandi */
+  max-width: 1200px;
 
   .gatto {
     width: calc((100% - 120px) / 4);
