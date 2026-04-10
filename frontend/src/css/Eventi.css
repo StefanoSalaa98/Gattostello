@@ -73,6 +73,7 @@
     aspect-ratio: 1;
     object-fit: cover;
     animation: slowZoom 10s linear forwards;
+    /* forwards --> rimane allo stato finale dell'animazione */
 }
 
 @keyframes slowZoom {

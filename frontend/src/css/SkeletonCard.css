@@ -1,5 +1,6 @@
 .skeleton-card {
     pointer-events: none;
+    /* Disabilito tutte le interazioni del mouse */
 }
 
 .skeleton-image,
