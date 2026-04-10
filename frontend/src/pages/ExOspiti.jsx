@@ -1,5 +1,5 @@
 import axios from "axios"
-import { useState, useEffect } from "react"
+import { useState, useEffect, useRef } from "react"
 import { useSearchParams } from "react-router-dom";
 // importo hook per il contesto
 import { useGlobal } from "../contexts/GlobalContext";
@@ -23,6 +23,9 @@ export default function ExOspiti() {
     const [searchParams, setSearchParams] = useSearchParams();
     const page = parseInt(searchParams.get("page")) || 1;
 
+    // creo un riferimento diretto a un elemento del DOM
+    const catsContainerRef = useRef(null);
+
     // variabile di stato delle pagine totali
     const [totalPages, setTotalPages] = useState();
 
@@ -40,28 +43,44 @@ export default function ExOspiti() {
             .finally(() => { setIsLoading(false) })
     }
 
+    // quando cambio paginazione risalgo all'inizio del container delle card gatti
+    useEffect(() => {
+        catsContainerRef.current?.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        });
+    }, [page]);
+
     // faccio partire la chiamata solo al primo montaggio del componente
     useEffect(fecthCats, [page]);
 
     return (
         <>
-            <div className="gatto-container fade-in" key={page}>
-                {cats.map((cat) => (
-                    <div key={cat.id} className="gatto">
-                        <AnimateOnScroll animation="zoom-in">
-                            <Card
-                                name={cat.name}
-                                sex={cat.sex}
-                                image={cat.image}
+            <div
+                ref={catsContainerRef}
+                className="gatto-container fade-in"
+                key={page}
+            >
+                {isLoading ?
+                    (
+                        Array.from({ length: 8 }).map((_, index) => (
+                            <SkeletonCard key={index} />))
+                    )
+                    :
+                    (
+                        cats.map((cat) => (
+                            <div key={cat.id} className="gatto">
+                                <AnimateOnScroll animation="zoom-in">
+                                    <Card
+                                        name={cat.name}
+                                        sex={cat.sex}
+                                        image={cat.image}
 
-                            />
-                        </AnimateOnScroll>
-                    </div>
-                ))}
-                {isLoading &&
-                    Array.from({ length: 8 }).map((_, index) => (
-                        <SkeletonCard key={index} />
-                    ))}
+                                    />
+                                </AnimateOnScroll>
+                            </div>)
+                        )
+                    )}
             </div>
 
             <Pagination
