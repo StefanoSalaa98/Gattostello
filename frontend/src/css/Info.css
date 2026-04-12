@@ -85,10 +85,19 @@
             }
         }
     }
+
+    .indietro {
+        margin-left: 25px;
+    }
+
 }
 
 @media (max-width: 480px) {
     .info {
         width: 100%;
+    }
+
+    .indietro {
+        margin-left: 15px;
     }
 }
