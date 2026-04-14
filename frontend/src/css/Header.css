@@ -12,7 +12,7 @@ header {
     display: flex;
 
     .logo {
-        width: 25%;
+        width: 18%;
 
         img {
             height: 75px;
@@ -23,13 +23,13 @@ header {
         color: white;
     }
 
-    .testa {
+    /* .testa {
         margin-right: 30px;
         margin-bottom: 3px;
-    }
+    } */
 
     .pagine {
-        width: 50%;
+        width: 72%;
         display: flex;
         align-items: center;
     }
@@ -74,17 +74,28 @@ header {
         width: 100%;
     }
 
-    .doppia-riga {
+    /* .doppia-riga {
+        position: relative;
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
+    .prima-riga {
+        position: relative;
+        top: 3px;
+    }
+
+    .seconda-riga {
+        position: relative;
+        top: -3px;
+    } */
+
     .burger {
         display: flex;
         align-items: center;
         justify-content: flex-end;
-        width: 25%;
+        width: 10%;
 
         .icona {
             margin-right: 10px;
