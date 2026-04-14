@@ -11,7 +11,7 @@ import AnimateOnScroll from "../hooks/AnimateOnScroll";
 export default function HomePage() {
     const API_URL = import.meta.env.VITE_API_URL;
     const { isLoading, setIsLoading } = useGlobal();
-    const color = " rgb(95 201 95)";
+    const color = " rgb(81, 175, 81)";
     const [totale, setTotale] = useState([]);
 
     const fecthTotale = () => {
@@ -37,9 +37,10 @@ export default function HomePage() {
 
                     <AnimateOnScroll delay={0.3}>
                         <div className="totale">
-                            <span>Abbiamo aiutato: </span>
+                            {/* <span>Abbiamo aiutato: </span> */}
                             <span className="numero">{totale}</span>
-                            <span> mici a trovare casa</span>
+                            <span> mici hanno trovato </span>
+                            <span> casa grazie a noi </span>
                         </div>
                     </AnimateOnScroll>
 
