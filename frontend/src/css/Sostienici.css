@@ -67,6 +67,10 @@
             color: white;
             padding-left: 30px;
 
+            .scelta {
+                margin-bottom: 40px;
+            }
+
             h2 {
                 font-size: 2.5em;
                 margin-bottom: 10px;
@@ -78,7 +82,7 @@
 
             p {
                 font-size: 1.2em;
-                font-weight: 600;
+                font-weight: 300;
             }
         }
 
@@ -135,6 +139,11 @@
     font-size: 1.5em;
 }
 
+.inserisci {
+    font-size: 1.2em;
+    font-weight: 400;
+}
+
 .causale {
     font-size: 1.2em;
     font-weight: 600;
@@ -159,8 +168,10 @@
 /* messaggio iban copiato */
 
 .iban {
-    display: block;
-    margin-bottom: 10px;
+    /* display: block; */
+    /* margin-bottom: 10px; */
+    font-size: 1.3em;
+    margin-right: 15px;
 }
 
 .iban-text {
@@ -314,14 +325,14 @@
 
                 li {
                     font-size: 1.2em;
-                    font-weight: 600;
+                    font-weight: 300;
                     margin-bottom: 10px;
                 }
             }
 
             span {
                 font-size: 1.2em;
-                font-weight: 600;
+                font-weight: 300;
             }
 
             h2 {
@@ -329,15 +340,14 @@
                 margin-bottom: 20px;
             }
 
-            h3 {
-                font-size: 3em;
+            /* .sottotitolo {
+                margin-top: 40px;
                 margin-bottom: 20px;
-                color: darkgreen;
-            }
+            } */
 
             p {
                 font-size: 1.2em;
-                font-weight: 600;
+                font-weight: 300;
             }
         }
 
@@ -458,7 +468,7 @@
 
                 li {
                     font-size: 1.2em;
-                    font-weight: 600;
+                    font-weight: 300;
                     margin-bottom: 10px;
                 }
             }
@@ -473,15 +483,9 @@
                 margin-bottom: 20px;
             }
 
-            h3 {
-                font-size: 3em;
-                margin-bottom: 20px;
-                color: darkgreen;
-            }
-
             p {
                 font-size: 1.2em;
-                font-weight: 600;
+                font-weight: 300;
             }
 
             a {
