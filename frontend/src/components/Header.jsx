@@ -1,7 +1,5 @@
 import { NavLink } from "react-router-dom"
 import BurgerMenu from "./BurgerMenu"
-import { FaFacebookF } from "react-icons/fa";
-import { FaInstagram } from "react-icons/fa";
 import "../css/Header.css";
 
 export default function Header() {
@@ -20,29 +18,16 @@ export default function Header() {
                             <NavLink className="link" to="/sostienici">Sostienici</NavLink>
                             <NavLink className="link" to="/unisciti">Unisciti</NavLink>
                             <NavLink className="link" to="/eventi">Eventi</NavLink>
-
-                            <NavLink className="link" to="/adotta">
-                                <div className="doppia-riga">
-                                    <span>Adotta</span>
-                                    <span>un gatto</span>
-                                </div>
-                            </NavLink>
-
-                            <NavLink className="link" to="/ex-ospiti">
-                                <div className="doppia-riga">
-                                    <span>I nostri</span>
-                                    <span>ex ospiti</span>
-                                </div>
-                            </NavLink>
-
+                            <NavLink className="link" to="/adotta">Adotta un gatto</NavLink>
+                            <NavLink className="link" to="/ex-ospiti">I nostri ex ospiti</NavLink>
                         </div>
                     </nav>
                     <div className="burger">
-                        <div className="testa">
+                        {/* <div className="testa">
                             <a className="icona" href="https://www.facebook.com/ilGattostello"><FaFacebookF /></a>
                             <a className="icona" href="https://www.facebook.com/profile.php?id=100087577566537&locale=it_IT"><FaFacebookF /></a>
                             <a className="icona" href="https://www.instagram.com/gattostello.odv/"><FaInstagram /></a>
-                        </div>
+                        </div> */}
                         <BurgerMenu />
                     </div>
                 </div>
