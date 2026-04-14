@@ -28,7 +28,7 @@ export default function Sostienici() {
         sessionStorage.setItem("scelta", scelta);
     }, [scelta]);
 
-    const color = " rgb(95 201 95)";
+    const color = " rgb(81, 175, 81)";
 
     return (
         <>
@@ -119,7 +119,7 @@ export default function Sostienici() {
                     <div className="testo">
                         <AnimateOnScroll>
                             <h2>Adotta a distanza</h2>
-                            <p>Puoi offrire amore e cure a un micio bisognoso del Gattostello senza portarlo a casa. Alcuni mici sono adottabili a distanza in quanto per problemi comportamentali o di salute è più difficile trovar loro una casa. Con un contributo di <strong> 120 euro </strong> sostieni le sue esigenze quotidiane per un anno intero, ricevi aggiornamenti e vieni a trovarlo nella nostra struttura. Fai una differenza significativa nella sua vita. Grazie al tuo sostegno potrai garantirgli tutte le cure e le attenzioni necessarie.</p>
+                            <p>Puoi offrire amore e cure a un micio bisognoso del Gattostello senza portarlo a casa. Alcuni mici sono adottabili a distanza in quanto per problemi comportamentali o di salute è più difficile trovar loro una casa. Con un contributo di <strong> 120 euro </strong> sostieni le sue esigenze quotidiane <strong> per un anno intero</strong>, ricevi aggiornamenti e vieni a trovarlo nella nostra struttura. Fai una differenza significativa nella sua vita. Grazie al tuo sostegno potrai garantirgli tutte le cure e le attenzioni necessarie.</p>
                             <p>Scrivici su whatsapp per sapere chi di loro è in cerca di una mamma o un papà a distanza:</p>
                             <div className="whatsapp"> <WhatsAppButton />339 806 7656 </div>
                         </AnimateOnScroll>
@@ -154,8 +154,8 @@ export default function Sostienici() {
                     <div className="testo">
                         <AnimateOnScroll delay={0.5}>
                             <h2>Dona il tuo 5X1000 a Gattostello</h2>
-                            <p>Il tuo aiuto in questo momento è fondamentale per la cura dei tanti mici che ospitiamo e per portare avanti la nostra missione. Con una semplice firma ci aiuti a garantire cibo, cure e protezione ai mici del Gattostello. Grazie di cuore!</p>
-                            <h3>Donare il 5X1000 è semplice</h3>
+                            {/* <p>Il tuo aiuto in questo momento è fondamentale per la cura dei tanti mici che ospitiamo e per portare avanti la nostra missione. Con una semplice firma ci aiuti a garantire cibo, cure e protezione ai mici del Gattostello. Grazie di cuore!</p>
+                            <h2 className="sottotitolo">Donare è semplice</h2> */}
                             <span>Nella prossima dichiarazione dei redditi:</span> <br />
                             <ul>
                                 <li>
