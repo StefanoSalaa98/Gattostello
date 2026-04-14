@@ -74,12 +74,15 @@ export default function Tessera({ livello }) {
     return (
         <>
             <AnimateOnScroll>
-                {livelli[livello]}
-                <div>
-                    <span className="iban-title"> IBAN: </span><Iban />
+                <div className="scelta">
+                    {livelli[livello]}
                 </div>
+
+                <Iban />
+
                 <div>
-                    <span className="causale">Inserici nella causale: Tessera {causale()}</span>
+                    <span className="inserisci"> Inserici nella causale: </span>
+                    <span className="causale"> Tessera {causale()}</span>
                 </div>
             </AnimateOnScroll>
         </>
