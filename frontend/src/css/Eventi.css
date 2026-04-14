@@ -1,3 +1,21 @@
+.intro-eventi {
+    padding-top: 120px;
+    padding-bottom: 50px;
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+
+    h2 {
+        font-size: 2.5em;
+        margin-bottom: 20px;
+    }
+
+    p {
+        font-size: 1.3em;
+    }
+
+}
+
 .eventi-container {
     width: 90%;
     margin: 0 auto;
@@ -5,7 +23,6 @@
     justify-content: center;
     flex-wrap: wrap;
     gap: 80px;
-    padding-top: 120px;
     margin-bottom: 100px;
 }
 
@@ -88,8 +105,13 @@
 }
 
 /* imposto una larghezza massima dei contenitori per gestire monitor molto grandi */
+
 .eventi-container {
     max-width: 1200px;
+}
+
+.intro-eventi {
+    max-width: 800px;
 }
 
 
@@ -98,12 +120,20 @@
     .flip-card {
         width: 70%;
     }
+
+    .intro-eventi {
+        width: 70%;
+    }
 }
 
 @media (max-width: 768px) {
 
-    .flip-card {
+    .intro-eventi {
         width: 85%;
+    }
+
+    .flip-card {
+        width: 90%;
     }
 
     .flip-card-back {
@@ -122,6 +152,10 @@
 }
 
 @media (max-width: 480px) {
+
+    .intro-eventi {
+        width: 90%;
+    }
 
     .flip-card {
         width: 100%;
