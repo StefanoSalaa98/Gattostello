@@ -11,7 +11,7 @@
         font-size: 3em;
         font-weight: 500;
         font-family: "PawWow", sans-serif;
-        color: var(--second-color);
+        color: var(--main-color);
     }
 
     h2 {
@@ -19,17 +19,17 @@
     }
 
     .totale {
-        width: 400px;
+        width: 800px;
         margin: 0 auto;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
-        color: var(--second-color);
+        color: var(--main-color);
         font-size: 1.7em;
         font-weight: 600;
 
         .numero {
-            font-size: 2em;
+            font-size: 3em;
             font-weight: 800;
         }
     }
@@ -60,7 +60,7 @@
         }
 
         p {
-            font-weight: 600;
+            font-weight: 300;
             font-size: 1.2em;
         }
     }
