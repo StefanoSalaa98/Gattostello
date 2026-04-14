@@ -105,7 +105,7 @@ export default function Eventi() {
                         {/* faccia frontale card */}
                         <div className="flip-card-front">
                             <img
-                                src="/public/img/eventi/raccolta.jpg"
+                                src="/public/img/eventi/raccolta_pappe.jpg"
                                 alt="raccolta_pappe"
                                 className="card-image"
                             />
