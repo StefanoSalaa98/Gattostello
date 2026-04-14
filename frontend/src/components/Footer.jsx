@@ -1,5 +1,7 @@
 import { MdPhoneAndroid } from "react-icons/md";
 import { MdOutlineMailOutline } from "react-icons/md";
+import { FaFacebookF } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
 import "../css/Footer.css";
 
 export default function Footer() {
@@ -23,6 +25,11 @@ export default function Footer() {
                     <h5>Contatti</h5>
                     <MdPhoneAndroid /><a href="tel:+39 339 806 7656"> 339 806 7656 </a><br /><br />
                     <MdOutlineMailOutline /><a href="mailto:gattostello.co@gmail.com"> gattostello.co@gmail.com</a>
+                    <div className="testa">
+                        <a className="icona" href="https://www.facebook.com/ilGattostello"><FaFacebookF /></a>
+                        <a className="icona" href="https://www.facebook.com/profile.php?id=100087577566537&locale=it_IT"><FaFacebookF /></a>
+                        <a className="icona" href="https://www.instagram.com/gattostello.odv/"><FaInstagram /></a>
+                    </div>
                 </div>
             </div>
         </footer>
