@@ -37,7 +37,6 @@ export default function HomePage() {
 
                     <AnimateOnScroll delay={0.3}>
                         <div className="totale">
-                            {/* <span>Abbiamo aiutato: </span> */}
                             <span className="numero">{totale}</span>
                             <span> mici hanno trovato </span>
                             <span> casa grazie a noi </span>

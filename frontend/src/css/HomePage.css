@@ -4,7 +4,7 @@
     padding-top: 160px;
     height: 300px;
     text-align: center;
-    margin-bottom: 270px;
+    margin-bottom: 300px;
 
     h1,
     h2 {
@@ -19,7 +19,7 @@
     }
 
     .totale {
-        width: 800px;
+        width: 80%;
         margin: 0 auto;
         display: flex;
         flex-direction: column;
@@ -240,7 +240,14 @@
     max-width: 1200px;
 }
 
+
+/* Sezione responsive */
 @media (max-width: 1024px) {
+
+    .home-container {
+        margin-bottom: 350px;
+    }
+
     .descrizione-container {
 
         .descrizione {
@@ -294,7 +301,7 @@
 
 @media (max-width: 768px) {
     .home-container {
-        margin-bottom: 400px;
+        margin-bottom: 450px;
     }
 
     .descrizione-container {
