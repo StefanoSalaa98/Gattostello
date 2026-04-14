@@ -19,6 +19,27 @@ footer {
             color: rgb(255, 255, 255);
             text-decoration: inherit;
         }
+
+        .contatti .testa {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 20px;
+
+            .icona {
+                font-size: 1.4em;
+                margin-right: 10px;
+                padding: 3px 7px;
+                border: solid 1px transparent;
+                -webkit-transition: 1.2s ease;
+                transition: 1.2s ease;
+            }
+
+            .icona:hover {
+                border-radius: 50%;
+                border: solid 1px;
+            }
+        }
     }
 }
 
