@@ -15,7 +15,7 @@ export default function Iban() {
     return (
         <>
             <div>
-                <span className="iban"></span>
+                <span className="iban">IBAN:</span>
                 <span
                     onClick={copiaIban}
                     className="iban-text"
