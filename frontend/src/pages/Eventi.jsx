@@ -14,6 +14,12 @@ export default function Eventi() {
     //            mobile --> giro la card al click
     return (
         <>
+            <div className="intro-eventi">
+                <h2> I nostri eventi </h2>
+                <p>
+                    Oltre a prenderci cura con dedizione di ogni micio, noi del Gattostello siamo costantemente al lavoro per organizzare iniziative uniche e divertenti, trasformando la solidarietà in eventi imperdibili per sostenere la nostra causa. Seguici sui nostri canali social per non perderteli!
+                </p>
+            </div>
             <div className="eventi-container">
                 <div
                     className={`flip-card ${flipped ? 'flipped' : ''}`}
