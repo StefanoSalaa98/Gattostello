@@ -6,7 +6,7 @@ import AnimateOnScroll from "../hooks/AnimateOnScroll";
 
 export default function ChiSiamo() {
 
-    const color = " rgb(95 201 95)";
+    const color = " rgb(81, 175, 81)";
 
     return (
         <>
@@ -20,7 +20,7 @@ export default function ChiSiamo() {
                     </div>
                     <div className="immagine">
                         <AnimateOnScroll animation="slide-right" delay={0.5}>
-                            <img src="img/bianconero.jpg" alt="coppia" loading="lazy" />
+                            <img src="img/bianconero2.png" alt="coppia" loading="lazy" />
                         </AnimateOnScroll>
                     </div>
                 </div>
@@ -29,7 +29,7 @@ export default function ChiSiamo() {
                 <div className="chi-siamo2">
                     <div className="immagine">
                         <AnimateOnScroll animation="slide-left">
-                            <img src="img/gruppo.jpg" alt="gruppo" loading="lazy" />
+                            <img src="img/romeo.png" alt="romeo" loading="lazy" />
                         </AnimateOnScroll>
                     </div>
                     <div className="testo">
