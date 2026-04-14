@@ -1,16 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
 @font-face {
   font-family: "PawWow";
   src: url("./assets/fonts/PawWowBlock-VGMDl.otf") format("opentype");
 }
 
 :root {
-  --main-color: rgb(95 201 95);
+  /* --main-color: rgb(95 201 95); */
+  --main-color: rgb(81, 175, 81);
   --second-color: rgb(0, 136, 0, 0.8);
 }
 
 * {
   margin: 0;
-  font-family: sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 body {
