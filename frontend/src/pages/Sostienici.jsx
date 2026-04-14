@@ -154,8 +154,6 @@ export default function Sostienici() {
                     <div className="testo">
                         <AnimateOnScroll delay={0.5}>
                             <h2>Dona il tuo 5X1000 a Gattostello</h2>
-                            {/* <p>Il tuo aiuto in questo momento è fondamentale per la cura dei tanti mici che ospitiamo e per portare avanti la nostra missione. Con una semplice firma ci aiuti a garantire cibo, cure e protezione ai mici del Gattostello. Grazie di cuore!</p>
-                            <h2 className="sottotitolo">Donare è semplice</h2> */}
                             <span>Nella prossima dichiarazione dei redditi:</span> <br />
                             <ul>
                                 <li>
