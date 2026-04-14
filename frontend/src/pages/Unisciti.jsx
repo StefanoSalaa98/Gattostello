@@ -33,6 +33,7 @@ export default function Unisciti() {
                     </div>
                     <div className="testo">
                         <AnimateOnScroll delay={0.5}>
+                            <h2>Diventa volontario</h2>
                             <p>
                                 Essere un volontario significa prendersi cura della quotidianità dei nostri ospiti: dare loro da mangiare e pulire i luoghi in cui vivono, compresi lettiere, ciotole e aree comuni, non senza qualche pausa per dare e ricevere coccole.
                                 Le altre attività includono eventi di raccolta pappa, mercatini e gestione delle emergenze. In caso di bisogno, potrebbe essere necessario accompagnare gli animali alle visite veterinarie.
