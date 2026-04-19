@@ -29,7 +29,7 @@ export default function HomePage() {
         <>
             <div className="home-container">
                 <AnimateOnScroll>
-                    <h1>BENVENUTI SUL SITO test DEL GATTOSTELLO</h1>
+                    <h1>BENVENUTI SUL SITO DEL GATTOSTELLO</h1>
                     <h2>Dove ogni gatto trova una zampa tesa e un posto sicuro</h2>
                 </AnimateOnScroll>
 
