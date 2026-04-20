@@ -15,6 +15,7 @@ export default function HomePage() {
     const [totale, setTotale] = useState([]);
 
     const fecthTotale = () => {
+        console.log(API_URL);
         setIsLoading(true);
         axios
             .get(`${API_URL}/cats/total-ex`)
