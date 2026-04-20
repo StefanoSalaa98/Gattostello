@@ -17,7 +17,7 @@ export default function HomePage() {
     const fecthTotale = () => {
         setIsLoading(true);
         axios
-            .get(`${API_URL}/total-ex`)
+            .get(`${API_URL}/cats/total-ex`)
             .then(({ data }) => setTotale(data.data))
             .catch((error) => console.log(error))
             .finally(() => setIsLoading(false));

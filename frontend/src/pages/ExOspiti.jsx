@@ -33,7 +33,7 @@ export default function ExOspiti() {
     const fecthCats = () => {
         // appena entro nella funzione per la chiamata axios, attivo il loading 
         setIsLoading(true);
-        axios.get(`${API_URL}?adottato=1&page=${page}`)
+        axios.get(`${API_URL}/cats?adottato=1&page=${page}`)
             .then(({ data }) => {
                 setCats(data.data);
                 setTotalPages(data.total_pages);

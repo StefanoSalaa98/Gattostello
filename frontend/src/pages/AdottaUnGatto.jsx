@@ -34,7 +34,7 @@ export default function AdottaUnGatto() {
     const fetchCats = () => {
         // appena entro nella funzione per la chiamata axios, attivo il loading 
         setIsLoading(true);
-        axios.get(`${API_URL}?adottato=0&page=${page}`)
+        axios.get(`${API_URL}/cats?adottato=0&page=${page}`)
             .then(({ data }) => {
                 setCats(data.data);
                 setTotalPages(data.total_pages);
