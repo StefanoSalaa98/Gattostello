@@ -94,12 +94,18 @@ export default function Info() {
                 <div className="evidenza">
                     <div className="immagine">
                         {cat.image ?
-                            <img src={`${IMAGE_URL}/${cat.image}`}
-                                alt="gatto"
+                            // <img src={`${IMAGE_URL}/${cat.image}`}
+                            //     alt="gatto"
+                            //     onError={(e) => {
+                            //         e.target.src = "../img/default.png"; // Percorso della mia immagine di default
+                            //         e.target.onerror = null; // Evita loop infiniti se anche la default manca
+                            //     }} />
+                            <img src={cat.image} alt="gatto"
                                 onError={(e) => {
-                                    e.target.src = "../img/default.png"; // Percorso della mia immagine di default
+                                    e.target.src = "img/default.png"; // Percorso della mia immagine di default
                                     e.target.onerror = null; // Evita loop infiniti se anche la default manca
-                                }} />
+                                }}
+                            />
                             :
                             <img src="../img/default.png" alt="gatto" />
                         }
