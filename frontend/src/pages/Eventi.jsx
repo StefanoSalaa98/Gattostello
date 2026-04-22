@@ -22,7 +22,7 @@ export default function Eventi() {
             <div className="eventi-container">
                 <div
                     className={`flip-card ${flippedCard === 1 ? 'flipped' : ''}`}
-                    onClick={() => setFlippedCard(!flippedCard)}  //cambiolo stato di flipped
+                    onClick={() => setFlippedCard(flippedCard === 1 ? null : 1)}  //cambio lo stato di flipped
                 >
                     {/* contenitore interno che faccio effettivamente ruotare */}
                     <div className="flip-card-inner">
@@ -51,7 +51,7 @@ export default function Eventi() {
 
                 <div
                     className={`flip-card ${flippedCard === 2 ? 'flipped' : ''}`}
-                    onClick={() => setFlippedCard(!flippedCard)}  //cambiolo stato di flipped
+                    onClick={() => setFlippedCard(flippedCard === 2 ? null : 2)}  //cambio lo stato di flipped
                 >
                     {/* contenitore interno che faccio effettivamente ruotare */}
                     <div className="flip-card-inner">
@@ -80,7 +80,7 @@ export default function Eventi() {
 
                 <div
                     className={`flip-card ${flippedCard === 3 ? 'flipped' : ''}`}
-                    onClick={() => setFlippedCard(!flippedCard)}  //cambiolo stato di flipped
+                    onClick={() => setFlippedCard(flippedCard === 3 ? null : 3)}  //cambio lo stato di flipped
                 >
                     {/* contenitore interno che faccio effettivamente ruotare */}
                     <div className="flip-card-inner">
@@ -108,8 +108,8 @@ export default function Eventi() {
                 </div>
 
                 <div
-                    className={`flip-card ${flippedCard ? 'flipped' : ''}`}
-                    onClick={() => setFlippedCard(!flippedCard)}  //cambiolo stato di flipped
+                    className={`flip-card ${flippedCard === 4 ? 'flipped' : ''}`}
+                    onClick={() => setFlippedCard(flippedCard === 4 ? null : 4)}  //cambio lo stato di flipped
                 >
                     {/* contenitore interno che faccio effettivamente ruotare */}
                     <div className="flip-card-inner">
