@@ -19,6 +19,7 @@
 body {
   /* evita che compaia scrollbar orizzontale pagina home page*/
   overflow-x: hidden;
+  background-color: red !important;
 }
 
 /* Inizio onda */
