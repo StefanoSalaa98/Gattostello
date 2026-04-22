@@ -4,8 +4,8 @@ import AnimateOnScroll from "../hooks/AnimateOnScroll";
 
 export default function Eventi() {
 
-    // variabile di stato che indica se devo o non devo girare la card
-    const [flipped, setFlipped] = useState(false);
+    // variabile di stato che indica se devo o non devo girare la singola card
+    const [flippedCard, setFlippedCard] = useState(null);
 
     // Approccio: desktop --> giro la card all'hover
     //            mobile --> giro la card al click
@@ -21,8 +21,8 @@ export default function Eventi() {
             </div>
             <div className="eventi-container">
                 <div
-                    className={`flip-card ${flipped ? 'flipped' : ''}`}
-                    onClick={() => setFlipped(!flipped)}  //cambiolo stato di flipped
+                    className={`flip-card ${flippedCard === 1 ? 'flipped' : ''}`}
+                    onClick={() => setFlippedCard(!flippedCard)}  //cambiolo stato di flipped
                 >
                     {/* contenitore interno che faccio effettivamente ruotare */}
                     <div className="flip-card-inner">
@@ -50,8 +50,8 @@ export default function Eventi() {
                 </div>
 
                 <div
-                    className={`flip-card ${flipped ? 'flipped' : ''}`}
-                    onClick={() => setFlipped(!flipped)}  //cambiolo stato di flipped
+                    className={`flip-card ${flippedCard === 2 ? 'flipped' : ''}`}
+                    onClick={() => setFlippedCard(!flippedCard)}  //cambiolo stato di flipped
                 >
                     {/* contenitore interno che faccio effettivamente ruotare */}
                     <div className="flip-card-inner">
@@ -79,8 +79,8 @@ export default function Eventi() {
                 </div>
 
                 <div
-                    className={`flip-card ${flipped ? 'flipped' : ''}`}
-                    onClick={() => setFlipped(!flipped)}  //cambiolo stato di flipped
+                    className={`flip-card ${flippedCard === 3 ? 'flipped' : ''}`}
+                    onClick={() => setFlippedCard(!flippedCard)}  //cambiolo stato di flipped
                 >
                     {/* contenitore interno che faccio effettivamente ruotare */}
                     <div className="flip-card-inner">
@@ -108,8 +108,8 @@ export default function Eventi() {
                 </div>
 
                 <div
-                    className={`flip-card ${flipped ? 'flipped' : ''}`}
-                    onClick={() => setFlipped(!flipped)}  //cambiolo stato di flipped
+                    className={`flip-card ${flippedCard ? 'flipped' : ''}`}
+                    onClick={() => setFlippedCard(!flippedCard)}  //cambiolo stato di flipped
                 >
                     {/* contenitore interno che faccio effettivamente ruotare */}
                     <div className="flip-card-inner">
