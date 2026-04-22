@@ -764,8 +764,12 @@
                 ul {
                     li {
                         .iban-container {
+                            .iban {
+                                display: block;
+                            }
+
                             .iban-text {
-                                font-size: 1.1em;
+                                font-size: 1em;
                             }
                         }
                     }
@@ -853,7 +857,7 @@
                     li {
                         .iban-container {
                             .iban-text {
-                                font-size: 1em;
+                                font-size: 0.8em;
                             }
                         }
                     }
