@@ -18,7 +18,7 @@ export default function HomePage() {
         console.log("API URL:", API_URL);
         setIsLoading(true);
         axios
-            .get(`${API_URL}/cats/total-ex`)
+            .get(`${API_URL}/total-ex`)
             .then(({ data }) => setTotale(data.data))
             .catch((error) => console.log(error))
             .finally(() => setIsLoading(false));
