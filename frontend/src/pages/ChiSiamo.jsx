@@ -6,7 +6,7 @@ import AnimateOnScroll from "../hooks/AnimateOnScroll";
 
 export default function ChiSiamo() {
 
-    const color = " rgb(81, 175, 81)";
+    const color = " hsl(120, 40%, 45%)";
 
     return (
         <>

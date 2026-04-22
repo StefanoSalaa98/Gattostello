@@ -11,7 +11,7 @@ import AnimateOnScroll from "../hooks/AnimateOnScroll";
 export default function HomePage() {
     const API_URL = import.meta.env.VITE_API_URL;
     const { isLoading, setIsLoading } = useGlobal();
-    const color = " rgb(81, 175, 81)";
+    const color = " hsl(120, 40%, 45%)";
     const [totale, setTotale] = useState([]);
 
     const fecthTotale = () => {
