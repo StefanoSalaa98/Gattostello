@@ -7,7 +7,9 @@
 
 :root {
   /* --main-color: rgb(95 201 95); */
-  --main-color: rgb(81, 175, 81);
+  /* --main-color: rgb(81, 175, 81); */
+  /* HEX più consistente tra device */
+  --main-color: #51af51;
   --second-color: rgb(0, 136, 0, 0.8);
 }
 
@@ -19,7 +21,6 @@
 body {
   /* evita che compaia scrollbar orizzontale pagina home page*/
   overflow-x: hidden;
-  background-color: red !important;
 }
 
 /* Inizio onda */
