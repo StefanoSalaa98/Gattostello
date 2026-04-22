@@ -129,7 +129,7 @@ export default function Eventi() {
                             <div className="content">
                                 <h2>Raccolta pappe</h2>
                                 <p>
-                                    Siccome la pancia dei nostri amici è la nostra priorità, siamo sempre in prima linea con le <strong> raccolte pappe: </strong>un piccolo gesto di solidarietà che per i nostri mici sempre affamati significa tutto.
+                                    Siccome la pancia dei nostri mici è la nostra priorità, siamo sempre in prima linea con le <strong> raccolte pappe: </strong>un piccolo gesto di solidarietà che per i nostri mici sempre affamati significa tutto.
                                 </p>
                             </div>
                         </div>
