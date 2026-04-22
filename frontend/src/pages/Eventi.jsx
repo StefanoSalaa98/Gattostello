@@ -30,7 +30,7 @@ export default function Eventi() {
                         <div className="flip-card-front">
                             <AnimateOnScroll animation="zoom-in">
                                 <img
-                                    src="/public/img/eventi/colazione.jpg"
+                                    src="img/eventi/colazione.jpg"
                                     alt="colazione"
                                     className="card-image"
                                 />
@@ -59,7 +59,7 @@ export default function Eventi() {
                         <div className="flip-card-front">
                             <AnimateOnScroll animation="zoom-in">
                                 <img
-                                    src="/public/img/eventi/cena.jpg"
+                                    src="img/eventi/cena.jpg"
                                     alt="cena"
                                     className="card-image"
                                 />
@@ -88,7 +88,7 @@ export default function Eventi() {
                         <div className="flip-card-front">
                             <AnimateOnScroll animation="zoom-in">
                                 <img
-                                    src="/public/img/eventi/mercatino.jpg"
+                                    src="img/eventi/mercatino.jpg"
                                     alt="mercatino"
                                     className="card-image"
                                 />
@@ -117,7 +117,7 @@ export default function Eventi() {
                         <div className="flip-card-front">
                             <AnimateOnScroll animation="zoom-in">
                                 <img
-                                    src="/public/img/eventi/raccolta_pappe.jpg"
+                                    src="img/eventi/raccolta_pappe.jpg"
                                     alt="raccolta_pappe"
                                     className="card-image"
                                 />
