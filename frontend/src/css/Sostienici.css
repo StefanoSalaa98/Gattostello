@@ -469,12 +469,6 @@
                     font-size: 1.2em;
                     font-weight: 300;
                     margin-bottom: 10px;
-
-                    .iban-container {
-                        .iban-text {
-                            color: red;
-                        }
-                    }
                 }
             }
 
@@ -765,6 +759,18 @@
             .immagine {
                 width: 90%;
             }
+
+            .testo {
+                ul {
+                    li {
+                        .iban-container {
+                            .iban-text {
+                                font-size: 1.1em;
+                            }
+                        }
+                    }
+                }
+            }
         }
 
     }
@@ -840,6 +846,18 @@
         .dona {
             .immagine {
                 width: 100%;
+            }
+
+            .testo {
+                ul {
+                    li {
+                        .iban-container {
+                            .iban-text {
+                                font-size: 1em;
+                            }
+                        }
+                    }
+                }
             }
         }
 
