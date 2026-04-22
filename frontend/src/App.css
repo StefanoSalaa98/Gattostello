@@ -8,15 +8,16 @@
 :root {
   /* --main-color: rgb(95 201 95); */
   /* --main-color: rgb(81, 175, 81); */
-  /* HEX più consistente tra device */
-  --main-color: #51af51;
+  /* HSL più consistente tra device e più controllabile*/
+  --main-color: hsl(120, 40%, 45%);
+  --second-color: hsl(120, 100%, 30%);
   --second-color: rgb(0, 136, 0, 0.8);
 }
 
 * {
   margin: 0;
   font-family: "Poppins", sans-serif;
-  background: #51af51 !important;
+  background: hsl(120, 40%, 45%) !important;
 }
 
 body {
