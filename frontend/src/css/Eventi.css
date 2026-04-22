@@ -51,12 +51,18 @@
        y2 = come si ferma */
 }
 
-/* se sono in hover nel desktop*/
-.flip-card:hover .flip-card-inner,
-/* o se sono ho cliccato (classe flipped nel mobile*/
-.flip-card.flipped .flip-card-inner {
-    /* giro la card */
-    transform: rotateY(180deg);
+/* se il dispositivo può usare il mouse hover --> sono su pc */
+@media (hover: hover) {
+    .flip-card:hover .flip-card-inner {
+        transform: rotateY(180deg);
+    }
+}
+
+/* se il dispositivo può usare il mouse hover --> sono su tablet o smartphone */
+@media (hover: none) {
+    .flip-card:hover .flip-card-inner {
+        transform: none;
+    }
 }
 
 .flip-card-front,
