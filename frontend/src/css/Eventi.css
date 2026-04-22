@@ -60,8 +60,8 @@
 
 /* se il dispositivo può usare il mouse hover --> sono su tablet o smartphone */
 @media (hover: none) {
-    .flip-card:hover .flip-card-inner {
-        transform: none;
+    .flip-card.flipped .flip-card-inner {
+        transform: rotateY(180deg);
     }
 }
 
