@@ -15,7 +15,8 @@ export default function Eventi() {
                 <AnimateOnScroll>
                     <h2> I nostri eventi </h2>
                     <p>
-                        Oltre a prenderci cura con dedizione di ogni micio, noi del Gattostello siamo costantemente al lavoro per organizzare iniziative uniche e divertenti, trasformando la solidarietà in eventi imperdibili per sostenere la nostra causa. Seguici sui nostri canali social per non perderteli!
+                        Oltre a prenderci cura con dedizione di ogni micio, noi del Gattostello siamo costantemente al lavoro per organizzare iniziative uniche e divertenti, trasformando la solidarietà in eventi imperdibili per sostenere la nostra causa.
+                        <strong> Gira le immagini </strong> per scoprirli e seguici sui nostri canali social per non perderteli!
                     </p>
                 </AnimateOnScroll>
             </div>
