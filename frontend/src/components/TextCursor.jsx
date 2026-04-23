@@ -12,11 +12,16 @@ export default function TextCursor({
     removalInterval = 120,
     maxPoints = 8,
 }) {
+    // array di impronte
     const [trail, setTrail] = useState([]);
+    // ultimo movimento
     const lastMoveTimeRef = useRef(Date.now());
+    // generatore ID unici
     const idCounter = useRef(0);
 
+    // funzione usata per aggiungere una impronta sia mouse desktop sia dito in trascinamento mobile
     const addTrailPoint = (x, y) => {
+        // creo coordinate e rotazione randomiche
         const createRandomData = () =>
             randomFloat
                 ? {
@@ -26,9 +31,12 @@ export default function TextCursor({
                 }
                 : {};
 
+        // prendo lo stato precedente dell'array
         setTrail((prev) => {
+            //  copio l'array
             const newTrail = [...prev];
 
+            // Se l'array è vuoto, creo  la prima impronta
             if (newTrail.length === 0) {
                 newTrail.push({
                     id: idCounter.current++,
@@ -38,6 +46,7 @@ export default function TextCursor({
                     ...createRandomData(),
                 });
             } else {
+                // prendo l'ultima impronta
                 const last = newTrail[newTrail.length - 1];
                 const dx = x - last.x;
                 const dy = y - last.y;
@@ -62,12 +71,13 @@ export default function TextCursor({
                 }
             }
 
+            // controllo per non superare il numero massimo di impronte
             return newTrail.length > maxPoints
                 ? newTrail.slice(newTrail.length - maxPoints)
                 : newTrail;
         });
 
-
+        // aggiorno ultimo movimento
         lastMoveTimeRef.current = Date.now();
     };
 
@@ -117,7 +127,7 @@ export default function TextCursor({
 
     useEffect(() => {
         const interval = setInterval(() => {
-            if (Date.now() - lastMoveTimeRef.current > 2000) {
+            if (Date.now() - lastMoveTimeRef.current > 1400) {
                 setTrail((prev) => (prev.length ? prev.slice(1) : prev));
             }
         }, removalInterval);
