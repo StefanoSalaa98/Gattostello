@@ -111,6 +111,14 @@ export default function Info() {
                         }
                     </div>
                     <div className="testo">
+                        {cat.prenotato === 0 ? (
+                            <span><strong>Stato: </strong>Libero</span>
+                        )
+                            :
+                            (
+                                <span><strong>Stato: </strong>Prenotato</span>
+                            )
+                        }
                         {cat.sex && (
                             <span> <strong>Sesso: </strong>
                                 {cat.sex == "M" ?
