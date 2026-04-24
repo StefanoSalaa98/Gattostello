@@ -69,7 +69,7 @@ export default function ChiSiamo() {
                     </AnimateOnScroll>
                     <AnimateOnScroll>
                         <p>
-                            Vi verranno fatte alcune domande che aiuteranno a individuare il gatto o i gatti più adatti in base al vostro nucleo familiare, stile di vita e tipo di abitazione. Ogni micio ha la sua età e una personalità unica, per aiutarvi a trovare il compagno ideale, analizziamo insieme il vostro contesto familiare, come la presenza di bambini, anziani o altri animali, e la vostra precedente esperienza con i felini. È altrettanto importante valutare le vostre abitudini quotidiane: se lavorate molte ore fuori casa, se viaggiate spesso o se vi spostate nei weekend, dobbiamo scegliere un gatto che si adatti bene alla solitudine o, al contrario, agli spostamenti.
+                            Vi verranno fatte alcune domande che aiuteranno a individuare il gatto o i gatti più adatti in base al vostro nucleo familiare, stile di vita e tipo di abitazione. Ogni micio ha la sua età e una personalità unica, per aiutarvi a trovare il compagno ideale, analizziamo insieme il vostro contesto familiare, come la presenza di bambini, anziani o altri animali, e la vostra precedente esperienza con i felini.
                         </p>
                     </AnimateOnScroll>
                     <AnimateOnScroll>
@@ -77,7 +77,7 @@ export default function ChiSiamo() {
                     </AnimateOnScroll>
                     <AnimateOnScroll>
                         <p>
-                            Per trovare il compagno ideale, dobbiamo immaginare la sua nuova vita nelle vostre stanze: si tratta di un appartamento in condominio o di una casa indipendente? Ci sono balconi da mettere in sicurezza o accessi diretti a vie molto frequentate? Come potete notare, ogni dettaglio architettonico ci aiuta a compiere la scelta migliore per la felicità vostra e del piccolo ospite.
+                            Per trovare il compagno ideale, dobbiamo immaginare la sua nuova vita nelle vostre stanze: si tratta di un appartamento in condominio o di una casa indipendente? Ci sono balconi da mettere in sicurezza o accessi diretti a vie molto frequentate? Ogni dettaglio ci aiuta a compiere la scelta migliore per la felicità vostra e del piccolo ospite.
                         </p>
                     </AnimateOnScroll>
                     <AnimateOnScroll>
@@ -95,7 +95,7 @@ export default function ChiSiamo() {
                     </AnimateOnScroll>
                     <AnimateOnScroll>
                         <p>
-                            Questo incontro sarà anche l'occasione perfetta per chiarire ogni dubbio con il nostro incaricato, chiedendo consigli sull'inserimento in casa o sulla gestione del gatto durante le ferie. Grazie di cuore per aver pensato ai nostri mici per una possibile adozione, per averci letto fino a qui e per l'attenzione che dedicherete a quanto vi abbiamo raccontato!
+                            Questo incontro sarà anche l'occasione perfetta per chiarire ogni dubbio, chiedendo consigli sull'inserimento in casa o sulla gestione del gatto durante le ferie. Grazie di cuore per aver pensato ai nostri mici per una possibile adozione, per averci letto fino a qui e per l'attenzione che dedicherete a quanto vi abbiamo raccontato!
                         </p>
                     </AnimateOnScroll>
                     <div className="adotta">
