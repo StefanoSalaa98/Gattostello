@@ -46,7 +46,6 @@ export default function Info() {
         setIsLoading(true);
         axios.get(`${API_URL}/${slug}`)
             .then(response => {
-                console.log(response.data.data);
                 setCat(response.data.data)
             })
             .catch(error => { console.log(error) })
@@ -111,14 +110,12 @@ export default function Info() {
                         }
                     </div>
                     <div className="testo">
-                        {cat.prenotato === 0 ? (
-                            <span><strong>Stato: </strong>Libero</span>
-                        )
-                            :
-                            (
-                                <span><strong>Stato: </strong>Prenotato</span>
-                            )
-                        }
+                        {cat.prenotato !== undefined && (
+                            <span>
+                                <strong>Stato: </strong>
+                                {cat.prenotato === 0 ? "Libero" : "Prenotato"}
+                            </span>
+                        )}
                         {cat.sex && (
                             <span> <strong>Sesso: </strong>
                                 {cat.sex == "M" ?
