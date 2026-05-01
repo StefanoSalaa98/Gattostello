@@ -12,7 +12,31 @@ export default function HomePage() {
     const API_URL = import.meta.env.VITE_API_URL;
     const { isLoading, setIsLoading } = useGlobal();
     const color = " hsl(120, 40%, 45%)";
+
+    // Variabile di stato che mostra il totale degli adottati
     const [totale, setTotale] = useState([]);
+
+    // Variabile di stato che gestisce il contatore
+    const [count, setCount] = useState(0);
+
+    const animatedCounter = () => {
+
+        const duration = 2000;
+
+        // Se ho raggiunto il target mi fermo
+        if (count < totale) {
+            // Calcolo il tempo tra un incremento e l'altro per finire entro 'duration'
+            // Più è alto il numero, più veloce deve essere il timer
+            const delay = duration / totale;
+
+            const timer = setTimeout(() => {
+                setCount(prevCount => prevCount + 1);
+            }, delay);
+
+            // Pulizia del timer
+            return () => clearTimeout(timer);
+        }
+    }
 
     const fecthTotale = () => {
         console.log("API URL:", API_URL);
@@ -26,6 +50,8 @@ export default function HomePage() {
 
     useEffect(fecthTotale, []);
 
+    useEffect(animatedCounter, [count, totale]);
+
     return (
         <>
             <div className="home-container">
@@ -34,17 +60,14 @@ export default function HomePage() {
                     <h2>Dove ogni gatto trova una zampa tesa e un posto sicuro</h2>
                 </AnimateOnScroll>
 
-                {!isLoading && (
+                <AnimateOnScroll delay={0.3}>
+                    <div className="totale">
+                        <span className="numero">{count}</span>
+                        <span> mici hanno trovato </span>
+                        <span> casa grazie a noi </span>
+                    </div>
+                </AnimateOnScroll>
 
-                    <AnimateOnScroll delay={0.3}>
-                        <div className="totale">
-                            <span className="numero">{totale}</span>
-                            <span> mici hanno trovato </span>
-                            <span> casa grazie a noi </span>
-                        </div>
-                    </AnimateOnScroll>
-
-                )}
             </div>
 
             <OndaBottom colore={color} sfondo="bianco" />
