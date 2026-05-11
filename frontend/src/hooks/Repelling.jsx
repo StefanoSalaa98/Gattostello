@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { motion, useSpring, useMotionValue } from "framer-motion";
 
-export default function Repelling({ children, strength = 0.15 }) {
+export default function Repelling({ children, strength = 0.15, isDisabled = false }) {
     // Valori di movimento per la posizione target
     const mouseX = useMotionValue(0);
     const mouseY = useMotionValue(0);
@@ -12,6 +12,13 @@ export default function Repelling({ children, strength = 0.15 }) {
     const translateY = useSpring(mouseY, springConfig);
 
     useEffect(() => {
+        // Se l'effetto è disabilitato, resetto la posizione ed esco
+        if (isDisabled) {
+            mouseX.set(0);
+            mouseY.set(0);
+            return;
+        }
+
         const handleMouseMove = (e) => {
             const { innerWidth, innerHeight } = window;
 
@@ -31,7 +38,7 @@ export default function Repelling({ children, strength = 0.15 }) {
 
         window.addEventListener("mousemove", handleMouseMove);
         return () => window.removeEventListener("mousemove", handleMouseMove);
-    }, [mouseX, mouseY, strength]);
+    }, [mouseX, mouseY, strength, isDisabled]);
 
     return (
         <motion.div
