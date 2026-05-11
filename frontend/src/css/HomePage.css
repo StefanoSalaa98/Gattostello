@@ -1,3 +1,82 @@
+/* --- 1. CONTENITORE PRINCIPALE (HERO) --- */
+.hero-container {
+    position: relative;
+    width: 100%;
+    /* Altezza dinamica: 80% su PC, 100% su Mobile */
+    height: 120vh;
+    overflow: hidden;
+    /* Fondamentale: impedisce allo zoom di "uscire" dal sito */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--main-color);
+    /* Sfondo di sicurezza mentre carica l'immagine */
+}
+
+/* --- 2. L'IMMAGINE E L'ANIMAZIONE --- */
+.hero-image-animated {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    opacity: 0;
+    /* Animazione: Nome | Durata | Curva (rallenta alla fine) | Blocca alla fine */
+    animation: slowZoomAndStop 5s ease-out 1.5s forwards;
+    /* RITARDO: l'animazione partirà dopo 1.5 secondi dal caricamento */
+}
+
+/* Definizione del movimento */
+@keyframes slowZoomAndStop {
+    from {
+        transform: scale(1);
+        opacity: 0.01;
+        /* Parte un po' più scura */
+    }
+
+    to {
+        transform: scale(1.2);
+        /* Zoom del 10% */
+        opacity: 1;
+        /* Diventa nitida */
+    }
+}
+
+/* --- 4. CONTENUTO TESTUALE --- */
+.hero-content {
+    position: relative;
+    z-index: 3;
+    /* Sopra l'immagine e l'overlay */
+    color: #ffffff;
+    text-align: center;
+
+    h1,
+    h2 {
+        font-size: 3em;
+        font-weight: 500;
+        font-family: "PawWow", sans-serif;
+    }
+
+    h2 {
+        margin-bottom: 150px;
+    }
+}
+
+
+/* --- 3. OVERLAY (Per rendere il testo leggibile) --- */
+.hero-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Gradiente scuro per far risaltare il testo bianco */
+    z-index: 2;
+}
+
 .home-container {
     width: 90%;
     margin: auto;
@@ -5,18 +84,6 @@
     height: 300px;
     text-align: center;
     margin-bottom: 300px;
-
-    h1,
-    h2 {
-        font-size: 3em;
-        font-weight: 500;
-        font-family: "PawWow", sans-serif;
-        color: var(--main-color);
-    }
-
-    h2 {
-        margin-bottom: 50px;
-    }
 
     .totale {
         width: 80%;
