@@ -11,9 +11,27 @@ export default function Repelling({ children, strength = 0.15, isDisabled = fals
     const translateX = useSpring(mouseX, springConfig);
     const translateY = useSpring(mouseY, springConfig);
 
+    // Stato per gestire la disattivazione su schermi piccoli (< 768px)
+    const [isMobile, setIsMobile] = useState(false);
+
     useEffect(() => {
-        // Se l'effetto è disabilitato, resetto la posizione ed esco
-        if (isDisabled) {
+        // Funzione per controllare la larghezza dello schermo
+        const checkMobile = () => {
+            setIsMobile(window.innerWidth < 768);
+        };
+
+        // Controllo iniziale e aggiunta listener per il resize
+        checkMobile();
+        window.addEventListener("resize", checkMobile);
+
+        return () => window.removeEventListener("resize", checkMobile);
+    }, []);
+
+    useEffect(() => {
+        // Disabilito se:
+        // 1. La prop isDisabled è true (burger menu aperto)
+        // 2. Lo schermo è mobile (isMobile è true)
+        if (isDisabled || isMobile) {
             mouseX.set(0);
             mouseY.set(0);
             return;
