@@ -9,11 +9,16 @@ function GlobalProvider({ children }) {
     // variabile di stato per la gestione del loader, inizialmente settata su false
     const [isLoading, setIsLoading] = useState(false);
 
+    // Variabile che mi dice lo stato del Burger Menu
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+
     return (
         <GlobalContext.Provider
             value={{
                 isLoading,
                 setIsLoading,
+                isMenuOpen,
+                setIsMenuOpen,
             }}
         >
             {children}
