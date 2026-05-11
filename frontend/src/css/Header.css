@@ -1,8 +1,49 @@
 header {
-    background-color: var(--main-color);
     position: fixed;
     z-index: 99999;
     width: 100%;
+}
+
+/* STATO 1: Inizio pagina - Trasparente */
+.navbar-top {
+    background-color: transparent;
+    color: white;
+    transform: translateY(-100px);
+    animation: slideDownFade 1s ease-out forwards;
+    /* Visibile */
+}
+
+/* STATO 2: Durante lo scroll nella Hero - Scompare */
+.navbar-hidden {
+    background-color: transparent;
+    transform: translateY(0);
+    animation: slideTopFade 1s ease-out forwards;
+    pointer-events: none;
+    /* Impedisce di cliccare i link mentre è nascosto */
+}
+
+/* STATO 3: Oltre la Hero - Riappare Verde */
+.navbar-sticky {
+    background-color: var(--main-color);
+    color: white;
+    transform: translateY(-100px);
+    /* Entrano dall'alto */
+    animation: slideDownFade 1s ease-out forwards;
+    /* Torna giù visibile */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes slideDownFade {
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideTopFade {
+    to {
+        transform: translateY(-100%);
+        /* Si sposta sopra, fuori dallo schermo */
+    }
 }
 
 .header-container {
@@ -65,31 +106,15 @@ header {
         width: 100%;
     }
 
-    .link.active {
+    /* .link.active {
         color: rgb(5, 5, 17);
-    }
+    } */
 
     .link.active::after {
-        background-color: rgb(5, 5, 17);
+        /* background-color: rgb(5, 5, 17); */
+        background-color: white;
         width: 100%;
     }
-
-    /* .doppia-riga {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .prima-riga {
-        position: relative;
-        top: 3px;
-    }
-
-    .seconda-riga {
-        position: relative;
-        top: -3px;
-    } */
 
     .burger {
         display: flex;
