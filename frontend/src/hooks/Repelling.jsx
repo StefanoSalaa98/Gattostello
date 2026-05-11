@@ -37,26 +37,27 @@ export default function Repelling({ children, strength = 0.15, isDisabled = fals
             return;
         }
 
-        const handleMouseMove = (e) => {
+        const handleMove = (x, y) => {
             const { innerWidth, innerHeight } = window;
-
-            // 1. Troviamo il centro del viewport
             const centerX = innerWidth / 2;
             const centerY = innerHeight / 2;
+            const distX = x - centerX;
+            const distY = y - centerY;
 
-            // 2. Calcoliamo la distanza del mouse dal centro
-            const distX = e.clientX - centerX;
-            const distY = e.clientY - centerY;
-
-            // 3. APPLICHIAMO LA DIREZIONE OPPOSTA
-            // Moltiplicando per -strength, il testo si muove in direzione contraria al mouse
             mouseX.set(distX * -strength);
             mouseY.set(distY * -strength);
         };
 
-        window.addEventListener("mousemove", handleMouseMove);
-        return () => window.removeEventListener("mousemove", handleMouseMove);
-    }, [mouseX, mouseY, strength, isDisabled]);
+        const onMouseMove = (e) => handleMove(e.clientX, e.clientY);
+
+        window.addEventListener("mousemove", onMouseMove);
+        return () => {
+            window.removeEventListener("mousemove", onMouseMove);
+            mouseX.set(0);
+            mouseY.set(0);
+        };
+        // Aggiungiamo isMobile alle dipendenze
+    }, [mouseX, mouseY, strength, isDisabled, isMobile]);
 
     return (
         <motion.div
@@ -70,4 +71,4 @@ export default function Repelling({ children, strength = 0.15, isDisabled = fals
             {children}
         </motion.div>
     );
-};
+}
