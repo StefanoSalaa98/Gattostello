@@ -11,7 +11,7 @@ import Repelling from "../hooks/Repelling";
 
 export default function HomePage() {
     const API_URL = import.meta.env.VITE_API_URL;
-    const { isLoading, setIsLoading } = useGlobal();
+    const { isLoading, setIsLoading, isMenuOpen } = useGlobal();
     const color = " hsl(120, 40%, 45%)";
 
     // Stato per sapere se il contatore è visibile
@@ -98,7 +98,7 @@ export default function HomePage() {
                 {/* Contenuto sovrapposto (opzionale) */}
 
                 <div className="hero-content">
-                    <Repelling strength={0.2}>
+                    <Repelling strength={0.2} isDisabled={isMenuOpen}>
                         <h1>BENVENUTI SUL SITO DEL GATTOSTELLO</h1>
                         <h2>Dove ogni gatto trova una zampa tesa e un posto sicuro</h2>
                     </Repelling>
