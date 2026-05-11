@@ -1,12 +1,51 @@
+import { useState, useEffect } from "react"
+import { useLocation } from 'react-router-dom';
 import { NavLink } from "react-router-dom"
 import BurgerMenu from "./BurgerMenu"
 import "../css/Header.css";
 
 export default function Header() {
 
+    // ricavo la pagina in cui mi trovo
+    const location = useLocation();
+    // variabile che mi dice se sono nella HomePage
+    const isHomePage = location.pathname === "/";
+
+    const [headerState, setHeaderState] = useState('top');
+
+    useEffect(() => {
+
+        // Se non sonon nella HomePage esco subito
+        if (!isHomePage) {
+            setHeaderState('sticky');
+            return;
+        }
+
+        const handleScroll = () => {
+            const heroHeight = window.innerHeight * 0.8;
+
+            if (scrollY < 50) {
+                // 1. Siamo proprio all'inizio
+                setHeaderState('top');
+            } else if (scrollY > 50 && scrollY < heroHeight) {
+                // 2. L'utente ha iniziato a scrollare ma è ancora nella Hero
+                setHeaderState('hidden');
+            } else if (scrollY >= heroHeight) {
+                // 3. Abbiamo superato la Hero
+                setHeaderState('sticky');
+            }
+        };
+
+        // Eseguo il controllo immediatamente al montaggio del componente
+        handleScroll();
+
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, [isHomePage]);
+
     return (
         <>
-            <header>
+            <header className={`navbar-${headerState}`}>
                 <div className="header-container">
                     <div className="logo">
                         <img src="/img/gattostello_post.png" alt="gattostello" />
