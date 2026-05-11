@@ -22,16 +22,17 @@ export default function Header() {
         }
 
         const handleScroll = () => {
+            // Imposto il rietro dell'header all'80% della Hero
             const heroHeight = window.innerHeight * 0.8;
 
             if (scrollY < 50) {
-                // 1. Siamo proprio all'inizio
+                // 1. Inizio della Hero
                 setHeaderState('top');
             } else if (scrollY > 50 && scrollY < heroHeight) {
                 // 2. L'utente ha iniziato a scrollare ma è ancora nella Hero
                 setHeaderState('hidden');
             } else if (scrollY >= heroHeight) {
-                // 3. Abbiamo superato la Hero
+                // 3. Hero superata
                 setHeaderState('sticky');
             }
         };
@@ -62,11 +63,6 @@ export default function Header() {
                         </div>
                     </nav>
                     <div className="burger">
-                        {/* <div className="testa">
-                            <a className="icona" href="https://www.facebook.com/ilGattostello"><FaFacebookF /></a>
-                            <a className="icona" href="https://www.facebook.com/profile.php?id=100087577566537&locale=it_IT"><FaFacebookF /></a>
-                            <a className="icona" href="https://www.instagram.com/gattostello.odv/"><FaInstagram /></a>
-                        </div> */}
                         <BurgerMenu />
                     </div>
                 </div>
