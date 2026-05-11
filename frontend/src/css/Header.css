@@ -64,11 +64,6 @@ header {
         color: white;
     }
 
-    /* .testa {
-        margin-right: 30px;
-        margin-bottom: 3px;
-    } */
-
     .pagine {
         width: 72%;
         display: flex;
@@ -142,6 +137,11 @@ header {
     }
 
     #offcanvasMenu {
+        position: fixed !important;
+        top: 0;
+        bottom: 0;
+        height: 100vh !important;
+        z-index: 99999 !important;
         width: 30%;
         padding-left: 30px;
         background-color: var(--main-color);
