@@ -140,7 +140,7 @@ header {
         position: fixed !important;
         top: 0;
         bottom: 0;
-        height: 100vh !important;
+        height: 100dvh !important;
         z-index: 99999 !important;
         width: 30%;
         padding-left: 30px;

@@ -1,11 +1,9 @@
 import { useEffect, useRef } from "react";
 import { useGlobal } from "../contexts/GlobalContext";
-import { FaFacebookF } from "react-icons/fa";
-import { FaInstagram } from "react-icons/fa";
+import { FaFacebookF, FaInstagram } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 
 export default function BurgerMenu() {
-
     const { setIsMenuOpen } = useGlobal();
     const offcanvasRef = useRef(null);
 
@@ -13,51 +11,61 @@ export default function BurgerMenu() {
         const menuElement = offcanvasRef.current;
         if (!menuElement) return;
 
-        // Inizializzo l'istanza Bootstrap (serve per far funzionare i listener in modo affidabile)
+        // Inizializzazione manuale per garantire il funzionamento su tutti i dispositivi
         const bsOffcanvas = window.bootstrap?.Offcanvas.getOrCreateInstance(menuElement);
 
-        const handleOpen = () => {
-            setIsMenuOpen(true);
-        };
-        const handleClose = () => {
-            setIsMenuOpen(false);
-        };
+        // Uso 'show' e 'hide' invece di 'shown' e 'hidden' per un feedback immediato
+        const handleOpen = () => setIsMenuOpen(true);
+        const handleClose = () => setIsMenuOpen(false);
 
-        menuElement.addEventListener('shown.bs.offcanvas', handleOpen);
-        menuElement.addEventListener('hidden.bs.offcanvas', handleClose);
+        menuElement.addEventListener('show.bs.offcanvas', handleOpen);
+        menuElement.addEventListener('hide.bs.offcanvas', handleClose);
 
         return () => {
-            menuElement.removeEventListener('shown.bs.offcanvas', handleOpen);
-            menuElement.removeEventListener('hidden.bs.offcanvas', handleClose);
+            menuElement.removeEventListener('show.bs.offcanvas', handleOpen);
+            menuElement.removeEventListener('hide.bs.offcanvas', handleClose);
+            // Reset di sicurezza dello stato quando il componente smonta
+            setIsMenuOpen(false);
         };
     }, [setIsMenuOpen]);
 
+    // Funzione per chiudere il menu quando si clicca un link
+    const closeMenu = () => {
+        const bsOffcanvas = window.bootstrap?.Offcanvas.getInstance(offcanvasRef.current);
+        bsOffcanvas?.hide();
+    };
+
     return (
         <>
-            {/* bottone burger */}
+            {/* Bottone Burger */}
             <button
-                className="navbar-toggler "
+                className="navbar-toggler"
                 data-bs-theme="dark"
                 type="button"
                 data-bs-toggle="offcanvas"
                 data-bs-target="#offcanvasMenu"
                 aria-controls="offcanvasMenu"
+                // Fallback manuale per disattivare il repelling istantaneamente al tocco
+                onTouchStart={() => setIsMenuOpen(true)}
             >
                 <span className="navbar-toggler-icon"></span>
             </button>
 
-            {/* pannello offcanvas */}
+            {/* Pannello Offcanvas */}
             <div
                 className="offcanvas offcanvas-end"
                 tabIndex="-1"
                 id="offcanvasMenu"
                 ref={offcanvasRef}
+                aria-labelledby="offcanvasMenuLabel"
             >
                 <div className="offcanvas-header">
+                    <h5 id="offcanvasMenuLabel" className="visually-hidden">Menu</h5>
                     <button
                         type="button"
                         className="btn-close"
                         data-bs-dismiss="offcanvas"
+                        aria-label="Close"
                     />
                 </div>
 
@@ -84,17 +92,15 @@ export default function BurgerMenu() {
                         <li className="nav-item mb-3">
                             <NavLink className="link" to="/ex-ospiti">I nostri ex ospiti</NavLink>
                         </li>
-                        <li className="nav-item social mt-auto">
-                            <a className="icona nav-link icona-burger"
-                                href="https://www.facebook.com/ilGattostello">
+
+                        <li className="nav-item social mt-auto d-flex justify-content-around">
+                            <a className="icona nav-link icona-burger" href="https://www.facebook.com/ilGattostello" target="_blank" rel="noreferrer">
                                 <FaFacebookF />
                             </a>
-                            <a className="icona nav-link icona-burger"
-                                href="https://www.facebook.com/profile.php?id=100087577566537&locale=it_IT">
+                            <a className="icona nav-link icona-burger" href="https://www.facebook.com/profile.php?id=100087577566537" target="_blank" rel="noreferrer">
                                 <FaFacebookF />
                             </a>
-                            <a className="icona nav-link icona-burger"
-                                href="https://www.instagram.com/gattostello.odv/">
+                            <a className="icona nav-link icona-burger" href="https://www.instagram.com/gattostello.odv/" target="_blank" rel="noreferrer">
                                 <FaInstagram />
                             </a>
                         </li>
@@ -102,5 +108,5 @@ export default function BurgerMenu() {
                 </div>
             </div>
         </>
-    )
+    );
 }
