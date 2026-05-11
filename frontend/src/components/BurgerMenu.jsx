@@ -1,8 +1,37 @@
+import { useEffect, useRef } from "react";
+import { useGlobal } from "../contexts/GlobalContext";
 import { FaFacebookF } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 
 export default function BurgerMenu() {
+
+    const { setIsMenuOpen } = useGlobal();
+    const offcanvasRef = useRef(null);
+
+    useEffect(() => {
+        const menuElement = offcanvasRef.current;
+        if (!menuElement) return;
+
+        // Inizializzo l'istanza Bootstrap (serve per far funzionare i listener in modo affidabile)
+        const bsOffcanvas = window.bootstrap?.Offcanvas.getOrCreateInstance(menuElement);
+
+        const handleOpen = () => {
+            setIsMenuOpen(true);
+        };
+        const handleClose = () => {
+            setIsMenuOpen(false);
+        };
+
+        menuElement.addEventListener('shown.bs.offcanvas', handleOpen);
+        menuElement.addEventListener('hidden.bs.offcanvas', handleClose);
+
+        return () => {
+            menuElement.removeEventListener('shown.bs.offcanvas', handleOpen);
+            menuElement.removeEventListener('hidden.bs.offcanvas', handleClose);
+        };
+    }, [setIsMenuOpen]);
+
     return (
         <>
             {/* bottone burger */}
@@ -22,6 +51,7 @@ export default function BurgerMenu() {
                 className="offcanvas offcanvas-end"
                 tabIndex="-1"
                 id="offcanvasMenu"
+                ref={offcanvasRef}
             >
                 <div className="offcanvas-header">
                     <button
