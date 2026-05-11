@@ -80,10 +80,10 @@
 .home-container {
     width: 90%;
     margin: auto;
-    padding-top: 160px;
+    padding-top: 120px;
     height: 300px;
     text-align: center;
-    margin-bottom: 300px;
+    margin-bottom: 150px;
 
     .totale {
         width: 80%;
@@ -311,10 +311,6 @@
 /* Sezione responsive */
 @media (max-width: 1024px) {
 
-    .home-container {
-        margin-bottom: 350px;
-    }
-
     .descrizione-container {
 
         .descrizione {
@@ -368,7 +364,7 @@
 
 @media (max-width: 768px) {
     .home-container {
-        margin-bottom: 450px;
+        margin-bottom: 200px;
     }
 
     .descrizione-container {
@@ -394,7 +390,6 @@
 
 @media (max-width: 480px) {
     .home-container {
-        margin-bottom: 550px;
 
         .totale {
             width: 80%;
