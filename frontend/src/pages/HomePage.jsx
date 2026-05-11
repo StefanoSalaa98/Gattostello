@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { useGlobal } from "../contexts/GlobalContext";
 
@@ -7,39 +7,63 @@ import OndaTop from "../components/OndaTop";
 import OndaBottom from "../components/OndaBottom";
 import "../css/HomePage.css";
 import AnimateOnScroll from "../hooks/AnimateOnScroll";
+import Repelling from "../hooks/Repelling";
 
 export default function HomePage() {
     const API_URL = import.meta.env.VITE_API_URL;
     const { isLoading, setIsLoading } = useGlobal();
     const color = " hsl(120, 40%, 45%)";
 
+    // Stato per sapere se il contatore è visibile
+    const [isVisible, setIsVisible] = useState(false);
+    // Riferimento all'elemento DOM
+    const counterRef = useRef(null);
+
     // Variabile di stato che mostra il totale degli adottati
-    const [totale, setTotale] = useState([]);
+    const [totale, setTotale] = useState(0);
 
     // Variabile di stato che gestisce il contatore
     const [count, setCount] = useState(0);
 
+    // Intersection Observer per attivare isVisible
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    setIsVisible(true);
+                    observer.disconnect(); // Smetto di osservare una volta attivato
+                }
+            },
+            { threshold: 0.1 } // Parte quando il 10% del componente è visibile
+        );
+
+        if (counterRef.current) {
+            observer.observe(counterRef.current);
+        }
+
+        return () => observer.disconnect();
+    }, []);
+
     const animatedCounter = () => {
+
+        // Se non è ancora visibile o ha finito, esco subito
+        if (!isVisible || totale <= 0 || count >= totale) return;
 
         const duration = 2000;
 
-        // Se ho raggiunto il target mi fermo
-        if (count < totale) {
-            // Calcolo il tempo tra un incremento e l'altro per finire entro 'duration'
-            // Più è alto il numero, più veloce deve essere il timer
-            const delay = duration / totale;
+        // Calcolo il tempo tra un incremento e l'altro per finire entro 'duration'
+        // Più è alto il numero, più veloce deve essere il timer
+        const delay = duration / totale;
 
-            const timer = setTimeout(() => {
-                setCount(prevCount => prevCount + 1);
-            }, delay);
+        const timer = setTimeout(() => {
+            setCount(prevCount => prevCount + 1);
+        }, delay);
 
-            // Pulizia del timer
-            return () => clearTimeout(timer);
-        }
+        // Pulizia del timer
+        return () => clearTimeout(timer);
     }
 
     const fecthTotale = () => {
-        console.log("API URL:", API_URL);
         setIsLoading(true);
         axios
             .get(`${API_URL}/total-ex`)
@@ -50,18 +74,42 @@ export default function HomePage() {
 
     useEffect(fecthTotale, []);
 
-    useEffect(animatedCounter, [count, totale]);
+    useEffect(animatedCounter, [count, totale, isVisible]);
 
     return (
         <>
+
+            <section className="hero-container">
+                {/* Contenitore dell'immagine con overflow hidden */}
+                <div className="hero-image-wrapper">
+                    <picture>
+                        {/* Se lo schermo è largo al massimo 768px, uso l'immagine verticale */}
+                        <source media="(max-width: 768px)" srcSet="img/heroimage_mobile.jpg" />
+
+                        {/* Per tutti gli altri casi (Desktop), uso quella orizzontale */}
+                        <img
+                            src="img/heroimage_desktop.jpg"
+                            alt="Immagine Hero Animata"
+                            className="hero-image-animated"
+                        />
+                    </picture>
+                </div>
+
+                {/* Contenuto sovrapposto (opzionale) */}
+
+                <div className="hero-content">
+                    <Repelling strength={0.2}>
+                        <h1>BENVENUTI SUL SITO DEL GATTOSTELLO</h1>
+                        <h2>Dove ogni gatto trova una zampa tesa e un posto sicuro</h2>
+                    </Repelling>
+                </div>
+
+            </section>
+
             <div className="home-container">
-                <AnimateOnScroll>
-                    <h1>BENVENUTI SUL SITO DEL GATTOSTELLO</h1>
-                    <h2>Dove ogni gatto trova una zampa tesa e un posto sicuro</h2>
-                </AnimateOnScroll>
 
                 <AnimateOnScroll delay={0.3}>
-                    <div className="totale">
+                    <div className="totale" ref={counterRef}>
                         <span className="numero">{count}</span>
                         <span> mici hanno trovato </span>
                         <span> casa grazie a noi </span>
