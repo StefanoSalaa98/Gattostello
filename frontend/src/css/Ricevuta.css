@@ -1,0 +1,65 @@
+.form-ricevuta-wrapper {
+    padding-top: 100px;
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+.form-ricevuta {
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-top: 5px solid var(--main-color);
+    /* Il tuo verde */
+}
+
+input {
+    margin-bottom: 15px;
+}
+
+.form-ricevuta input,
+.form-ricevuta textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.input-error {
+    border: 1px solid red;
+    background-color: rgba(212, 19, 19, 0.1);
+}
+
+.form-ricevuta button {
+    background-color: hsl(120, 40%, 45%);
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.form-ricevuta button {
+    margin: 10px 0;
+}
+
+.form-ricevuta button:hover {
+    transform: scale(1.05);
+    background-color: var(--main-color);
+}
+
+.elenco-errori {
+    color: rgb(168, 12, 12);
+}
+
+.success-card {
+    text-align: center;
+    padding: 40px;
+    background: #f0fff0;
+    border-radius: 15px;
+    border: 2px dashed #4caf50;
+}

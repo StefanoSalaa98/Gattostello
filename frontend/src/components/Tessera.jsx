@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { Link } from "react-router-dom";
 import Iban from "./Iban";
 import AnimateOnScroll from "../hooks/AnimateOnScroll";
 
@@ -80,9 +80,10 @@ export default function Tessera({ livello }) {
 
                 <Iban />
 
-                <div>
+                <div className="compila">
                     <span className="inserisci"> Inserici nella causale: </span>
                     <span className="causale"> Tessera {causale()}</span>
+                    <Link to="/ricevuta">Richiedi ricevuta</Link>
                 </div>
             </AnimateOnScroll>
         </>

@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import Tessera from "../components/Tessera";
 import Seleziona from "../components/Seleziona";
 import CodiceFiscale from "../components/CodiceFiscale";
@@ -9,6 +9,7 @@ import OndaTop from "../components/OndaTop";
 import OndaBottom from "../components/OndaBottom";
 import "../css/Sostienici.css";
 import AnimateOnScroll from "../hooks/AnimateOnScroll";
+import { GrDocumentText } from "react-icons/gr";
 
 export default function Sostienici() {
 
@@ -38,6 +39,12 @@ export default function Sostienici() {
                         <AnimateOnScroll>
                             <h2>Come aiutare i gatti del Gattostello</h2>
                             <p>Se sei arrivato in questa pagina, probabilmente è perché desideri aiutare i mici del Gattostello! La nostra associazione non gode di sovvenzioni comunali o statali ma sopravvive grazie all'autotassazione dei volontari e alle donazioni di chi, generosamente, decide di sostenere la nostra missione. Ogni piccolo aiuto rappresenta un grande passo avanti per migliorare la vita dei nostri amici a 4 zampe. Ricorda: le donazioni possono essere dedotte dalla dichiarazione dei redditi. Ti consigliamo di conservare le ricevute dei versamenti come prova delle donazioni effettuate. Grazie per il tuo contributo!</p>
+                            {/* NUOVO BOX FISCALE */}
+                            <div className="info-fiscale">
+                                <h3><GrDocumentText /> Detrazioni Fiscali:</h3>
+                                <p>Hai effettutato una donazione?</p>
+                                <Link to="/ricevuta">Richiedi la ricevuta</Link>
+                            </div>
                         </AnimateOnScroll>
                     </div>
                     <div className="immagine">
@@ -209,8 +216,9 @@ export default function Sostienici() {
                             <p>Ogni aiuto è fondamentale, piccolo o grande che sia, a seconda delle vostre disponibilità, si può aiutare i nostri mici in tanti modi:</p>
                             <ul>
                                 <li>
-                                    Potete effettuare una donazione libera al nostro iban:
+                                    <span>Potete effettuare una donazione libera al nostro iban:</span>
                                     <Iban />
+                                    <Link to="/ricevuta">Richiedi ricevuta</Link>
                                 </li>
                                 <li>
                                     Potete portare cibo, giochi, articoli per felini al nostro indirizzo: <br />
@@ -218,13 +226,43 @@ export default function Sostienici() {
                                 </li>
                                 <li>
                                     <span className="diventa">Potete donare parte del vostro tempo libero diventando volontari</span>
-                                    <a href="/unisciti">Scopri di più</a>
+                                    <Link href="/unisciti">Scopri di più</Link>
                                 </li>
                             </ul>
                         </AnimateOnScroll>
                     </div>
                 </div>
             </div >
+
+            <OndaBottom colore={color} sfondo="scuro" />
+            <OndaTop colore={color} sfondo="bianco" />
+
+            <div className="gofundme-container">
+                <div className="gofundme">
+                    <div className="testo">
+                        <AnimateOnScroll>
+                            <h2>Raccolta fondi</h2>
+                            <p>
+                                Emy e Cracco hanno affrontato prove durissime: la perdita, la malattia e l'abbandono. Nonostante il dolore, non hanno mai smesso di fidarsi delle persone e di sperare in un futuro migliore. Oggi hanno bisogno del nostro aiuto per continuare le cure e trovare finalmente una famiglia che li ami per sempre. Ogni contributo può regalare loro una nuova possibilità.
+                            </p>
+                            <p>
+                                <a
+                                    href="https://gofund.me/ecf63c48b"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    Conosci la loro storia
+                                </a>
+                            </p>
+                        </AnimateOnScroll>
+                    </div>
+                    <div className="immagine">
+                        <AnimateOnScroll animation="slide-right" delay={0.5}>
+                            <img src="img/cracco.webp" alt="cracco" loading="lazy" />
+                        </AnimateOnScroll>
+                    </div>
+                </div>
+            </div>
         </>
     )
 }

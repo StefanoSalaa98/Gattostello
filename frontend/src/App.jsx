@@ -12,6 +12,7 @@ import ExOspiti from './pages/ExOspiti';
 import Info from './pages/Info';
 import Eventi from './pages/Eventi';
 import Sostienici from './pages/Sostienici'
+import Ricevuta from './pages/Ricevuta';
 import ScrollToTop from './components/ScrollToTop';
 import NotFoundPage from './pages/NotFondPage';
 import "./css/Animations.css";
@@ -34,6 +35,7 @@ function App() {
             <Route index element={<HomePage />}></Route>
             <Route path="/chi-siamo" element={<ChiSiamo />}></Route>
             <Route path="/sostienici" element={<Sostienici />}></Route>
+            <Route path="/ricevuta" element={<Ricevuta />}></Route>
             <Route path="/adotta">
               <Route index element={<AdottaUnGatto />}></Route>
               <Route path=":slug" element={<Info />} />
