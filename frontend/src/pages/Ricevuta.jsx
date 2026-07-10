@@ -120,6 +120,11 @@ export default function Ricevuta() {
             });
 
         } catch (err) {
+
+            console.log("Errore completo:", err);
+            console.log("Response:", err.response);
+            console.log("Data:", err.response?.data);
+
             // Gestione degli errori provenienti dal server (es. validazione Laravel fallita o server spento)
             let messaggioErroreServer = "Si è verificato un errore di rete. Riprova più tardi.";
 
