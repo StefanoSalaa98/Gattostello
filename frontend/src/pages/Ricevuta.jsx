@@ -14,8 +14,10 @@ export default function Ricevuta() {
     const [fieldErrors, setFieldErrors] = useState({});
     // variabile di stato che contiene i campi errati
 
-    // const MAIL_URL = import.meta.env.VITE_MAIL_URL;
-    const MAIL_URL = "https://laravel-gattostello-production.up.railway.app/api/richiesta-ricevuta";
+    const MAIL_URL = import.meta.env.VITE_MAIL_URL;
+
+    console.log("Variabili env:", import.meta.env);
+    console.log("MAIL_URL:", MAIL_URL);
 
     const [formData, setFormData] = useState({
         cognome: "",
