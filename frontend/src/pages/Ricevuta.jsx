@@ -16,9 +16,6 @@ export default function Ricevuta() {
 
     const MAIL_URL = import.meta.env.VITE_MAIL_URL;
 
-    console.log("Variabili env:", import.meta.env);
-    console.log("MAIL_URL:", MAIL_URL);
-
     const [formData, setFormData] = useState({
         cognome: "",
         nome: "",
