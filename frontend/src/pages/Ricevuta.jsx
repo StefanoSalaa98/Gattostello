@@ -2,8 +2,11 @@ import axios from "axios";
 import { useState } from "react";
 import AnimateOnScroll from "../hooks/AnimateOnScroll";
 import "../css/Ricevuta.css";
+import { useNavigate } from "react-router-dom";
 
 export default function Ricevuta() {
+
+    const navigate = useNavigate();
 
     const [status, setStatus] = useState({ loading: false, success: false, error: null });
     // status è un'oggetto con tre proprietà:
@@ -152,10 +155,15 @@ export default function Ricevuta() {
                         <p>I dati sono stati registrati nei sistemi del Gattostello e abbiamo inviato la mail di riepilogo ai volontari.</p>
                         <p>Riceverai la tua ricevuta fiscale non appena avremo verificato il versamento. Grazie per il tuo grande cuore!</p>
                         <button
-                            onClick={() => setStatus({ loading: false, success: false, error: null })}
-                            style={{ marginTop: "20px", padding: "10px 20px", borderRadius: "20px", cursor: "pointer" }}
+                            onClick={() => navigate("/")}
+                            style={{
+                                marginTop: "20px",
+                                padding: "10px 20px",
+                                borderRadius: "20px",
+                                cursor: "pointer"
+                            }}
                         >
-                            Invia un'altra richiesta
+                            Torna alla Home
                         </button>
                     </div>
                 </AnimateOnScroll>
