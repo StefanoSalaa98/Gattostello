@@ -256,6 +256,8 @@ export default function Ricevuta() {
                             name="importo"
                             placeholder="Importo (€)"
                             min="0"
+                            step="0.01"
+                            inputMode="decimal"
                             value={formData.importo}
                             onChange={handleChange}
                         />
