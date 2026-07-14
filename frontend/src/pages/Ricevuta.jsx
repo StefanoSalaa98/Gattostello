@@ -122,24 +122,42 @@ export default function Ricevuta() {
                 civico: "", citta: "", email: "", importo: "", messaggio: ""
             });
 
-        } catch (err) {
+        }
+        // catch (err) {
 
-            console.log("Errore completo:", err);
+        //     console.log("Errore completo:", err);
+        //     console.log("Response:", err.response);
+        //     console.log("Data:", err.response?.data);
+
+        //     // Gestione degli errori provenienti dal server (es. validazione Laravel fallita o server spento)
+        //     let messaggioErroreServer = "Si è verificato un errore di rete. Riprova più tardi.";
+
+        //     if (err.response && err.response.data) {
+        //         // Se Laravel ci restituisce un errore di validazione (422) o altro messaggio specifico
+        //         messaggioErroreServer = err.response.data.message || "Errore nell'invio dei dati.";
+        //     }
+
+        //     setStatus({
+        //         loading: false,
+        //         success: false,
+        //         error: [messaggioErroreServer] // Lo salvo come array per mantenerlo coerente con il .map() nel mio JSX
+        //     });
+        // }
+        catch (err) {
+            console.log("Errore:", err);
             console.log("Response:", err.response);
             console.log("Data:", err.response?.data);
 
-            // Gestione degli errori provenienti dal server (es. validazione Laravel fallita o server spento)
             let messaggioErroreServer = "Si è verificato un errore di rete. Riprova più tardi.";
 
-            if (err.response && err.response.data) {
-                // Se Laravel ci restituisce un errore di validazione (422) o altro messaggio specifico
-                messaggioErroreServer = err.response.data.message || "Errore nell'invio dei dati.";
+            if (err.response?.data?.message) {
+                messaggioErroreServer = err.response.data.message;
             }
 
             setStatus({
                 loading: false,
                 success: false,
-                error: [messaggioErroreServer] // Lo salvo come array per mantenerlo coerente con il .map() nel mio JSX
+                error: [messaggioErroreServer],
             });
         }
     };
