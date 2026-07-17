@@ -20,7 +20,8 @@ export default function HomePage() {
     const counterRef = useRef(null);
 
     // Variabile di stato che mostra il totale degli adottati
-    const [totale, setTotale] = useState(0);
+    // const [totale, setTotale] = useState(0);
+    const totale = 400;
 
     // Variabile di stato che gestisce il contatore
     const [count, setCount] = useState(0);
@@ -63,17 +64,17 @@ export default function HomePage() {
         return () => clearTimeout(timer);
     }
 
-    const fecthTotale = () => {
-        setIsLoading(true);
-        axios
-            .get(`${API_URL}/total-ex`)
-            // .then(({ data }) => setTotale(data.data))
-            .then(({ data }) => setTotale(400))
-            .catch((error) => console.log(error))
-            .finally(() => setIsLoading(false));
-    };
+    // const fecthTotale = () => {
+    //     setIsLoading(true);
+    //     axios
+    //         .get(`${API_URL}/total-ex`)
+    //         // .then(({ data }) => setTotale(data.data))
+    //         .then(({ data }) => setTotale(400))
+    //         .catch((error) => console.log(error))
+    //         .finally(() => setIsLoading(false));
+    // };
 
-    useEffect(fecthTotale, []);
+    // useEffect(fecthTotale, []);
 
     useEffect(animatedCounter, [count, totale, isVisible]);
 
