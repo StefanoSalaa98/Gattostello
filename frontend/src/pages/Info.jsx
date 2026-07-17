@@ -1,4 +1,5 @@
 import axios from "axios"
+import { Helmet } from "react-helmet-async";
 
 import { Link, useParams } from "react-router-dom";
 import { useLocation } from "react-router-dom";
@@ -35,7 +36,7 @@ export default function Info() {
     const { setIsLoading } = useGlobal();
 
     // variabile di stato del gatto
-    const [cat, setCat] = useState([]);
+    const [cat, setCat] = useState(null);
 
     //variabile di stato per la data estesa
     const [data, setData] = useState([]);
@@ -83,6 +84,35 @@ export default function Info() {
 
     return (
         <>
+            {cat && (
+                <Helmet>
+
+                    <title>
+                        {cat.name} - Gatto in adozione | Gattostello
+                    </title>
+
+                    <meta
+                        name="description"
+                        content={cat.info || `Scopri ${cat.name}, un gatto in cerca di famiglia presso Gattostello.`}
+                    />
+
+                    <meta
+                        property="og:title"
+                        content={`${cat.name} - Gattostello`}
+                    />
+
+                    <meta
+                        property="og:description"
+                        content={cat.info || ""}
+                    />
+
+                    <meta
+                        property="og:image"
+                        content={cat.image}
+                    />
+
+                </Helmet>
+            )}
             <div className="info">
                 <Link
                     to={`/adotta?page=${page}`}
@@ -99,7 +129,9 @@ export default function Info() {
                             //         e.target.src = "../img/default.png"; // Percorso della mia immagine di default
                             //         e.target.onerror = null; // Evita loop infiniti se anche la default manca
                             //     }} />
-                            <img src={cat.image} alt="gatto"
+                            <img
+                                src={cat.image}
+                                alt={`${cat.name} - gatto in adozione presso Gattostello`}
                                 onError={(e) => {
                                     e.target.src = "img/default.png"; // Percorso della mia immagine di default
                                     e.target.onerror = null; // Evita loop infiniti se anche la default manca

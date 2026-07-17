@@ -17,6 +17,7 @@ import ScrollToTop from './components/ScrollToTop';
 import NotFoundPage from './pages/NotFondPage';
 import "./css/Animations.css";
 
+import { HelmetProvider } from "react-helmet-async";
 // importo il provider context globale
 import { GlobalProvider } from './contexts/GlobalContext';
 
@@ -25,30 +26,32 @@ function App() {
 
 
   return (
-    <GlobalProvider>
-      <BrowserRouter>
-        {/* Questo componente ricarica la nuova pagina dall'inizio */}
-        <ScrollToTop />
-        <Routes>
+    <HelmetProvider>
+      <GlobalProvider>
+        <BrowserRouter>
+          {/* Questo componente ricarica la nuova pagina dall'inizio */}
+          <ScrollToTop />
+          <Routes>
 
-          <Route element={<MyLayout />}>
-            <Route index element={<HomePage />}></Route>
-            <Route path="/chi-siamo" element={<ChiSiamo />}></Route>
-            <Route path="/sostienici" element={<Sostienici />}></Route>
-            <Route path="/ricevuta" element={<Ricevuta />}></Route>
-            <Route path="/adotta">
-              <Route index element={<AdottaUnGatto />}></Route>
-              <Route path=":slug" element={<Info />} />
+            <Route element={<MyLayout />}>
+              <Route index element={<HomePage />}></Route>
+              <Route path="/chi-siamo" element={<ChiSiamo />}></Route>
+              <Route path="/sostienici" element={<Sostienici />}></Route>
+              <Route path="/ricevuta" element={<Ricevuta />}></Route>
+              <Route path="/adotta">
+                <Route index element={<AdottaUnGatto />}></Route>
+                <Route path=":slug" element={<Info />} />
+              </Route>
+              <Route path="/ex-ospiti" element={<ExOspiti />}></Route>
+              <Route path="/unisciti" element={<Unisciti />}></Route>
+              <Route path="/eventi" element={<Eventi />}></Route>
+              <Route path="*" element={<NotFoundPage />} />
             </Route>
-            <Route path="/ex-ospiti" element={<ExOspiti />}></Route>
-            <Route path="/unisciti" element={<Unisciti />}></Route>
-            <Route path="/eventi" element={<Eventi />}></Route>
-            <Route path="*" element={<NotFoundPage />} />
-          </Route>
-        </Routes>
+          </Routes>
 
-      </BrowserRouter>
-    </GlobalProvider >
+        </BrowserRouter>
+      </GlobalProvider >
+    </HelmetProvider>
   )
 }
 
