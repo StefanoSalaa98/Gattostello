@@ -137,11 +137,14 @@ export default function Info() {
                         {cat.coat && (
                             <span><strong>Manto: </strong>{cat.coat}</span>
                         )}
-                        {cat.info && (
-                            <span><strong>Informazioni: </strong>{cat.info}</span>
-                        )}
+
                     </div>
                 </div>
+                {cat.info && (
+                    <div className="informazioni">
+                        {cat.info}
+                    </div>
+                )}
             </div>
         </>
     )

@@ -50,6 +50,11 @@
             }
         }
     }
+
+    .informazioni {
+        margin-top: 30px;
+        font-size: 1.2em;
+    }
 }
 
 @media (max-width: 1024px) {
@@ -95,9 +100,14 @@
 @media (max-width: 480px) {
     .info {
         width: 100%;
+
+        .informazioni {
+            padding: 0 15px;
+        }
     }
 
     .indietro {
         margin-left: 15px;
     }
+
 }
