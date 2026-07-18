@@ -50,7 +50,7 @@ export default function HomePage() {
         // Se non è ancora visibile o ha finito, esco subito
         if (!isVisible || totale <= 0 || count >= totale) return;
 
-        const duration = 500;
+        const duration = 2500;
 
         // Calcolo il tempo tra un incremento e l'altro per finire entro 'duration'
         // Più è alto il numero, più veloce deve essere il timer
