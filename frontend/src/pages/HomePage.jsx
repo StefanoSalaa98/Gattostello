@@ -118,6 +118,25 @@ export default function HomePage() {
                     property="og:image"
                     content="https://gattostello.it/img/og-image.jpg"
                 />
+
+                <script type="application/ld+json">
+                    {JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "AnimalShelter",
+                        "name": "Gattostello",
+                        "url": "https://gattostello.it",
+                        "image": "https://gattostello.it/img/logo-og.jpg",
+                        "telephone": "+39 3398067656",
+                        "address": {
+                            "@type": "PostalAddress",
+                            "streetAddress": "Via A. Diaz 25",
+                            "addressLocality": "Alzate Brianza",
+                            "addressRegion": "CO",
+                            "postalCode": "22040",
+                            "addressCountry": "IT"
+                        }
+                    })}
+                </script>
             </Helmet>
 
             <section className="hero-container">
