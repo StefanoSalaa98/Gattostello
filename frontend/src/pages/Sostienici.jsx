@@ -10,6 +10,7 @@ import OndaBottom from "../components/OndaBottom";
 import "../css/Sostienici.css";
 import AnimateOnScroll from "../hooks/AnimateOnScroll";
 import { GrDocumentText } from "react-icons/gr";
+import { Helmet } from "react-helmet-async";
 
 export default function Sostienici() {
 
@@ -33,6 +34,43 @@ export default function Sostienici() {
 
     return (
         <>
+            <Helmet>
+                <title>
+                    Sostieni Gattostello | Donazioni, 5x1000 e Adozioni a distanza
+                </title>
+
+                <meta
+                    name="description"
+                    content="Aiuta Gattostello a prendersi cura dei gatti in difficoltà. Dona con bonifico, 5x1000, adozione a distanza, tessera associativa o raccolte fondi. Ogni contributo fa la differenza."
+                />
+
+                <meta
+                    name="keywords"
+                    content="donazioni gatti, gattile Como, 5x1000, adozione a distanza, donazioni animali, volontari gattile, Gattostello"
+                />
+
+                <meta
+                    property="og:title"
+                    content="Sostieni Gattostello"
+                />
+
+                <meta
+                    property="og:description"
+                    content="Aiutaci a salvare, curare e trovare una famiglia ai gatti più bisognosi. Scopri tutti i modi per sostenere Gattostello."
+                />
+
+                <meta
+                    property="og:image"
+                    content="https://gattostello.it/img/og-image.jpg"
+                />
+
+                <meta
+                    property="og:url"
+                    content="https://gattostello.it/sostienici"
+                />
+
+                <meta property="og:type" content="website" />
+            </Helmet>
             <div className="sostienici-container">
                 <div className="sostienici">
                     <div className="testo">

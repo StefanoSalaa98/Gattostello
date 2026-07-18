@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "../css/Eventi.css";
 import AnimateOnScroll from "../hooks/AnimateOnScroll";
+import { Helmet } from "react-helmet-async";
 
 export default function Eventi() {
 
@@ -11,6 +12,43 @@ export default function Eventi() {
     //            mobile --> giro la card al click
     return (
         <>
+            <Helmet>
+                <title>
+                    Eventi e iniziative | Gattostello
+                </title>
+
+                <meta
+                    name="description"
+                    content="Scopri gli eventi organizzati da Gattostello: colazioni con i gatti, apericena, cene di beneficenza, mercatini e raccolte pappe. Partecipa e aiuta i nostri mici."
+                />
+
+                <meta
+                    name="keywords"
+                    content="eventi gattile, eventi Como, mercatini beneficenza, raccolta pappe, colazione con i gatti, Gattostello"
+                />
+
+                <meta
+                    property="og:title"
+                    content="Eventi e iniziative | Gattostello"
+                />
+
+                <meta
+                    property="og:description"
+                    content="Partecipa agli eventi di Gattostello e sostieni i gatti in cerca di una famiglia."
+                />
+
+                <meta
+                    property="og:image"
+                    content="https://gattostello.it/img/og-image.jpg"
+                />
+
+                <meta
+                    property="og:url"
+                    content="https://gattostello.it/eventi"
+                />
+
+                <meta property="og:type" content="website" />
+            </Helmet>
             <div className="intro-eventi">
                 <AnimateOnScroll>
                     <h2> I nostri eventi </h2>

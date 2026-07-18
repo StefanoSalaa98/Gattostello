@@ -3,6 +3,7 @@ import OndaBottom from "../components/OndaBottom"
 import { Link } from "react-router-dom";
 import "../css/Chisiamo.css";
 import AnimateOnScroll from "../hooks/AnimateOnScroll";
+import { Helmet } from "react-helmet-async";
 
 export default function ChiSiamo() {
 
@@ -10,6 +11,44 @@ export default function ChiSiamo() {
 
     return (
         <>
+            <Helmet>
+                <title>Chi siamo | Gattostello - Gattile e adozione gatti</title>
+
+                <meta
+                    name="description"
+                    content="Scopri la storia del Gattostello, la nostra missione e come ci prendiamo cura dei gatti in difficoltà. Informazioni sul rifugio e sul percorso di adozione."
+                />
+
+                <link
+                    rel="canonical"
+                    href="https://gattostello.it/chi-siamo"
+                />
+
+                <meta
+                    property="og:title"
+                    content="Chi siamo | Gattostello"
+                />
+
+                <meta
+                    property="og:description"
+                    content="Conosci la storia del Gattostello, il nostro impegno per i gatti e il percorso di adozione."
+                />
+
+                <meta
+                    property="og:type"
+                    content="website"
+                />
+
+                <meta
+                    property="og:url"
+                    content="https://gattostello.it/chi-siamo"
+                />
+
+                <meta
+                    property="og:image"
+                    content="https://gattostello.it/img/og-image.jpg"
+                />
+            </Helmet>
             <div className="chi-siamo-container">
                 <div className="chi-siamo">
                     <div className="testo">

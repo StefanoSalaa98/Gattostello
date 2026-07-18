@@ -8,6 +8,7 @@ import OndaBottom from "../components/OndaBottom";
 import "../css/HomePage.css";
 import AnimateOnScroll from "../hooks/AnimateOnScroll";
 import Repelling from "../hooks/Repelling";
+import { Helmet } from "react-helmet-async";
 
 export default function HomePage() {
     const API_URL = import.meta.env.VITE_API_URL;
@@ -80,6 +81,44 @@ export default function HomePage() {
 
     return (
         <>
+            <Helmet>
+                <title>Gattostello | Gattile e adozione gatti in Lombardia</title>
+
+                <meta
+                    name="description"
+                    content="Gattostello è un'associazione che si prende cura dei gatti in difficoltà e li aiuta a trovare una famiglia. Scopri i gatti in adozione, sostienici o diventa volontario."
+                />
+
+                <link
+                    rel="canonical"
+                    href="https://gattostello.it/"
+                />
+
+                <meta
+                    property="og:title"
+                    content="Gattostello | Gattile e adozione gatti"
+                />
+
+                <meta
+                    property="og:description"
+                    content="Scopri i gatti in cerca di una famiglia, sostieni il Gattostello o unisciti ai nostri volontari."
+                />
+
+                <meta
+                    property="og:type"
+                    content="website"
+                />
+
+                <meta
+                    property="og:url"
+                    content="https://gattostello.it/"
+                />
+
+                <meta
+                    property="og:image"
+                    content="https://gattostello.it/img/og-image.jpg"
+                />
+            </Helmet>
 
             <section className="hero-container">
                 {/* Contenitore dell'immagine con overflow hidden */}

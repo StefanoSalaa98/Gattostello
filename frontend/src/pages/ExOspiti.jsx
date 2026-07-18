@@ -7,6 +7,7 @@ import Card from "../components/Card";
 import SkeletonCard from "../components/SkeletonCard";
 import Pagination from "../components/Pagination";
 import AnimateOnScroll from "../hooks/AnimateOnScroll";
+import { Helmet } from "react-helmet-async";
 
 export default function ExOspiti() {
 
@@ -56,6 +57,45 @@ export default function ExOspiti() {
 
     return (
         <>
+            <Helmet>
+                <title>
+                    {page === 1
+                        ? "Gatti adottati | Ex ospiti di Gattostello"
+                        : `Gatti adottati - Pagina ${page} | Gattostello`}
+                </title>
+
+                <meta
+                    name="description"
+                    content="Scopri i gatti che hanno trovato una famiglia grazie a Gattostello. Ogni adozione rappresenta una nuova vita e un lieto fine."
+                />
+
+                <meta
+                    name="keywords"
+                    content="gatti adottati, ex ospiti, adozioni riuscite, gattile Como, Gattostello"
+                />
+
+                <meta
+                    property="og:title"
+                    content="Gatti adottati | Gattostello"
+                />
+
+                <meta
+                    property="og:description"
+                    content="Conosci i gatti che hanno trovato una casa grazie all'impegno di Gattostello."
+                />
+
+                <meta
+                    property="og:image"
+                    content="https://gattostello.it/img/og-image.jpg"
+                />
+
+                <meta
+                    property="og:url"
+                    content="https://gattostello.it/ex-ospiti"
+                />
+
+                <meta property="og:type" content="website" />
+            </Helmet>
             <div
                 ref={catsContainerRef}
                 className="gatto-container fade-in"

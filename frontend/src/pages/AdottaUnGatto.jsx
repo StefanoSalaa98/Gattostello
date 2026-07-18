@@ -8,6 +8,7 @@ import Card from "../components/Card";
 import SkeletonCard from "../components/SkeletonCard";
 import Pagination from "../components/Pagination";
 import AnimateOnScroll from "../hooks/AnimateOnScroll";
+import { Helmet } from "react-helmet-async";
 
 export default function AdottaUnGatto() {
 
@@ -57,6 +58,44 @@ export default function AdottaUnGatto() {
 
     return (
         <>
+            <Helmet>
+                <title>
+                    Adotta un gatto | Gatti in cerca di casa - Gattostello
+                </title>
+
+                <meta
+                    name="description"
+                    content="Scopri i gatti ospitati da Gattostello che aspettano una famiglia. Guarda le loro storie e trova il compagno di vita perfetto."
+                />
+
+                <meta
+                    name="keywords"
+                    content="adozione gatti, gatti da adottare, gattile Como, adotta un gatto, gatti in cerca di casa, Gattostello"
+                />
+
+                <meta
+                    property="og:title"
+                    content="Adotta un gatto | Gattostello"
+                />
+
+                <meta
+                    property="og:description"
+                    content="Conosci i gatti ospitati da Gattostello e trova il tuo nuovo compagno di vita."
+                />
+
+                <meta
+                    property="og:image"
+                    content="https://gattostello.it/img/og-image.jpg"
+                />
+
+                <meta
+                    property="og:url"
+                    content="https://gattostello.it/adotta"
+                />
+
+                <meta property="og:type" content="website" />
+            </Helmet>
+
             <div
                 ref={catsContainerRef}
                 className="gatto-container fade-in"
