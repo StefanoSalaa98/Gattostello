@@ -125,7 +125,8 @@ export default function HomePage() {
                         "@type": "AnimalShelter",
                         "name": "Gattostello",
                         "url": "https://gattostello.it",
-                        "image": "https://gattostello.it/img/logo-og.jpg",
+                        "image": "https://gattostello.it/img/icona.ico",
+                        "logo": "https://gattostello.it/img/icona.ico",
                         "telephone": "+39 3398067656",
                         "address": {
                             "@type": "PostalAddress",
