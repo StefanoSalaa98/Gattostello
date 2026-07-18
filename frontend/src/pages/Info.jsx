@@ -82,6 +82,10 @@ export default function Info() {
 
     useEffect(dataEstesa, [cat]);
 
+    if (!cat) {
+        return null;
+    }
+
     return (
         <>
             {cat && (
