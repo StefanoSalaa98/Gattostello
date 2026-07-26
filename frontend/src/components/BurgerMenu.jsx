@@ -1,3 +1,4 @@
+import Offcanvas from "bootstrap/js/dist/offcanvas";
 import { useEffect, useRef } from "react";
 import { useGlobal } from "../contexts/GlobalContext";
 import { FaFacebookF, FaInstagram } from "react-icons/fa";
@@ -11,28 +12,25 @@ export default function BurgerMenu() {
         const menuElement = offcanvasRef.current;
         if (!menuElement) return;
 
-        // Inizializzazione manuale per garantire il funzionamento su tutti i dispositivi
-        const bsOffcanvas = window.bootstrap?.Offcanvas.getOrCreateInstance(menuElement);
+        Offcanvas.getOrCreateInstance(menuElement);
 
-        // Uso 'show' e 'hide' invece di 'shown' e 'hidden' per un feedback immediato
         const handleOpen = () => setIsMenuOpen(true);
         const handleClose = () => setIsMenuOpen(false);
 
-        menuElement.addEventListener('show.bs.offcanvas', handleOpen);
-        menuElement.addEventListener('hide.bs.offcanvas', handleClose);
+        menuElement.addEventListener("show.bs.offcanvas", handleOpen);
+        menuElement.addEventListener("hide.bs.offcanvas", handleClose);
 
         return () => {
-            menuElement.removeEventListener('show.bs.offcanvas', handleOpen);
-            menuElement.removeEventListener('hide.bs.offcanvas', handleClose);
-            // Reset di sicurezza dello stato quando il componente smonta
+            menuElement.removeEventListener("show.bs.offcanvas", handleOpen);
+            menuElement.removeEventListener("hide.bs.offcanvas", handleClose);
             setIsMenuOpen(false);
         };
     }, [setIsMenuOpen]);
 
     // Funzione per chiudere il menu quando si clicca un link
     const closeMenu = () => {
-        const bsOffcanvas = window.bootstrap?.Offcanvas.getInstance(offcanvasRef.current);
-        bsOffcanvas?.hide();
+        const instance = Offcanvas.getOrCreateInstance(offcanvasRef.current);
+        instance.hide();
     };
 
     return (
