@@ -148,6 +148,10 @@ video {
     }
 }
 
+video {
+    width: 35%;
+}
+
 @media (max-width: 768px) {
     .unisciti-par1-container {
 
@@ -177,6 +181,10 @@ video {
             }
         }
     }
+
+    video {
+        width: 60%;
+    }
 }
 
 @media (max-width: 480px) {
@@ -204,5 +212,9 @@ video {
                 width: 100%;
             }
         }
+    }
+
+    video {
+        width: 80%;
     }
 }
