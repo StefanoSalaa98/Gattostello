@@ -72,25 +72,59 @@ export default function BurgerMenu() {
                 <div className="offcanvas-body menu-laterale d-flex flex-column">
                     <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
                         <li className="nav-item mb-3">
-                            <NavLink className="link" to="/">Home Page</NavLink>
+                            <NavLink className="link"
+                                to="/"
+                                onClick={closeMenu}>
+                                Home Page
+                            </NavLink>
                         </li>
                         <li className="nav-item mb-3">
-                            <NavLink className="link" to="/chi-siamo">Chi Siamo</NavLink>
+                            <NavLink
+                                className="link"
+                                to="/chi-siamo"
+                                onClick={closeMenu}>
+                                Chi Siamo
+                            </NavLink>
                         </li>
                         <li className="nav-item mb-3">
-                            <NavLink className="link" to="/sostienici">Sostienici</NavLink>
+                            <NavLink
+                                className="link"
+                                to="/sostienici"
+                                onClick={closeMenu}>
+                                Sostienici
+                            </NavLink>
                         </li>
                         <li className="nav-item mb-3">
-                            <NavLink className="link" to="/unisciti">Unisciti</NavLink>
+                            <NavLink
+                                className="link"
+                                to="/unisciti"
+                                onClick={closeMenu}>
+                                Unisciti
+                            </NavLink>
                         </li>
                         <li className="nav-item mb-3">
-                            <NavLink className="link" to="/eventi">Eventi</NavLink>
+                            <NavLink
+                                className="link"
+                                to="/eventi"
+                                onClick={closeMenu}>
+                                Eventi
+                            </NavLink>
                         </li>
                         <li className="nav-item mb-3">
-                            <NavLink className="link" to="/adotta">Adotta un gatto</NavLink>
+                            <NavLink
+                                className="link"
+                                to="/adotta"
+                                onClick={closeMenu}>
+                                Adotta un gatto
+                            </NavLink>
                         </li>
                         <li className="nav-item mb-3">
-                            <NavLink className="link" to="/ex-ospiti">I nostri ex ospiti</NavLink>
+                            <NavLink
+                                className="link"
+                                to="/ex-ospiti"
+                                onClick={closeMenu}>
+                                I nostri ex ospiti
+                            </NavLink>
                         </li>
 
                         <li className="nav-item social mt-auto d-flex justify-content-around">
