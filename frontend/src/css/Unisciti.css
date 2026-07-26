@@ -97,6 +97,10 @@
     }
 }
 
+video {
+    width: 25%;
+}
+
 /* imposto una larghezza massima dei contenitori per gestire monitor molto grandi */
 .unisciti {
     max-width: 1200px;

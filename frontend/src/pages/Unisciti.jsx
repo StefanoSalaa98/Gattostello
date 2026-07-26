@@ -45,6 +45,12 @@ export default function Unisciti() {
                     </div>
                 </div>
             </div>
+            <div className="unisciti-par1-container">
+                <video controls>
+                    <source src="/video/volontari.mp4" type="video/mp4" />
+                    Il tuo browser non supporta il tag video.
+                </video>
+            </div>
         </>
     )
 }
