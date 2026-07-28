@@ -51,7 +51,7 @@ export default function HomePage() {
         // Se non è ancora visibile o ha finito, esco subito
         if (!isVisible || totale <= 0 || count >= totale) return;
 
-        const duration = 5000;
+        const duration = 3000;
 
         // Calcolo il tempo tra un incremento e l'altro per finire entro 'duration'
         // Più è alto il numero, più veloce deve essere il timer
@@ -86,7 +86,7 @@ export default function HomePage() {
 
                 <meta
                     name="description"
-                    content="Gattostello è un'associazione che si prende cura dei gatti in difficoltà e li aiuta a trovare una famiglia. Scopri i gatti in adozione, sostienici o diventa volontario."
+                    content="Il Gattostello è un rifugio di Alzate Brianza che recupera, cura e trova una famiglia ai gatti in cerca di adozione. Scopri come aiutarci."
                 />
 
                 <link
