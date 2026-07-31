@@ -193,6 +193,68 @@ export default function Sostienici() {
                 <div className="cinque-x-mille">
                     <div className="immagine">
                         <AnimateOnScroll animation="slide-left">
+                            <img src="img/wishlist.jpg" alt="5x1000" loading="lazy" />
+                        </AnimateOnScroll>
+                    </div>
+                    <div className="testo">
+                        <AnimateOnScroll delay={0.5}>
+                            <h2>Wishlist Amazon</h2>
+                            <p>
+                                Un piccolo gesto può fare una grande differenza.
+                            </p>
+                            <p>
+                                Dietro ogni gatto accolto ci sono cure, attenzioni e tante necessità quotidiane.
+                            </p>
+                            <p>
+                                Abbiamo creato una lista Amazon con alcuni prodotti che utilizziamo al Gattostello: pappe, traversine, prodotti per le loro cure e tutto ciò che ci aiuta a prenderci cura dei nostri mici.
+                                Se avete piacere di darci una mano, potete scegliere un prodotto dalla lista e donarlo ai nostri ospiti.
+                                Ogni dono, anche il più piccolo, per noi è un aiuto prezioso e ci permette di continuare ad accogliere e prenderci cura di loro.
+                            </p>
+                            <a id="wishlist" href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.amazon.it%2Fregistries%2Fgl%2Fguest-view%2FJD9XXJDZW610%3Fref_%3Dcm_sw_r_apin_ggr-subnav-share_YXKQ6KV5BE1R7X59VFDG%26language%3Den-US%26fbclid%3DIwZXh0bgNhZW0CMTAAYnJpZBExeHVkTVlMdEsxNVVrYUxQM3NydGMGYXBwX2lkEDIyMjAzOTE3ODgyMDA4OTIAAR5VPIMYGn0WcSODoXpR8d3K8g9puVMtbtZEPcakHHZNxEa2ACWYtmjq1iDyzw_aem_kYaE3vvAtqw_fM3biW2NFQ&h=AUD7jWgCIVGtXy6IwCImXBZm6JNtjrJAqzQgwn_ZiXcTgWkN42_ZrXCaxV2DLhMls-s23yGZ_t1WL7rxYHfywVYJtZrgzUXfEZ8X-OEfjLGS3E-7p6KvWS5CJV5s_QM2Nhwg">
+                                Wishlist Gattostello
+                            </a>
+                        </AnimateOnScroll>
+                    </div>
+                </div>
+            </div >
+
+            <OndaBottom colore={color} sfondo="scuro" />
+            <OndaTop colore={color} sfondo="bianco" />
+
+            <div className="gofundme-container">
+                <div className="gofundme">
+                    <div className="testo">
+                        <AnimateOnScroll>
+                            <h2>Raccolta fondi</h2>
+                            <p>
+                                Emy e Cracco hanno affrontato prove durissime: la perdita, la malattia e l'abbandono. Nonostante il dolore, non hanno mai smesso di fidarsi delle persone e di sperare in un futuro migliore. Oggi hanno bisogno del nostro aiuto per continuare le cure e trovare finalmente una famiglia che li ami per sempre. Ogni contributo può regalare loro una nuova possibilità.
+                            </p>
+                            <p>
+                                <a
+                                    href="https://gofund.me/ecf63c48b"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    Conosci la loro storia
+                                </a>
+                            </p>
+                        </AnimateOnScroll>
+                    </div>
+                    <div className="immagine">
+                        <AnimateOnScroll animation="slide-right" delay={0.5}>
+                            <img src="img/cracco.webp" alt="cracco" loading="lazy" />
+                        </AnimateOnScroll>
+                    </div>
+                </div>
+            </div>
+
+            <OndaBottom colore={color} sfondo="bianco" />
+            <OndaTop colore={color} sfondo="scuro" />
+
+            <div className="cinque-x-mille-container">
+                <div className="cinque-x-mille">
+                    <div className="immagine">
+                        <AnimateOnScroll animation="slide-left">
                             <img src="img/5x1000.jpg" alt="5x1000" loading="lazy" />
                         </AnimateOnScroll>
                     </div>
@@ -271,36 +333,6 @@ export default function Sostienici() {
                     </div>
                 </div>
             </div >
-
-            <OndaBottom colore={color} sfondo="scuro" />
-            <OndaTop colore={color} sfondo="bianco" />
-
-            <div className="gofundme-container">
-                <div className="gofundme">
-                    <div className="testo">
-                        <AnimateOnScroll>
-                            <h2>Raccolta fondi</h2>
-                            <p>
-                                Emy e Cracco hanno affrontato prove durissime: la perdita, la malattia e l'abbandono. Nonostante il dolore, non hanno mai smesso di fidarsi delle persone e di sperare in un futuro migliore. Oggi hanno bisogno del nostro aiuto per continuare le cure e trovare finalmente una famiglia che li ami per sempre. Ogni contributo può regalare loro una nuova possibilità.
-                            </p>
-                            <p>
-                                <a
-                                    href="https://gofund.me/ecf63c48b"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
-                                    Conosci la loro storia
-                                </a>
-                            </p>
-                        </AnimateOnScroll>
-                    </div>
-                    <div className="immagine">
-                        <AnimateOnScroll animation="slide-right" delay={0.5}>
-                            <img src="img/cracco.webp" alt="cracco" loading="lazy" />
-                        </AnimateOnScroll>
-                    </div>
-                </div>
-            </div>
         </>
     )
 }
