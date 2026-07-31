@@ -210,7 +210,8 @@ export default function Sostienici() {
                                 Se avete piacere di darci una mano, potete scegliere un prodotto dalla lista e donarlo ai nostri ospiti.
                                 Ogni dono, anche il più piccolo, per noi è un aiuto prezioso e ci permette di continuare ad accogliere e prenderci cura di loro.
                             </p>
-                            <a id="wishlist" href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.amazon.it%2Fregistries%2Fgl%2Fguest-view%2FJD9XXJDZW610%3Fref_%3Dcm_sw_r_apin_ggr-subnav-share_YXKQ6KV5BE1R7X59VFDG%26language%3Den-US%26fbclid%3DIwZXh0bgNhZW0CMTAAYnJpZBExeHVkTVlMdEsxNVVrYUxQM3NydGMGYXBwX2lkEDIyMjAzOTE3ODgyMDA4OTIAAR5VPIMYGn0WcSODoXpR8d3K8g9puVMtbtZEPcakHHZNxEa2ACWYtmjq1iDyzw_aem_kYaE3vvAtqw_fM3biW2NFQ&h=AUD7jWgCIVGtXy6IwCImXBZm6JNtjrJAqzQgwn_ZiXcTgWkN42_ZrXCaxV2DLhMls-s23yGZ_t1WL7rxYHfywVYJtZrgzUXfEZ8X-OEfjLGS3E-7p6KvWS5CJV5s_QM2Nhwg">
+                            <a id="wishlist" href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.amazon.it%2Fregistries%2Fgl%2Fguest-view%2FJD9XXJDZW610%3Fref_%3Dcm_sw_r_apin_ggr-subnav-share_YXKQ6KV5BE1R7X59VFDG%26language%3Den-US%26fbclid%3DIwZXh0bgNhZW0CMTAAYnJpZBExeHVkTVlMdEsxNVVrYUxQM3NydGMGYXBwX2lkEDIyMjAzOTE3ODgyMDA4OTIAAR5VPIMYGn0WcSODoXpR8d3K8g9puVMtbtZEPcakHHZNxEa2ACWYtmjq1iDyzw_aem_kYaE3vvAtqw_fM3biW2NFQ&h=AUD7jWgCIVGtXy6IwCImXBZm6JNtjrJAqzQgwn_ZiXcTgWkN42_ZrXCaxV2DLhMls-s23yGZ_t1WL7rxYHfywVYJtZrgzUXfEZ8X-OEfjLGS3E-7p6KvWS5CJV5s_QM2Nhwg"
+                                target="_blank" rel="noopener noreferrer">
                                 Wishlist Gattostello
                             </a>
                         </AnimateOnScroll>
