@@ -146,7 +146,7 @@ export default function BurgerMenu() {
                             </a>
                         </li>
 
-                        <li className="nav-item mb-3">
+                        {/* <li className="nav-item mb-3">
                             <a
                                 href="/ex-ospiti"
                                 className="link"
@@ -154,7 +154,7 @@ export default function BurgerMenu() {
                             >
                                 I nostri ex ospiti
                             </a>
-                        </li>
+                        </li> */}
 
                         <li className="nav-item social mt-auto d-flex justify-content-around">
                             <a className="icona nav-link icona-burger" href="https://www.facebook.com/ilGattostello" target="_blank" rel="noreferrer">

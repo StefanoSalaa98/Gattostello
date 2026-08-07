@@ -30,7 +30,8 @@ export default function Sostienici() {
         sessionStorage.setItem("scelta", scelta);
     }, [scelta]);
 
-    const color = " hsl(120, 40%, 45%)";
+    // const color = " hsl(120, 40%, 45%)";
+    const color = " #779767";
 
     return (
         <>

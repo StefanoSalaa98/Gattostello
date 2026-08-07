@@ -1,0 +1,212 @@
+.volunteer-form {
+    width: 90%;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 35px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.volunteer-form h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.volunteer-form>p {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.form-row {
+    display: flex;
+    gap: 25px;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label,
+.form-section>label {
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.form-group input,
+.form-section input,
+.form-section select,
+.form-section textarea {
+    font-family: inherit;
+}
+
+.form-group input,
+.form-section select,
+.form-section textarea {
+    width: 100%;
+    padding: 11px 13px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-section select:focus,
+.form-section textarea:focus {
+    outline: none;
+    border-color: #777;
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.08);
+}
+
+.form-section {
+    margin-bottom: 25px;
+}
+
+.form-section>label:first-child {
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Radio e checkbox */
+
+.radio-group {
+    display: flex;
+    gap: 25px;
+}
+
+.form-section>label:not(:first-child),
+.radio-group label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+    font-weight: normal;
+}
+
+.form-section input[type="radio"],
+.form-section input[type="checkbox"] {
+    width: auto;
+    margin: 0;
+}
+
+/* Select */
+
+.form-section select {
+    cursor: pointer;
+    background-color: white;
+}
+
+/* Textarea */
+
+.form-section textarea {
+    resize: vertical;
+    min-height: 140px;
+}
+
+/* Errore */
+
+.input-error {
+    border: 2px solid #dc3545 !important;
+}
+
+.elenco-errori {
+    margin-top: 20px;
+    padding: 15px 20px;
+    border-radius: 8px;
+    background-color: #fff0f0;
+    color: #b00020;
+}
+
+.elenco-errori li {
+    margin-bottom: 5px;
+}
+
+.elenco-errori li:last-child {
+    margin-bottom: 0;
+}
+
+/* Pulsante */
+
+.volunteer-form button {
+    display: block;
+    margin: 30px auto 0;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 25px;
+    background-color: #333;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.volunteer-form button:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+.volunteer-form button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Schermata di successo */
+
+.success-card {
+    width: 90%;
+    max-width: 700px;
+    margin: 50px auto;
+    padding: 40px;
+    text-align: center;
+    background-color: #f0fff0;
+    border-radius: 15px;
+    border: 2px dashed #4caf50;
+}
+
+.success-card h3 {
+    margin-bottom: 20px;
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .volunteer-form {
+        width: 92%;
+        padding: 25px 20px;
+        margin: 25px auto;
+    }
+
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+        margin-bottom: 0;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    .radio-group {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .form-section {
+        margin-bottom: 22px;
+    }
+
+    .volunteer-form button {
+        width: 100%;
+    }
+
+    .success-card {
+        width: 90%;
+        padding: 30px 20px;
+    }
+}

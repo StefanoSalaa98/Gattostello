@@ -59,7 +59,7 @@ export default function Header() {
                             <NavLink className="link" to="/unisciti">Unisciti</NavLink>
                             <NavLink className="link" to="/eventi">Eventi</NavLink>
                             <NavLink className="link" to="/adotta">Adotta un gatto</NavLink>
-                            <NavLink className="link" to="/ex-ospiti">I nostri ex ospiti</NavLink>
+                            {/* <NavLink className="link" to="/ex-ospiti">I nostri ex ospiti</NavLink> */}
                         </div>
                     </nav>
                     <div className="burger">

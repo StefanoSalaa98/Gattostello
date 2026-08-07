@@ -13,7 +13,8 @@ import { Helmet } from "react-helmet-async";
 export default function HomePage() {
     const API_URL = import.meta.env.VITE_API_URL;
     const { isLoading, setIsLoading, isMenuOpen } = useGlobal();
-    const color = " hsl(120, 40%, 45%)";
+    // const color = " hsl(120, 40%, 45%)";
+    const color = " #779767";
 
     // Stato per sapere se il contatore è visibile
     const [isVisible, setIsVisible] = useState(false);
@@ -268,13 +269,23 @@ export default function HomePage() {
                     <div className="immagine">
                         <AnimateOnScroll animation="slide-left">
                             <div className="mappa">
+
                                 <iframe
-                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2783.1674397101615!2d9.182261675472207!3d45.76783451312959!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47869f8fc6d84c3d%3A0xbcb051b56d6a6290!2sGattostello%20ODV!5e0!3m2!1sit!2sit!4v1772190445417!5m2!1sit!2sit"
-                                    style={{ border: 0 }}
+                                    src="https://www.google.com/maps?q=45.76782790943917,9.184892010562939&output=embed"
                                     allowFullScreen
                                     loading="lazy"
-                                    title="Mappa associazione"
+                                    title="Posizione Gattostello ODV"
                                 />
+
+                                <a
+                                    href="https://www.google.com/maps/search/?api=1&query=45.76782790943917,9.184892010562939"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="mappa-link"
+                                    aria-label="Apri la posizione di Gattostello ODV su Google Maps"
+                                >
+                                </a>
+
                             </div>
                         </AnimateOnScroll>
                     </div>
@@ -288,8 +299,8 @@ export default function HomePage() {
                             <p><strong>ad Alzate Brianza, Via A. Diaz 25</strong></p>
                         </AnimateOnScroll>
                     </div>
-                </div>
-            </div>
+                </div >
+            </div >
         </>
     );
 }

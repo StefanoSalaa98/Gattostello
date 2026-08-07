@@ -101,6 +101,11 @@ export default function AdottaUnGatto() {
                 className="gatto-container fade-in"
                 key={page}
             >
+                <h2>I nostri a-mici</h2>
+                <p>Ogni gatto che arriva al Gattostello porta con sé una storia diversa.
+                    Alcuni arrivano spaventati, altri feriti, altri ancora semplicemente alla ricerca di un posto sicuro dove sentirsi accolti.
+                    Noi ci prendiamo cura di ognuno di loro rispettando i tempi e le esigenze di ciascun gatto, accompagnandolo passo dopo passo verso una nuova vita.
+                    In questa sezione raccontiamo alcune delle loro storie: <strong> premi sul gatto per scoprirle. </strong></p>
                 {isLoading ?
                     (
                         Array.from({ length: 8 }).map((_, index) => (
@@ -110,9 +115,11 @@ export default function AdottaUnGatto() {
                     :
                     (
                         cats?.map((cat) => (
-                            <Link
-                                to={`/adotta/${cat.slug}?page=${page}`}
-                                key={cat.id}
+                            <a
+                                href={cat?.coat}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                // key={cat.id}
                                 className="gatto"
                             >
                                 <AnimateOnScroll animation="zoom-in">
@@ -122,7 +129,7 @@ export default function AdottaUnGatto() {
                                         image={cat?.image}
                                     />
                                 </AnimateOnScroll>
-                            </Link>
+                            </a>
                         ))
                     )
                 }

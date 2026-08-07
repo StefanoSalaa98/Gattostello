@@ -1,5 +1,6 @@
 import "../css/Unisciti.css";
 import AnimateOnScroll from "../hooks/AnimateOnScroll";
+import VolunteerForm from "../components/VolunteerForm";
 
 export default function Unisciti() {
     return (
@@ -51,6 +52,7 @@ export default function Unisciti() {
                     Il tuo browser non supporta il tag video.
                 </video>
             </div>
+            <VolunteerForm />
         </>
     )
 }

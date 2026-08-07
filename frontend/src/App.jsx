@@ -42,7 +42,7 @@ function App() {
                 <Route index element={<AdottaUnGatto />}></Route>
                 <Route path=":slug" element={<Info />} />
               </Route>
-              <Route path="/ex-ospiti" element={<ExOspiti />}></Route>
+              {/* <Route path="/ex-ospiti" element={<ExOspiti />}></Route> */}
               <Route path="/unisciti" element={<Unisciti />}></Route>
               <Route path="/eventi" element={<Eventi />}></Route>
               <Route path="*" element={<NotFoundPage />} />

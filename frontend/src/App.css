@@ -9,7 +9,8 @@
   /* --main-color: rgb(95 201 95); */
   /* --main-color: rgb(81, 175, 81); */
   /* HSL più consistente tra device e più controllabile*/
-  --main-color: hsl(120, 40%, 45%);
+  --main-color: #779767;
+  /* --main-color: hsl(120, 40%, 45%); */
   --second-color: hsl(120, 100%, 30%);
   --second-color: rgb(0, 136, 0, 0.8);
 }
@@ -62,6 +63,17 @@ body {
   margin-bottom: 100px;
   /* imposto una larghezza massima dei contenitori per gestire monitor molto grandi */
   max-width: 1200px;
+  text-align: center;
+
+  h2 {
+    font-size: 2em;
+    width: 100%;
+    text-align: center;
+  }
+
+  p {
+    font-size: 1.2em;
+  }
 
   .gatto {
     width: calc((100% - 120px) / 4);
