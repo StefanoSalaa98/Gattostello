@@ -40,8 +40,15 @@ export default function VolunteerForm() {
 
         const picker = flatpickr(dateInputRef.current, {
             locale: Italian,
+
             dateFormat: "d/m/Y",
+
+            // Disabilita il calendario nativo del telefono
+            disableMobile: true,
+
+            // Non permette date future
             maxDate: "today",
+
             allowInput: false,
 
             onReady: (selectedDates, dateStr, instance) => {
