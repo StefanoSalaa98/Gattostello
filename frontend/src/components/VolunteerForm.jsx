@@ -1,11 +1,16 @@
 import axios from "axios";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import flatpickr from "flatpickr";
+import { Italian } from "flatpickr/dist/l10n/it.js";
+import "flatpickr/dist/flatpickr.min.css";
 import { useGlobal } from "../contexts/GlobalContext";
 import "../css/VolunteerForm.css";
 
 export default function VolunteerForm() {
 
     const { setIsLoading } = useGlobal();
+
+    const dateInputRef = useRef(null);
 
     const MAIL_VOLUNTEER_URL = import.meta.env.VITE_MAIL_VOLUNTEER_URL;
 
@@ -28,6 +33,44 @@ export default function VolunteerForm() {
         come_aiutare: [],
         motivazione: ""
     });
+
+    useEffect(() => {
+
+        if (!dateInputRef.current) return;
+
+        const picker = flatpickr(dateInputRef.current, {
+            locale: Italian,
+            dateFormat: "d/m/Y",
+            maxDate: "today",
+            allowInput: false,
+
+            onReady: (selectedDates, dateStr, instance) => {
+                instance.jumpToDate(new Date(2000, 0, 1));
+            },
+
+            onChange: (selectedDates) => {
+
+                if (selectedDates.length > 0) {
+
+                    const data = selectedDates[0];
+
+                    const anno = data.getFullYear();
+                    const mese = String(data.getMonth() + 1).padStart(2, "0");
+                    const giorno = String(data.getDate()).padStart(2, "0");
+
+                    setFormData(prev => ({
+                        ...prev,
+                        data_nascita: `${anno}-${mese}-${giorno}`
+                    }));
+                }
+            }
+        });
+
+        return () => {
+            picker.destroy();
+        };
+
+    }, []);
 
     const [fieldErrors, setFieldErrors] = useState({});
 
@@ -237,11 +280,11 @@ export default function VolunteerForm() {
                     </label>
 
                     <input
-                        type="date"
+                        ref={dateInputRef}
+                        type="text"
                         name="data_nascita"
-                        value={formData.data_nascita}
-                        onChange={handleChange}
-                        className={fieldErrors.data_nascita ? "input-error" : ""}
+                        placeholder="Seleziona la data"
+                        readOnly
                     />
 
                 </div>
