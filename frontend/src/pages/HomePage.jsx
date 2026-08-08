@@ -287,6 +287,15 @@ export default function HomePage() {
                                 </a>
 
                             </div>
+
+                            <a
+                                href="https://www.google.com/maps/dir/?api=1&destination=45.76782790943917,9.184892010562939"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="come-arrivare"
+                            >
+                                📍 Come arrivare al Gattostello
+                            </a>
                         </AnimateOnScroll>
                     </div>
 

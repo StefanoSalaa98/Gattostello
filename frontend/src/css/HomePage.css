@@ -262,6 +262,24 @@
                 transform: scale(1.1);
                 cursor: pointer;
             }
+
+            a:not(.mappa-link) {
+                display: block;
+                margin: 0 auto;
+                width: 80%;
+                text-decoration: inherit;
+                padding: 10px;
+                border-radius: 10px;
+                background-color: var(--main-color);
+                color: white;
+                font-weight: 600;
+                font-size: 1.2em;
+                margin-top: 20px;
+            }
+
+            a:not(.mappa-link):hover {
+                background-color: darkgreen;
+            }
         }
 
         a:not(.mappa-link) {
