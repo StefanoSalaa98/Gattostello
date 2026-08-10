@@ -49,7 +49,7 @@ export default function Header() {
             <header className={`navbar-${headerState}`}>
                 <div className="header-container">
                     <div className="logo">
-                        <img src="/img/gattostello_post.png" alt="gattostello" />
+                        <img src="/img/gattostello_post3.png" alt="gattostello" />
                     </div>
                     <nav className="pagine">
                         <div className="link-list">

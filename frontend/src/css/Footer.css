@@ -11,6 +11,14 @@ footer {
         text-align: center;
         padding: 50px 0;
 
+        .posizione {
+            width: 20%;
+        }
+
+        .posizione .logo img {
+            width: 60%;
+        }
+
         h5 {
             margin-bottom: 20px;
         }

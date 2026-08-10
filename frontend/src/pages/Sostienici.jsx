@@ -244,7 +244,7 @@ export default function Sostienici() {
                     </div>
                     <div className="immagine">
                         <AnimateOnScroll animation="slide-right" delay={0.5}>
-                            <img src="img/cracco.webp" alt="cracco" loading="lazy" />
+                            <img src="img/emy_cracco.png" alt="cracco_e_emy" loading="lazy" />
                         </AnimateOnScroll>
                     </div>
                 </div>

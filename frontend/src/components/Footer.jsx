@@ -10,7 +10,7 @@ export default function Footer() {
             <div className="footer-container">
                 <div className="posizione">
                     <div className="logo">
-                        <img src="/img/gattostello_post.png" alt="gattostello" />
+                        <img src="/img/gattostello_post3.png" alt="gattostello" />
                     </div>
                     <p><strong>Via A. Diaz 25</strong></p>
                     <p><strong>Alzate Brianza (CO), 22040 </strong></p>
