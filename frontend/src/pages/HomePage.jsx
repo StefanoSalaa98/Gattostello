@@ -199,7 +199,7 @@ export default function HomePage() {
                     </div>
 
 
-                    <div className="immagine">
+                    <div className="immagine giornale">
                         <AnimateOnScroll animation="slide-right" delay={0.5}>
                             <img src="img/giornale.jpg" alt="giornale" loading="lazy" />
                         </AnimateOnScroll>
