@@ -32,7 +32,17 @@ export default function Card(props) {
                 }
             </div>
             <div className="testo">
-                <span>{sex == "M" ? <IoMdMale className="icona maschio" /> : <IoMdFemale className="icona femmina" />}</span>
+                <span>
+                    {sex == "M"
+                        ? <IoMdMale className="icona maschio" />
+                        : sex == "F"
+                            ? <IoMdFemale className="icona femmina" />
+                            : <>
+                                <IoMdMale className="icona maschio" />
+                                <IoMdFemale className="icona femmina" />
+                            </>
+                    }
+                </span>
                 <span className="titolo">{name}</span>
             </div>
         </>
