@@ -20,7 +20,10 @@ export default function Unisciti() {
                     </div>
                     <div className="immagine">
                         <AnimateOnScroll animation="slide-right" delay={0.5}>
-                            <img src="img/mango.jpg" alt="gatto" loading="lazy" />
+                            <video controls>
+                                <source src="/video/gattostello.mp4" type="video/mp4" />
+                                Il tuo browser non supporta il tag video.
+                            </video>
                         </AnimateOnScroll>
                     </div>
                 </div>
@@ -29,7 +32,10 @@ export default function Unisciti() {
                 <div className="unisciti">
                     <div className="immagine">
                         <AnimateOnScroll animation="slide-left">
-                            <img src="img/lino.jpg" alt="gatto" loading="lazy" />
+                            <video controls>
+                                <source src="/video/volontari.mp4" type="video/mp4" />
+                                Il tuo browser non supporta il tag video.
+                            </video>
                         </AnimateOnScroll>
                     </div>
                     <div className="testo">
@@ -38,19 +44,13 @@ export default function Unisciti() {
                             <p>
                                 Essere un volontario significa prendersi cura della quotidianità dei nostri ospiti: dare loro da mangiare e pulire i luoghi in cui vivono, compresi lettiere, ciotole e aree comuni, non senza qualche pausa per dare e ricevere coccole.
                                 Le altre attività includono eventi di raccolta pappa, mercatini e gestione delle emergenze. In caso di bisogno, potrebbe essere necessario accompagnare gli animali alle visite veterinarie.
-                            </p >
+                            </p>
                             <p>
                                 I turni si svolgono tutti i giorni due volte al giorno: il turno della mattina inizia alle <strong>8:00/8:15</strong>, il turno del pomeriggio inizia alle <strong>17:00/17:15.</strong> Ogni turno viene svolto con l'aiuto di più volontari e ha una <strong>durata media di 2/3 ore </strong>a seconda del periodo.
                             </p>
                         </AnimateOnScroll>
                     </div>
                 </div>
-            </div>
-            <div className="unisciti-par1-container">
-                <video controls>
-                    <source src="/video/volontari.mp4" type="video/mp4" />
-                    Il tuo browser non supporta il tag video.
-                </video>
             </div>
             <VolunteerForm />
         </>
