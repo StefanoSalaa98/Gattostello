@@ -238,7 +238,7 @@
             h3 {
                 font-size: 3em;
                 margin-bottom: 20px;
-                color: darkgreen;
+                color: var(--main-color);
             }
 
             p {
