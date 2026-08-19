@@ -148,6 +148,21 @@
         }
     }
 
+    .giornale {
+        width: 50%;
+
+        img {
+            width: 80%;
+            padding: 30px;
+            transition: transform 0.5s ease;
+        }
+
+        img:hover {
+            transform: scale(1.1);
+            cursor: pointer;
+        }
+    }
+
     a {
         margin: 0 auto;
         width: 30%;
@@ -376,7 +391,7 @@
             }
 
             .giornale {
-                width: 80%;
+                width: 90%;
 
                 img {
                     padding: 20px;
@@ -430,7 +445,7 @@
             }
 
             .giornale {
-                width: 90%;
+                width: 100%;
 
                 img {
                     padding: 10px;
@@ -469,7 +484,6 @@
             }
 
             .giornale {
-                width: 100%;
 
                 img {
                     padding: 0;
