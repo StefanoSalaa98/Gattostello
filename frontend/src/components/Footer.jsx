@@ -23,7 +23,6 @@ export default function Footer() {
                 </div>
                 <div className="contatti">
                     <h5>Contatti</h5>
-                    <MdPhoneAndroid /><a href="tel:+39 339 806 7656"> 339 806 7656 </a><br /><br />
                     <MdOutlineMailOutline /><a href="mailto:gattostello.co@gmail.com"> gattostello.co@gmail.com</a>
                     <div className="testa">
                         <a className="icona" href="https://www.facebook.com/ilGattostello"><FaFacebookF /></a>
