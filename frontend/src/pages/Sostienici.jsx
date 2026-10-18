@@ -160,32 +160,41 @@ export default function Sostienici() {
             <OndaBottom colore={color} sfondo="scuro" />
             <OndaTop colore={color} sfondo="bianco" />
 
-            <div className="distanza-container">
-                <div className="distanza">
+            <div className="gofundme-container">
+                <div className="gofundme">
                     <div className="testo">
                         <AnimateOnScroll>
-                            <h2>Adotta a distanza</h2>
-                            <p>Puoi offrire amore e cure a un micio bisognoso del Gattostello senza portarlo a casa. Alcuni mici sono adottabili a distanza in quanto per problemi comportamentali o di salute è più difficile trovar loro una casa. Con un contributo di <strong> 120 euro </strong> sostieni le sue esigenze quotidiane <strong> per un anno intero</strong>, ricevi aggiornamenti e vieni a trovarlo nella nostra struttura. Fai una differenza significativa nella sua vita. Grazie al tuo sostegno potrai garantirgli tutte le cure e le attenzioni necessarie.</p>
-                            <p>Scrivici su whatsapp per sapere chi di loro è in cerca di una mamma o un papà a distanza:</p>
-                            <div className="whatsapp"> <WhatsAppButton />339 806 7656 </div>
+                            <h2>Gruppo Teaming</h2>
+                            <p>
+                                Conosci Teaming? È una piattaforma che permette di sostenere associazioni e progetti solidali con una piccola donazione di appena 1 &euro; al mese. Un gesto semplice, alla portata di tutti, che insieme può trasformarsi in qualcosa di davvero grande!
+                            </p>
+                            <p>
+                                Anche noi del Gattostello abbiamo creato il nostro gruppo Teaming, con un obiettivo importante: raccogliere fondi per affrontare le tante spese quotidiane e continuare a prenderci cura dei nostri amati mici, garantendo loro cibo, cure e tutto ciò di cui hanno bisogno.
+                            </p>
+                            <p>
+                                Lo sappiamo, 1 &euro; può sembrare pochissimo… ma prova a immaginare cosa succede se a donarlo siamo in tanti! Un euro alla volta, possiamo costruire un aiuto concreto e prezioso per i nostri mici, perché ogni ciotola riempita, ogni cura e ogni piccola conquista contano.
+                            </p>
+                            <p>
+                                Unisciti al nostro gruppo Teaming e sostieni il Gattostello con appena 1 &euro; al mese! I nostri mici contano anche su di te. Grazie di cuore!
+                            </p>
+                            <p>
+                                <a
+                                    href="https://www.teaming.net/gattostelloodv"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    Uniciti al team
+                                </a>
+                            </p>
                         </AnimateOnScroll>
                     </div>
                     <div className="immagine">
                         <AnimateOnScroll animation="slide-right" delay={0.5}>
-                            <img src="img/adozioni.jpg" alt="adozioni" loading="lazy" />
+                            <img src="img/teaming.jpg" alt="teaming" loading="lazy" />
                         </AnimateOnScroll>
                     </div>
                 </div>
-            </div>
-
-            <div className="banner">
-                <div className="banner-track">
-                    {/* duplico l'array e lo scorro completamente */}
-                    {[...images, ...images].map((img, index) => (
-                        <img key={index} src={img} alt={`banner ${index + 1}`} />
-                    ))}
-                </div>
-            </div>
+            </div >
 
             <OndaBottom colore={color} sfondo="bianco" />
             <OndaTop colore={color} sfondo="scuro" />
@@ -223,30 +232,30 @@ export default function Sostienici() {
             <OndaBottom colore={color} sfondo="scuro" />
             <OndaTop colore={color} sfondo="bianco" />
 
-            <div className="gofundme-container">
-                <div className="gofundme">
+            <div className="distanza-container">
+                <div className="distanza">
                     <div className="testo">
                         <AnimateOnScroll>
-                            <h2>Raccolta fondi</h2>
-                            <p>
-                                Emy e Cracco hanno affrontato prove durissime: la perdita, la malattia e l'abbandono. Nonostante il dolore, non hanno mai smesso di fidarsi delle persone e di sperare in un futuro migliore. Oggi hanno bisogno del nostro aiuto per continuare le cure e trovare finalmente una famiglia che li ami per sempre. Ogni contributo può regalare loro una nuova possibilità.
-                            </p>
-                            <p>
-                                <a
-                                    href="https://gofund.me/ecf63c48b"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
-                                    Conosci la loro storia
-                                </a>
-                            </p>
+                            <h2>Adotta a distanza</h2>
+                            <p>Puoi offrire amore e cure a un micio bisognoso del Gattostello senza portarlo a casa. Alcuni mici sono adottabili a distanza in quanto per problemi comportamentali o di salute è più difficile trovar loro una casa. Con un contributo di <strong> 120 euro </strong> sostieni le sue esigenze quotidiane <strong> per un anno intero</strong>, ricevi aggiornamenti e vieni a trovarlo nella nostra struttura. Fai una differenza significativa nella sua vita. Grazie al tuo sostegno potrai garantirgli tutte le cure e le attenzioni necessarie.</p>
+                            <p>Scrivici su whatsapp per sapere chi di loro è in cerca di una mamma o un papà a distanza:</p>
+                            <div className="whatsapp"> <WhatsAppButton />339 806 7656 </div>
                         </AnimateOnScroll>
                     </div>
                     <div className="immagine">
                         <AnimateOnScroll animation="slide-right" delay={0.5}>
-                            <img src="img/emy_cracco.png" alt="cracco_e_emy" loading="lazy" />
+                            <img src="img/adozioni.jpg" alt="adozioni" loading="lazy" />
                         </AnimateOnScroll>
                     </div>
+                </div>
+            </div>
+
+            <div className="banner">
+                <div className="banner-track">
+                    {/* duplico l'array e lo scorro completamente */}
+                    {[...images, ...images].map((img, index) => (
+                        <img key={index} src={img} alt={`banner ${index + 1}`} />
+                    ))}
                 </div>
             </div>
 
