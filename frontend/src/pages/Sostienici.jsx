@@ -183,7 +183,7 @@ export default function Sostienici() {
                                     target="_blank"
                                     rel="noopener noreferrer"
                                 >
-                                    Uniciti al team
+                                    Unisciti al Team
                                 </a>
                             </p>
                         </AnimateOnScroll>
